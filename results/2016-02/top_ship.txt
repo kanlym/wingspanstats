@@ -1,0 +1,55 @@
+Ships destroyed by a specific hull
+--------------------------------------------
+#01 - Manticore - 1039 ships
+#02 - Nemesis - 926 ships
+#03 - Stratios - 631 ships
+#04 - Purifier - 577 ships
+#05 - Hound - 472 ships
+#06 - Rapier - 136 ships
+#07 - Confessor - 119 ships
+#08 - Tengu - 108 ships
+#09 - Proteus - 85 ships
+#10 - Hecate - 84 ships
+#11 - Oracle - 73 ships
+#12 - Falcon - 63 ships
+#13 - Garmur - 56 ships
+#14 - Astero - 52 ships
+#15 - Svipul - 45 ships
+#16 - Scythe Fleet Issue - 37 ships
+#17 - Jackdaw - 34 ships
+#18 - Devoter - 33 ships
+#19 - Legion - 31 ships
+#20 - Arazu - 28 ships
+#21 - Caracal - 28 ships
+#22 - Pilgrim - 26 ships
+#23 - Tristan - 26 ships
+#24 - Sin - 25 ships
+#25 - Sabre - 20 ships
+
+ISK destroyed by a specific hull
+--------------------------------------------
+#01 - Manticore - 184.91b
+#02 - Nemesis - 146.87b
+#03 - Stratios - 105.90b
+#04 - Purifier - 93.81b
+#05 - Hound - 63.64b
+#06 - Confessor - 26.26b
+#07 - Tengu - 23.56b
+#08 - Rapier - 21.87b
+#09 - Falcon - 19.43b
+#10 - Pilgrim - 17.16b
+#11 - Proteus - 14.27b
+#12 - Sin - 11.94b
+#13 - Oracle - 11.79b
+#14 - Rattlesnake - 8.42b
+#15 - Legion - 8.37b
+#16 - Gila - 7.64b
+#17 - Arazu - 7.08b
+#18 - Caracal - 6.78b
+#19 - Osprey - 6.56b
+#20 - Scythe Fleet Issue - 6.09b
+#21 - Garmur - 6.06b
+#22 - Redeemer - 5.96b
+#23 - Ares - 5.01b
+#24 - Astero - 4.91b
+#25 - Hecate - 4.08b

@@ -1,0 +1,55 @@
+Ships destroyed by a specific hull
+--------------------------------------------
+#01 - Stratios - 512 ships
+#02 - Nemesis - 307 ships
+#03 - Manticore - 294 ships
+#04 - Hound - 96 ships
+#05 - Astero - 87 ships
+#06 - Purifier - 86 ships
+#07 - Proteus - 70 ships
+#08 - Thrasher - 70 ships
+#09 - Tengu - 69 ships
+#10 - Svipul - 56 ships
+#11 - Orthrus - 36 ships
+#12 - Rapier - 32 ships
+#13 - Falcon - 31 ships
+#14 - Daredevil - 29 ships
+#15 - Phobos - 29 ships
+#16 - Thorax - 27 ships
+#17 - Arazu - 23 ships
+#18 - Flycatcher - 22 ships
+#19 - Pilgrim - 20 ships
+#20 - Sabre - 20 ships
+#21 - Rifter - 18 ships
+#22 - Nestor - 18 ships
+#23 - Omen - 15 ships
+#24 - Caracal - 12 ships
+#25 - Loki - 12 ships
+
+ISK destroyed by a specific hull
+--------------------------------------------
+#01 - Stratios - 93.68b
+#02 - Manticore - 62.28b
+#03 - Nemesis - 60.69b
+#04 - Purifier - 27.95b
+#05 - Hound - 25.39b
+#06 - Tengu - 14.54b
+#07 - Rapier - 14.13b
+#08 - Proteus - 10.24b
+#09 - Pilgrim - 8.61b
+#10 - Orthrus - 6.84b
+#11 - Armageddon - 6.56b
+#12 - Nestor - 6.46b
+#13 - Falcon - 6.43b
+#14 - Sin - 6.36b
+#15 - Typhoon - 6.13b
+#16 - Phobos - 4.73b
+#17 - Astero - 4.56b
+#18 - Flycatcher - 3.49b
+#19 - Viator - 3.20b
+#20 - Arazu - 3.05b
+#21 - Legion - 2.64b
+#22 - Loki - 2.49b
+#23 - Sabre - 2.19b
+#24 - Thrasher - 2.14b
+#25 - Broadsword - 1.63b

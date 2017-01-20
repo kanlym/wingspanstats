@@ -1,0 +1,55 @@
+Top industrial hunters - ships destroyed
+--------------------------------------------
+#01 - Reed Icculus - 14 ships
+#02 - Cloaks McGee - 6 ships
+#03 - Orianna Okanata - 4 ships
+#04 - Jin Hadah - 3 ships
+#05 - Al3x Oaks - 2 ships
+#06 - Terram alWathani - 2 ships
+#07 - Mister McQueen - 2 ships
+#08 - Fash Zifsork - 2 ships
+#09 - Mei Long - 2 ships
+#10 - Avacado Salad - 2 ships
+#11 - Chance Ravinne - 2 ships
+#12 - TOPSTER - 2 ships
+#13 - Tasmine Cha-Tien - 2 ships
+#14 - Blackhawk Bordeaux - 2 ships
+#15 - NoGo Rose - 2 ships
+#16 - Malak Saren - 1 ships
+#17 - Crankball - 1 ships
+#18 - Kerie Thomas - 1 ships
+#19 - Nicholas Chance Badasaz - 1 ships
+#20 - Dorphin Ghekon - 1 ships
+#21 - Bjurn Akely - 1 ships
+#22 - WeirdBall - 1 ships
+#23 - Baron VonSchniffle - 1 ships
+#24 - Lenai Chelien - 1 ships
+#25 - Grant Adoudel - 1 ships
+
+Top industrial hunters - ISK destroyed
+--------------------------------------------
+#01 - Jin Hadah - 1.24b
+#02 - NoGo Rose - 1.23b
+#03 - Tasmine Cha-Tien - 1.11b
+#04 - Malak Saren - 0.98b
+#05 - WeirdBall - 0.98b
+#06 - Reed Icculus - 0.37b
+#07 - Fash Zifsork - 0.26b
+#08 - Orianna Okanata - 0.25b
+#09 - Al3x Oaks - 0.24b
+#10 - Avacado Salad - 0.23b
+#11 - SsjGhost - 0.23b
+#12 - Grimm Horizon - 0.23b
+#13 - minold heifer - 0.23b
+#14 - Czechbox - 0.23b
+#15 - Schrade - 0.23b
+#16 - Cloaks McGee - 0.13b
+#17 - Severin Talvan - 0.11b
+#18 - Kerie Thomas - 0.05b
+#19 - Mei Long - 0.05b
+#20 - Nik Volsk - 0.05b
+#21 - Mister McQueen - 0.03b
+#22 - TOPSTER - 0.03b
+#23 - Terram alWathani - 0.03b
+#24 - David Brannigan - 0.02b
+#25 - Lenai Chelien - 0.02b

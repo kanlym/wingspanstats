@@ -1,0 +1,13 @@
+Top Nestor pilots - ships destroyed
+--------------------------------------------
+#01 - Xee Yoona-451 - 4 ships
+#02 - Grimm Horizon - 3 ships
+#03 - Blackhawk Bordeaux - 2 ships
+#04 - Inta Vakaria - 1 ships
+
+Top Nestor pilots - ISK destroyed
+--------------------------------------------
+#01 - Blackhawk Bordeaux - 1.36b
+#02 - Grimm Horizon - 0.45b
+#03 - Xee Yoona-451 - 0.13b
+#04 - Inta Vakaria - 0.03b

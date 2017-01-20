@@ -1,0 +1,55 @@
+Top bomber pilots - ships destroyed
+--------------------------------------------
+#01 - Swift Isu - 105 ships
+#02 - EMAGDNIM - 42 ships
+#03 - Alebrelle Kuatu - 41 ships
+#04 - LordValcorn - 36 ships
+#05 - Okaga Utama - 32 ships
+#06 - Elyph Shiraz - 31 ships
+#07 - Albin wood - 31 ships
+#08 - Tasmine Cha-Tien - 31 ships
+#09 - GTZGodzsila - 27 ships
+#10 - Mei Long - 25 ships
+#11 - Quintus Va'Lari - 19 ships
+#12 - Analius Glover - 18 ships
+#13 - Vargo Shahni - 18 ships
+#14 - Darth Hinken - 15 ships
+#15 - Kawzen Arukkus - 15 ships
+#16 - Avacado Salad - 15 ships
+#17 - Maere Mearcstapa - 14 ships
+#18 - Nicholas Chance Kile - 12 ships
+#19 - Murphy Derpsalot - 10 ships
+#20 - SsjGhost - 10 ships
+#21 - choo t - 10 ships
+#22 - Stanis Solar - 9 ships
+#23 - v3rmin - 9 ships
+#24 - Zulu Clone - 8 ships
+#25 - khomeini - 8 ships
+
+Top bomber pilots - ISK destroyed
+--------------------------------------------
+#01 - Swift Isu - 33.75b
+#02 - Tasmine Cha-Tien - 16.41b
+#03 - v3rmin - 12.33b
+#04 - Mei Long - 9.71b
+#05 - Quintus Va'Lari - 7.48b
+#06 - EMAGDNIM - 6.12b
+#07 - Stanis Solar - 6.03b
+#08 - Albin wood - 5.92b
+#09 - LordValcorn - 5.31b
+#10 - Kawzen Arukkus - 4.99b
+#11 - Mutionu - 4.69b
+#12 - Winston Bigbrother - 4.65b
+#13 - Darth Hinken - 4.61b
+#14 - Murphy Derpsalot - 4.45b
+#15 - Analius Glover - 4.42b
+#16 - Ole DDoS - 4.28b
+#17 - Alebrelle Kuatu - 4.01b
+#18 - choo t - 3.69b
+#19 - Narcisse Nightmare - 3.20b
+#20 - Okaga Utama - 2.97b
+#21 - khomeini - 2.91b
+#22 - Trip Erata - 2.81b
+#23 - Sean DeTivianne - 2.52b
+#24 - GTZGodzsila - 2.13b
+#25 - Vargo Shahni - 2.11b

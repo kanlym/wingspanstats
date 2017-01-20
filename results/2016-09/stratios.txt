@@ -1,0 +1,55 @@
+Top Stratios pilots - ships destroyed
+--------------------------------------------
+#01 - Arcdale - 63 ships
+#02 - Avacado Salad - 48 ships
+#03 - Kanly Aideron - 37 ships
+#04 - Malak Saren - 32 ships
+#05 - Okaga Utama - 28 ships
+#06 - Jack The Slipper - 23 ships
+#07 - Bdan en Gravonere - 22 ships
+#08 - Findlaech - 18 ships
+#09 - Al3x Oaks - 17 ships
+#10 - Mrs Boom - 17 ships
+#11 - Eithros - 16 ships
+#12 - Delta Rescue - 15 ships
+#13 - TOPSTER - 13 ships
+#14 - Stanis Solar - 10 ships
+#15 - Reed Icculus - 9 ships
+#16 - Valtyr Farshield - 8 ships
+#17 - Mister McQueen - 7 ships
+#18 - Lexa Griffin - 7 ships
+#19 - Mei Long - 7 ships
+#20 - Sabioo - 6 ships
+#21 - Darth Hinken - 6 ships
+#22 - Gillion Wyrddych - 6 ships
+#23 - Grant Adoudel - 6 ships
+#24 - Sabrez Haklar - 6 ships
+#25 - Bails Naskingar - 6 ships
+
+Top Stratios pilots - ISK destroyed
+--------------------------------------------
+#01 - Mrs Boom - 8.78b
+#02 - Arcdale - 8.38b
+#03 - Avacado Salad - 6.65b
+#04 - Kanly Aideron - 6.26b
+#05 - Malak Saren - 5.87b
+#06 - JinBeam Tsasa - 5.49b
+#07 - Okaga Utama - 4.76b
+#08 - TOPSTER - 4.16b
+#09 - snipes911 snipes - 3.32b
+#10 - Eithros - 3.23b
+#11 - Jack The Slipper - 2.97b
+#12 - Valtyr Farshield - 2.78b
+#13 - Bdan en Gravonere - 2.38b
+#14 - Delta Rescue - 2.33b
+#15 - Grant Adoudel - 1.97b
+#16 - SoftCore - 1.78b
+#17 - Revan Wake - 1.64b
+#18 - DeLlave Verdun - 1.63b
+#19 - Iracus Varanu - 1.53b
+#20 - Rob Tsukaya - 1.45b
+#21 - Darth Hinken - 1.39b
+#22 - Menaiya Zamayid - 1.31b
+#23 - Jin Hadah - 1.25b
+#24 - Stanis Solar - 1.23b
+#25 - Amielia Evangelon - 1.20b

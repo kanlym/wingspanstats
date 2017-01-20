@@ -1,0 +1,27 @@
+Top Interdictor(+HIC) pilots - ships destroyed
+--------------------------------------------
+#01 - NoGo Rose - 34 ships
+#02 - Malak Saren - 18 ships
+#03 - SsjGhost - 6 ships
+#04 - Fash Zifsork - 5 ships
+#05 - Sharps - 4 ships
+#06 - Trip Erata - 3 ships
+#07 - Gillion Wyrddych - 2 ships
+#08 - Terram alWathani - 2 ships
+#09 - Analius Glover - 1 ships
+#10 - SoftCore - 1 ships
+#11 - Swift Isu - 1 ships
+
+Top Interdictor(+HIC) pilots - ISK destroyed
+--------------------------------------------
+#01 - NoGo Rose - 1.44b
+#02 - Fash Zifsork - 1.37b
+#03 - Malak Saren - 0.44b
+#04 - SsjGhost - 0.38b
+#05 - Gillion Wyrddych - 0.29b
+#06 - Sharps - 0.25b
+#07 - Analius Glover - 0.03b
+#08 - Terram alWathani - 0.03b
+#09 - Trip Erata - 0.00b
+#10 - SoftCore - 0.00b
+#11 - Swift Isu - 0.00b

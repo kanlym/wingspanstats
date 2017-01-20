@@ -1,0 +1,55 @@
+Top Astero pilots - ships destroyed
+--------------------------------------------
+#01 - Avacado Salad - 36 ships
+#02 - Bdan en Gravonere - 21 ships
+#03 - Fyodor Ivanov Svoboda - 20 ships
+#04 - Grant Adoudel - 14 ships
+#05 - Arcdale - 12 ships
+#06 - Mo Todoka - 12 ships
+#07 - Manda Loria - 10 ships
+#08 - Baron VonSchniffle - 10 ships
+#09 - Wolvy Badasaz - 9 ships
+#10 - TOPSTER - 9 ships
+#11 - Nik Volsk - 8 ships
+#12 - SoftCore - 6 ships
+#13 - Authawy - 6 ships
+#14 - Xepheer - 6 ships
+#15 - Dorphin Ghekon - 3 ships
+#16 - Ishtar d'Asmodai - 3 ships
+#17 - Alebrelle Kuatu - 3 ships
+#18 - Czechbox - 3 ships
+#19 - Epoch Veli - 3 ships
+#20 - Polly Agstrom - 3 ships
+#21 - Flint Lowell - 2 ships
+#22 - Trip Erata - 2 ships
+#23 - Alexandrine Marion - 2 ships
+#24 - Caine Vacuumborn - 2 ships
+#25 - Blackhawk Bordeaux - 2 ships
+
+Top Astero pilots - ISK destroyed
+--------------------------------------------
+#01 - SoftCore - 2.28b
+#02 - Bdan en Gravonere - 1.66b
+#03 - Fyodor Ivanov Svoboda - 1.47b
+#04 - Avacado Salad - 1.21b
+#05 - Authawy - 0.91b
+#06 - Alebrelle Kuatu - 0.79b
+#07 - Mo Todoka - 0.77b
+#08 - Djari Sah - 0.57b
+#09 - Alexandrine Marion - 0.56b
+#10 - Grant Adoudel - 0.46b
+#11 - Polly Agstrom - 0.42b
+#12 - TOPSTER - 0.41b
+#13 - Arcdale - 0.37b
+#14 - Baron VonSchniffle - 0.29b
+#15 - Severin Talvan - 0.29b
+#16 - Wolvy Badasaz - 0.25b
+#17 - Xepheer - 0.23b
+#18 - Dorphin Ghekon - 0.19b
+#19 - Trip Erata - 0.16b
+#20 - Ishtar d'Asmodai - 0.14b
+#21 - Epoch Veli - 0.13b
+#22 - Czechbox - 0.11b
+#23 - Manda Loria - 0.07b
+#24 - Blackhawk Bordeaux - 0.06b
+#25 - LordValcorn - 0.03b

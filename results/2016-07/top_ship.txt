@@ -1,0 +1,55 @@
+Ships destroyed by a specific hull
+--------------------------------------------
+#01 - Stratios - 694 ships
+#02 - Manticore - 305 ships
+#03 - Nemesis - 172 ships
+#04 - Purifier - 128 ships
+#05 - Hound - 94 ships
+#06 - Proteus - 63 ships
+#07 - Astero - 56 ships
+#08 - Pilgrim - 47 ships
+#09 - Rapier - 36 ships
+#10 - Nestor - 31 ships
+#11 - Vexor Navy Issue - 31 ships
+#12 - Orthrus - 25 ships
+#13 - Imperial Navy Slicer - 25 ships
+#14 - Scythe Fleet Issue - 21 ships
+#15 - Federation Navy Comet - 21 ships
+#16 - Falcon - 21 ships
+#17 - Loki - 20 ships
+#18 - Phobos - 20 ships
+#19 - Confessor - 19 ships
+#20 - Arazu - 18 ships
+#21 - Legion - 17 ships
+#22 - Svipul - 17 ships
+#23 - Heretic - 14 ships
+#24 - Incursus - 12 ships
+#25 - Garmur - 10 ships
+
+ISK destroyed by a specific hull
+--------------------------------------------
+#01 - Stratios - 174.86b
+#02 - Manticore - 99.85b
+#03 - Nemesis - 39.56b
+#04 - Pilgrim - 29.66b
+#05 - Hound - 27.52b
+#06 - Purifier - 20.45b
+#07 - Proteus - 16.39b
+#08 - Arazu - 13.46b
+#09 - Vexor Navy Issue - 11.99b
+#10 - Rapier - 9.87b
+#11 - Legion - 6.14b
+#12 - Orthrus - 6.00b
+#13 - Falcon - 5.43b
+#14 - Nestor - 5.09b
+#15 - Astero - 4.95b
+#16 - Eris - 3.77b
+#17 - Scythe Fleet Issue - 3.38b
+#18 - Heretic - 3.30b
+#19 - Confessor - 3.03b
+#20 - Phobos - 3.00b
+#21 - Gila - 2.71b
+#22 - Brutix - 2.13b
+#23 - Imperial Navy Slicer - 2.07b
+#24 - Stabber - 1.63b
+#25 - Loki - 1.62b

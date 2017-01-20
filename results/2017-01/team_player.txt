@@ -1,0 +1,55 @@
+Ships destroyed in a fleet
+--------------------------------------------
+#01 - Kerie Thomas - 43 ships
+#02 - Aldard Aldard - 42 ships
+#03 - Okaga Utama - 38 ships
+#04 - Rootey Tootey - 36 ships
+#05 - Jessi MalDoran - 32 ships
+#06 - AusTiger - 32 ships
+#07 - Mei Long - 31 ships
+#08 - Grimm Horizon - 30 ships
+#09 - Gareth Adoudel - 29 ships
+#10 - Haruko Kitsune - 27 ships
+#11 - SsjGhost - 27 ships
+#12 - Yosh Maken - 27 ships
+#13 - Vek Chiasson - 25 ships
+#14 - Xaeli - 24 ships
+#15 - Crankball - 23 ships
+#16 - Jerythas - 23 ships
+#17 - Zevenz - 23 ships
+#18 - Orianna Okanata - 22 ships
+#19 - Czechbox - 22 ships
+#20 - Sylnn Severn - 21 ships
+#21 - Swift Isu - 20 ships
+#22 - Xee Yoona-451 - 20 ships
+#23 - minold heifer - 20 ships
+#24 - Romanholiday - 20 ships
+#25 - Al3x Oaks - 19 ships
+
+ISK destroyed in a fleet
+--------------------------------------------
+#01 - Aldard Aldard - 15.92b
+#02 - Grimm Horizon - 14.94b
+#03 - SsjGhost - 13.67b
+#04 - AusTiger - 13.42b
+#05 - Okaga Utama - 13.38b
+#06 - Romanholiday - 12.20b
+#07 - Xaeli - 11.22b
+#08 - Kerie Thomas - 11.07b
+#09 - DeLlave Verdun - 10.91b
+#10 - Orianna Okanata - 10.02b
+#11 - Haruko Kitsune - 9.99b
+#12 - Zevenz - 9.93b
+#13 - Leptys Finbulventr - 9.68b
+#14 - Rootey Tootey - 9.65b
+#15 - QuarantineEng - 9.64b
+#16 - Jessi MalDoran - 9.40b
+#17 - Xee Yoona-451 - 9.18b
+#18 - Dorphin Ghekon - 9.10b
+#19 - Sachenka Cadelanne - 8.70b
+#20 - Epoch Veli - 8.61b
+#21 - Gareth Adoudel - 8.40b
+#22 - Kanly Aideron - 8.16b
+#23 - Jerythas - 8.00b
+#24 - Father Nye - 7.84b
+#25 - Crankball - 7.76b

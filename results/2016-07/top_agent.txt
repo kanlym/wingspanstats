@@ -1,0 +1,55 @@
+Ships destroyed
+--------------------------------------------
+#01 - Avacado Salad - 137 ships
+#02 - Swift Isu - 118 ships
+#03 - WeirdBall - 108 ships
+#04 - Okaga Utama - 94 ships
+#05 - Tasmine Cha-Tien - 86 ships
+#06 - Tyr Carter - 85 ships
+#07 - Dokii Dokii - 80 ships
+#08 - Mei Long - 69 ships
+#09 - Alebrelle Kuatu - 62 ships
+#10 - Valtyr Farshield - 60 ships
+#11 - EMAGDNIM - 51 ships
+#12 - Nicholas Chance Kile - 50 ships
+#13 - Narcisse Nightmare - 49 ships
+#14 - Albin wood - 48 ships
+#15 - Al3x Oaks - 46 ships
+#16 - Arcdale - 46 ships
+#17 - Inta Vakaria - 43 ships
+#18 - Analius Glover - 42 ships
+#19 - DerthGerps - 41 ships
+#20 - Shinzo Shikimira Shinzo - 41 ships
+#21 - LordValcorn - 40 ships
+#22 - Stanis Solar - 40 ships
+#23 - Elyph Shiraz - 39 ships
+#24 - Bails Naskingar - 38 ships
+#25 - Delta Rescue - 30 ships
+
+ISK destroyed
+--------------------------------------------
+#01 - WeirdBall - 41.36b
+#02 - Swift Isu - 35.64b
+#03 - Avacado Salad - 32.88b
+#04 - Tasmine Cha-Tien - 29.24b
+#05 - Okaga Utama - 26.14b
+#06 - Stanis Solar - 22.81b
+#07 - Cap'n Rick Clusterbomb - 22.10b
+#08 - Valtyr Farshield - 19.99b
+#09 - Shinzo Shikimira Shinzo - 17.31b
+#10 - Mei Long - 16.13b
+#11 - Narcisse Nightmare - 13.22b
+#12 - v3rmin - 12.33b
+#13 - Nicholas Chance Kile - 12.27b
+#14 - Tyr Carter - 11.72b
+#15 - Bails Naskingar - 11.31b
+#16 - Derreck Ming - 10.46b
+#17 - Albin wood - 10.09b
+#18 - Analius Glover - 9.50b
+#19 - Merlin Avalon - 9.41b
+#20 - Trip Erata - 8.25b
+#21 - Alebrelle Kuatu - 7.75b
+#22 - Quintus Va'Lari - 7.48b
+#23 - Ransom Odunen - 7.27b
+#24 - Psyche Ambraelle - 7.20b
+#25 - Gillion Wyrddych - 7.18b

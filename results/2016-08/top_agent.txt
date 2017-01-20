@@ -1,0 +1,55 @@
+Ships destroyed
+--------------------------------------------
+#01 - Avacado Salad - 110 ships
+#02 - Quintus Va'Lari - 63 ships
+#03 - Amielia Evangelon - 60 ships
+#04 - Xavier Hex - 53 ships
+#05 - Okaga Utama - 52 ships
+#06 - Findlaech - 48 ships
+#07 - Nicholas Chance Kile - 47 ships
+#08 - WeirdBall - 45 ships
+#09 - Al3x Oaks - 43 ships
+#10 - Inta Vakaria - 43 ships
+#11 - Arcdale - 39 ships
+#12 - Tasmine Cha-Tien - 38 ships
+#13 - Albin wood - 35 ships
+#14 - Mei Long - 35 ships
+#15 - Bails Naskingar - 32 ships
+#16 - Narcisse Nightmare - 29 ships
+#17 - Alebrelle Kuatu - 28 ships
+#18 - QuarantineEng - 26 ships
+#19 - Ben D'Eath - 26 ships
+#20 - Cap'n Rick Clusterbomb - 26 ships
+#21 - Lexa Griffin - 23 ships
+#22 - Sabrez Haklar - 21 ships
+#23 - Valtyr Farshield - 20 ships
+#24 - Swift Isu - 20 ships
+#25 - SoftCore - 20 ships
+
+ISK destroyed
+--------------------------------------------
+#01 - Findlaech - 30.09b
+#02 - Valtyr Farshield - 23.35b
+#03 - Cap'n Rick Clusterbomb - 20.89b
+#04 - Quintus Va'Lari - 20.02b
+#05 - Xavier Hex - 18.82b
+#06 - Avacado Salad - 18.72b
+#07 - Gillion Wyrddych - 17.51b
+#08 - Nicholas Chance Kile - 14.63b
+#09 - WeirdBall - 14.03b
+#10 - Okaga Utama - 13.17b
+#11 - Alebrelle Kuatu - 12.94b
+#12 - Ben D'Eath - 12.31b
+#13 - Lexa Griffin - 11.16b
+#14 - Mei Long - 10.62b
+#15 - Gort getrekt - 10.19b
+#16 - Sabrez Haklar - 10.08b
+#17 - minold heifer - 9.75b
+#18 - Ishtar d'Asmodai - 8.30b
+#19 - v3rmin - 8.00b
+#20 - Tasmine Cha-Tien - 7.97b
+#21 - Narcisse Nightmare - 7.62b
+#22 - scufitza - 7.52b
+#23 - Blackhawk Bordeaux - 7.44b
+#24 - Amielia Evangelon - 7.35b
+#25 - Glaedyr - 7.26b

@@ -1,0 +1,45 @@
+Top Recon pilots - ships destroyed
+--------------------------------------------
+#01 - Okaga Utama - 31 ships
+#02 - Nicholas Chance Kile - 21 ships
+#03 - Xavier Hex - 21 ships
+#04 - Tasmine Cha-Tien - 19 ships
+#05 - minold heifer - 7 ships
+#06 - Stele Toque - 6 ships
+#07 - Mei Long - 6 ships
+#08 - Trip Erata - 5 ships
+#09 - Avacado Salad - 5 ships
+#10 - Cap'n Rick Clusterbomb - 3 ships
+#11 - TOPSTER - 3 ships
+#12 - Ransom Odunen - 3 ships
+#13 - WeirdBall - 2 ships
+#14 - Blackhawk Bordeaux - 2 ships
+#15 - Albin wood - 1 ships
+#16 - Sharps - 1 ships
+#17 - Estebanzo Rufius - 1 ships
+#18 - Flaya Noong - 1 ships
+#19 - Inta Vakaria - 1 ships
+#20 - Jerythas - 1 ships
+
+Top Recon pilots - ISK destroyed
+--------------------------------------------
+#01 - minold heifer - 6.91b
+#02 - Jerythas - 6.21b
+#03 - Tasmine Cha-Tien - 4.49b
+#04 - Nicholas Chance Kile - 4.32b
+#05 - Okaga Utama - 3.66b
+#06 - Xavier Hex - 3.23b
+#07 - Ransom Odunen - 1.71b
+#08 - Mei Long - 1.53b
+#09 - Avacado Salad - 1.31b
+#10 - Cap'n Rick Clusterbomb - 1.05b
+#11 - Flaya Noong - 0.76b
+#12 - Stele Toque - 0.75b
+#13 - Trip Erata - 0.73b
+#14 - TOPSTER - 0.54b
+#15 - Albin wood - 0.28b
+#16 - Blackhawk Bordeaux - 0.16b
+#17 - Estebanzo Rufius - 0.15b
+#18 - WeirdBall - 0.09b
+#19 - Sharps - 0.06b
+#20 - Inta Vakaria - 0.04b

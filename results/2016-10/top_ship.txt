@@ -1,0 +1,55 @@
+Ships destroyed by a specific hull
+--------------------------------------------
+#01 - Stratios - 566 ships
+#02 - Manticore - 442 ships
+#03 - Nemesis - 348 ships
+#04 - Purifier - 274 ships
+#05 - Proteus - 155 ships
+#06 - Tengu - 140 ships
+#07 - Hound - 139 ships
+#08 - Astero - 131 ships
+#09 - Rapier - 83 ships
+#10 - Nestor - 63 ships
+#11 - Svipul - 52 ships
+#12 - Orthrus - 51 ships
+#13 - Arazu - 47 ships
+#14 - Falcon - 45 ships
+#15 - Garmur - 42 ships
+#16 - Pilgrim - 42 ships
+#17 - Phobos - 33 ships
+#18 - Sabre - 33 ships
+#19 - Loki - 28 ships
+#20 - Flycatcher - 26 ships
+#21 - Vexor Navy Issue - 25 ships
+#22 - Dominix - 24 ships
+#23 - Sin - 21 ships
+#24 - Vexor - 18 ships
+#25 - Thorax - 15 ships
+
+ISK destroyed by a specific hull
+--------------------------------------------
+#01 - Stratios - 112.98b
+#02 - Nemesis - 80.02b
+#03 - Manticore - 78.03b
+#04 - Tengu - 35.06b
+#05 - Purifier - 27.85b
+#06 - Proteus - 22.78b
+#07 - Rapier - 18.62b
+#08 - Falcon - 16.50b
+#09 - Hound - 12.67b
+#10 - Pilgrim - 11.68b
+#11 - Arazu - 11.32b
+#12 - Nestor - 10.66b
+#13 - Sin - 10.40b
+#14 - Astero - 6.87b
+#15 - Orthrus - 6.82b
+#16 - Flycatcher - 6.29b
+#17 - Svipul - 4.90b
+#18 - Sabre - 4.80b
+#19 - Gila - 4.77b
+#20 - Vexor Navy Issue - 4.10b
+#21 - Loki - 3.97b
+#22 - Augoror - 3.92b
+#23 - Thorax - 3.22b
+#24 - Vexor - 3.08b
+#25 - Garmur - 2.48b

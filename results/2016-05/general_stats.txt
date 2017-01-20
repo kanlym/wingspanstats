@@ -1,0 +1,30 @@
+General statistics
+--------------------------------------------
+Total kills: 1029
+Total value: 129.88b
+Average value/kill: 126.22m
+-- Total number of active pilots: 188/424 (44.34%)
+Kills per active member: 5.47
+ISK destroyed per active member: 690.86m
+Solo total kills: 610
+Solo total value: 30.58b
+Citadel kills: 10
+
+High-sec total kills: 101 (9.82%)
+High-sec total value: 1.22b (0.94%)
+
+Low-sec total kills: 178 (17.30%)
+Low-sec total value: 8.75b (6.74%)
+
+Null-sec total kills: 113 (10.98%)
+Null-sec total value: 12.05b (9.27%)
+
+W-space total kills: 637 (61.90%)
+W-space total value: 107.87b (83.05%)
+  [*] C1 - total kills: 109, total isk: 13.81b
+  [*] C2 - total kills: 237, total isk: 37.21b
+  [*] C3 - total kills: 197, total isk: 25.40b
+  [*] C4 - total kills: 43, total isk: 15.04b
+  [*] C5 - total kills: 39, total isk: 14.90b
+  [*] C6 - total kills: 8, total isk: 1.43b
+  [*] Thera - total kills: 4, total isk: 0.09b

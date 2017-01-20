@@ -1,0 +1,55 @@
+Ships destroyed in a fleet
+--------------------------------------------
+#01 - WeirdBall - 62 ships
+#02 - Mei Long - 58 ships
+#03 - Swift Isu - 53 ships
+#04 - Valtyr Farshield - 34 ships
+#05 - Cap'n Rick Clusterbomb - 30 ships
+#06 - Sabrez Haklar - 25 ships
+#07 - Avacado Salad - 25 ships
+#08 - Cain Patrouette - 23 ships
+#09 - Lenai Chelien - 23 ships
+#10 - Inta Vakaria - 23 ships
+#11 - Winston Bigbrother - 21 ships
+#12 - Massive Black - 20 ships
+#13 - Tasmine Cha-Tien - 20 ships
+#14 - Sharps - 19 ships
+#15 - Tyr Carter - 19 ships
+#16 - Mister McQueen - 18 ships
+#17 - Dokii Dokii - 17 ships
+#18 - Sir Revan SkyStalker - 16 ships
+#19 - Gillion Wyrddych - 16 ships
+#20 - Vothor - 16 ships
+#21 - Okaga Utama - 15 ships
+#22 - Ben D'Eath - 14 ships
+#23 - Reed Icculus - 12 ships
+#24 - DerthGerps - 12 ships
+#25 - Rogue Seven - 11 ships
+
+ISK destroyed in a fleet
+--------------------------------------------
+#01 - Mei Long - 15.14b
+#02 - WeirdBall - 14.42b
+#03 - Cap'n Rick Clusterbomb - 11.75b
+#04 - Valtyr Farshield - 11.67b
+#05 - Swift Isu - 9.64b
+#06 - Mister McQueen - 7.46b
+#07 - Tasmine Cha-Tien - 7.16b
+#08 - Winston Bigbrother - 6.88b
+#09 - Avacado Salad - 6.63b
+#10 - Okaga Utama - 6.30b
+#11 - Dokii Dokii - 5.55b
+#12 - Quintus Va'Lari - 5.47b
+#13 - HillAnt - 5.15b
+#14 - Stanis Solar - 5.10b
+#15 - Vothor - 5.01b
+#16 - Nakran Onyx - 5.01b
+#17 - Lenai Chelien - 4.48b
+#18 - Cain Patrouette - 4.08b
+#19 - Ben D'Eath - 3.78b
+#20 - Sir Revan SkyStalker - 3.59b
+#21 - Sharps - 3.19b
+#22 - Inta Vakaria - 3.10b
+#23 - Sabrez Haklar - 2.99b
+#24 - Tyr Carter - 2.99b
+#25 - Massive Black - 2.86b

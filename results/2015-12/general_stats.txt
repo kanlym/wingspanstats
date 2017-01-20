@@ -1,0 +1,31 @@
+General statistics
+--------------------------------------------
+Total kills: 1135
+Total value: 107.73b
+Average value/kill: 94.92m
+-- Total number of active pilots: 171/425 (40.24%)
+Kills per active member: 6.64
+ISK destroyed per active member: 630.01m
+Solo total kills: 688
+Solo total value: 46.15b
+
+High-sec total kills: 34 (3.00%)
+High-sec total value: 4.92b (4.56%)
+
+Low-sec total kills: 219 (19.30%)
+Low-sec total value: 8.01b (7.44%)
+
+Null-sec total kills: 122 (10.75%)
+Null-sec total value: 15.45b (14.34%)
+
+W-space total kills: 760 (66.96%)
+W-space total value: 79.35b (73.66%)
+  [*] C1 - total kills: 146, total isk: 20.02b
+  [*] C2 - total kills: 400, total isk: 30.40b
+  [*] C3 - total kills: 155, total isk: 21.46b
+  [*] C4 - total kills: 24, total isk: 3.00b
+  [*] C5 - total kills: 22, total isk: 1.18b
+  [*] C6 - total kills: 6, total isk: 2.23b
+  [*] C13 - total kills: 5, total isk: 0.51b
+  [*] Thera - total kills: 1, total isk: 0.45b
+  [*] Drifter wormholes - total kills: 1, total isk: 0.10b

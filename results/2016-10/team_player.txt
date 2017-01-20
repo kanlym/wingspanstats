@@ -1,0 +1,55 @@
+Ships destroyed in a fleet
+--------------------------------------------
+#01 - Mei Long - 118 ships
+#02 - Kanly Aideron - 109 ships
+#03 - Tasmine Cha-Tien - 91 ships
+#04 - Jin Hadah - 81 ships
+#05 - Avacado Salad - 75 ships
+#06 - Stanis Solar - 75 ships
+#07 - Lexa Griffin - 71 ships
+#08 - Mister McQueen - 69 ships
+#09 - DeLlave Verdun - 64 ships
+#10 - Pippinthehobbit - 58 ships
+#11 - Malak Saren - 53 ships
+#12 - Priestez - 53 ships
+#13 - Doris Andedarie - 53 ships
+#14 - SsjGhost - 52 ships
+#15 - Jack The Slipper - 51 ships
+#16 - Cristos Grimblade - 51 ships
+#17 - Schrade - 48 ships
+#18 - Ishtar d'Asmodai - 47 ships
+#19 - Cross Ghasha - 46 ships
+#20 - Quintus Va'Lari - 45 ships
+#21 - Revan Wake - 44 ships
+#22 - Nils Winterstorm - 41 ships
+#23 - XLR Escher - 36 ships
+#24 - Myra Vixen - 34 ships
+#25 - Blast Infinity - 34 ships
+
+ISK destroyed in a fleet
+--------------------------------------------
+#01 - Mei Long - 26.59b
+#02 - Lexa Griffin - 26.30b
+#03 - Avacado Salad - 21.59b
+#04 - Kanly Aideron - 19.48b
+#05 - Tasmine Cha-Tien - 17.16b
+#06 - Priestez - 16.29b
+#07 - Stanis Solar - 14.01b
+#08 - Jin Hadah - 12.93b
+#09 - Schrade - 12.42b
+#10 - Buster Atmosk - 10.27b
+#11 - Archimedes Vanguard - 9.93b
+#12 - Sharps - 9.65b
+#13 - minold heifer - 9.58b
+#14 - Pippinthehobbit - 9.53b
+#15 - Mister McQueen - 8.94b
+#16 - Mrs Boom - 8.83b
+#17 - Bails Naskingar - 8.55b
+#18 - Sabrez Haklar - 8.54b
+#19 - Zontor - 7.94b
+#20 - Revan Wake - 7.79b
+#21 - Caligulas - 7.58b
+#22 - SsjGhost - 7.24b
+#23 - Terram alWathani - 7.19b
+#24 - Grant Adoudel - 6.99b
+#25 - DeLlave Verdun - 6.78b

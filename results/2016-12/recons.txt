@@ -1,0 +1,55 @@
+Top Recon pilots - ships destroyed
+--------------------------------------------
+#01 - Xee Yoona-451 - 21 ships
+#02 - Kanly Aideron - 21 ships
+#03 - WeirdBall - 19 ships
+#04 - Vek Chiasson - 17 ships
+#05 - Quintus Va'Lari - 14 ships
+#06 - Epoch Veli - 14 ships
+#07 - Gillion Wyrddych - 11 ships
+#08 - Aafen - 10 ships
+#09 - Swift Isu - 9 ships
+#10 - Narcisse Nightmare - 7 ships
+#11 - Trip Erata - 7 ships
+#12 - Ronni Ormand - 7 ships
+#13 - Kerie Thomas - 6 ships
+#14 - Tasmine Cha-Tien - 6 ships
+#15 - NoGo Rose - 6 ships
+#16 - Arcdale - 5 ships
+#17 - Sooplex - 4 ships
+#18 - Avacado Salad - 4 ships
+#19 - Alex Pyzi - 3 ships
+#20 - TOPSTER - 3 ships
+#21 - SsjGhost - 2 ships
+#22 - Mei Long - 2 ships
+#23 - Soldier Isu - 2 ships
+#24 - JinBeam Tsasa - 2 ships
+#25 - Selena Na'sharr - 1 ships
+
+Top Recon pilots - ISK destroyed
+--------------------------------------------
+#01 - WeirdBall - 14.45b
+#02 - Aafen - 5.32b
+#03 - Xee Yoona-451 - 5.29b
+#04 - Arcdale - 4.32b
+#05 - Vek Chiasson - 4.16b
+#06 - Alex Pyzi - 1.80b
+#07 - Gillion Wyrddych - 1.58b
+#08 - Avacado Salad - 1.50b
+#09 - Epoch Veli - 1.44b
+#10 - Tasmine Cha-Tien - 1.06b
+#11 - Swift Isu - 0.87b
+#12 - NoGo Rose - 0.85b
+#13 - Mei Long - 0.80b
+#14 - SsjGhost - 0.77b
+#15 - Kanly Aideron - 0.67b
+#16 - Narcisse Nightmare - 0.57b
+#17 - TOPSTER - 0.54b
+#18 - Bdan en Gravonere - 0.44b
+#19 - Kerie Thomas - 0.30b
+#20 - Mo Todoka - 0.26b
+#21 - Sooplex - 0.24b
+#22 - Ronni Ormand - 0.22b
+#23 - Soldier Isu - 0.20b
+#24 - Quintus Va'Lari - 0.12b
+#25 - Schrade - 0.09b

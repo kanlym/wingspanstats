@@ -1,0 +1,49 @@
+Top Interdictor(+HIC) pilots - ships destroyed
+--------------------------------------------
+#01 - Sinonymous - 32 ships
+#02 - NoGo Rose - 18 ships
+#03 - QuarantineEng - 11 ships
+#04 - Kanly Aideron - 8 ships
+#05 - Analius Glover - 7 ships
+#06 - Sharps - 5 ships
+#07 - Orianna Okanata - 5 ships
+#08 - SsjGhost - 5 ships
+#09 - Buster Atmosk - 5 ships
+#10 - Gillion Wyrddych - 4 ships
+#11 - Arcdale - 3 ships
+#12 - Kerie Thomas - 2 ships
+#13 - Bjurn Akely - 2 ships
+#14 - Swift Isu - 2 ships
+#15 - Crazy Dogbreath - 2 ships
+#16 - minold heifer - 2 ships
+#17 - Benaiah Barrington - 1 ships
+#18 - Myra Vixen - 1 ships
+#19 - lashana darkmoon - 1 ships
+#20 - Baron VonSchniffle - 1 ships
+#21 - Vek Chiasson - 1 ships
+#22 - Wolvy Badasaz - 1 ships
+
+Top Interdictor(+HIC) pilots - ISK destroyed
+--------------------------------------------
+#01 - Arcdale - 1.10b
+#02 - QuarantineEng - 1.09b
+#03 - Gillion Wyrddych - 1.06b
+#04 - Orianna Okanata - 0.86b
+#05 - Sharps - 0.84b
+#06 - Sinonymous - 0.74b
+#07 - Kerie Thomas - 0.46b
+#08 - Crazy Dogbreath - 0.30b
+#09 - Kanly Aideron - 0.22b
+#10 - NoGo Rose - 0.21b
+#11 - Buster Atmosk - 0.16b
+#12 - SsjGhost - 0.13b
+#13 - lashana darkmoon - 0.13b
+#14 - Myra Vixen - 0.10b
+#15 - Analius Glover - 0.09b
+#16 - Swift Isu - 0.01b
+#17 - minold heifer - 0.01b
+#18 - Wolvy Badasaz - 0.00b
+#19 - Bjurn Akely - 0.00b
+#20 - Vek Chiasson - 0.00b
+#21 - Benaiah Barrington - 0.00b
+#22 - Baron VonSchniffle - 0.00b

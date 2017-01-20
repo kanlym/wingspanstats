@@ -1,0 +1,23 @@
+Top Bombing Run Specialists - ships destroyed
+--------------------------------------------
+#01 - Lovix - 10 ships
+#02 - Priestez - 10 ships
+#03 - Rev A - 9 ships
+#04 - Cross Ghasha - 9 ships
+#05 - Mister McQueen - 8 ships
+#06 - Blackhawk Bordeaux - 7 ships
+#07 - Alebrelle Kuatu - 5 ships
+#08 - Jack The Slipper - 3 ships
+#09 - Ladas Gladius Augustus - 1 ships
+
+Top Bombing Run Specialists - ISK destroyed
+--------------------------------------------
+#01 - Lovix - 0.24b
+#02 - Priestez - 0.24b
+#03 - Mister McQueen - 0.24b
+#04 - Rev A - 0.22b
+#05 - Blackhawk Bordeaux - 0.20b
+#06 - Jack The Slipper - 0.07b
+#07 - Alebrelle Kuatu - 0.07b
+#08 - Ladas Gladius Augustus - 0.00b
+#09 - Cross Ghasha - 0.00b

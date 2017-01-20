@@ -1,0 +1,19 @@
+Top Nestor pilots - ships destroyed
+--------------------------------------------
+#01 - Inta Vakaria - 16 ships
+#02 - Blackhawk Bordeaux - 6 ships
+#03 - Avacado Salad - 3 ships
+#04 - Xee Yoona-451 - 2 ships
+#05 - Bails Naskingar - 2 ships
+#06 - Grimm Horizon - 2 ships
+#07 - Pippinthehobbit - 1 ships
+
+Top Nestor pilots - ISK destroyed
+--------------------------------------------
+#01 - Inta Vakaria - 2.46b
+#02 - Avacado Salad - 0.27b
+#03 - Blackhawk Bordeaux - 0.20b
+#04 - Pippinthehobbit - 0.20b
+#05 - Xee Yoona-451 - 0.09b
+#06 - Bails Naskingar - 0.00b
+#07 - Grimm Horizon - 0.00b

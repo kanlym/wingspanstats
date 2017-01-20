@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wingspan Stats</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+	<script src="js/mainController.js"></script>
+     <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<h1> Wingspan Stats</h1>
+ <div ng-app="mainApp" ng-controller="mainController">
+        <div id="menu">
+            
+        </div>
+            <div id="content">
+            <button ng-click="propertyName = null; reverse = false">Set to unsorted</button>
+            <label>Search: <input ng-model="searchText"></label>
+                <table class="results">
+                    <tr>
+                        <th> Order</th>
+                        <th> <button ng-click="sortBy('character_name')">Agent Name</button> 
+                        <span class="sortorder" ng-show="propertyName === 'character_name'" ng-class="{reverse: reverse}"></span>
+                        </th>
+                        <th> <button ng-click="sortBy('ships_destroyed')">Ships Destroyed</button> 
+                        <span class="sortorder" ng-show="propertyName === 'ships_destroyed'" ng-class="{reverse: reverse}"></span></th>
+                        <th> <button ng-click="sortBy('isk_destroyed')">Value</button> 
+                        <span class="sortorder" ng-show="propertyName === 'isk_destroyed'" ng-class="{reverse: reverse}"></span>
+                        </th>
+                        <th> Average ship value </th>
+                    </tr>
+                    <tr ng-repeat="content in contents.agents | filter:searchText | orderBy:propertyName:reverse ">
+                        <td>[{{$index + 1}}] </td>
+                        <td>{{content.character_name}}</td>
+                        <td>{{content.ships_destroyed}}</td>
+                        <td>{{content.isk_destroyed / 1000000000 | number:2}}b </td>
+                        <td>{{content.isk_destroyed / content.ships_destroyed / 100000000 | number: 2}}m/ship</td>
+                    </tr>
+                </table>
+                
+                
+                	
+                	
+                </div>
+            </div>
+        </div>
+</body>
+</html>

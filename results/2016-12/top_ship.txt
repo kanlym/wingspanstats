@@ -1,0 +1,55 @@
+Ships destroyed by a specific hull
+--------------------------------------------
+#01 - Stratios - 958 ships
+#02 - Manticore - 428 ships
+#03 - Astero - 327 ships
+#04 - Nemesis - 285 ships
+#05 - Hound - 224 ships
+#06 - Tengu - 212 ships
+#07 - Proteus - 173 ships
+#08 - Hecate - 139 ships
+#09 - Svipul - 115 ships
+#10 - Purifier - 88 ships
+#11 - Rapier - 66 ships
+#12 - Sabre - 63 ships
+#13 - Falcon - 61 ships
+#14 - Brutix - 59 ships
+#15 - Gnosis - 48 ships
+#16 - Legion - 47 ships
+#17 - Orthrus - 37 ships
+#18 - Nestor - 32 ships
+#19 - Thrasher - 31 ships
+#20 - Pilgrim - 30 ships
+#21 - Scythe Fleet Issue - 29 ships
+#22 - Lachesis - 26 ships
+#23 - Stork - 24 ships
+#24 - Hurricane - 24 ships
+#25 - Ares - 24 ships
+
+ISK destroyed by a specific hull
+--------------------------------------------
+#01 - Stratios - 110.85b
+#02 - Manticore - 84.08b
+#03 - Hound - 60.44b
+#04 - Nemesis - 52.71b
+#05 - Purifier - 28.26b
+#06 - Falcon - 25.81b
+#07 - Proteus - 22.01b
+#08 - Tengu - 17.41b
+#09 - Astero - 14.85b
+#10 - Legion - 11.05b
+#11 - Brutix - 8.28b
+#12 - Rapier - 7.54b
+#13 - Gnosis - 6.59b
+#14 - Arazu - 6.13b
+#15 - Hurricane - 5.44b
+#16 - Pilgrim - 5.38b
+#17 - Svipul - 5.12b
+#18 - Sabre - 4.52b
+#19 - Hecate - 4.45b
+#20 - Panther - 3.90b
+#21 - Vigilant - 3.89b
+#22 - Scythe Fleet Issue - 3.87b
+#23 - Loki - 3.56b
+#24 - Orthrus - 3.53b
+#25 - Sin - 3.31b

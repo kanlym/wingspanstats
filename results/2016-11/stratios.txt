@@ -1,0 +1,55 @@
+Top Stratios pilots - ships destroyed
+--------------------------------------------
+#01 - Avacado Salad - 77 ships
+#02 - Mei Long - 49 ships
+#03 - Arcdale - 43 ships
+#04 - Reed Icculus - 40 ships
+#05 - TOPSTER - 29 ships
+#06 - Malak Saren - 28 ships
+#07 - Jin Hadah - 23 ships
+#08 - Al3x Oaks - 19 ships
+#09 - Bdan en Gravonere - 19 ships
+#10 - Ronni Ormand - 18 ships
+#11 - Czechbox - 18 ships
+#12 - Buster Atmosk - 17 ships
+#13 - Fash Zifsork - 16 ships
+#14 - Kanly Aideron - 15 ships
+#15 - Crankball - 12 ships
+#16 - Ishtar d'Asmodai - 11 ships
+#17 - minold heifer - 11 ships
+#18 - Terram alWathani - 10 ships
+#19 - Soldier Isu - 10 ships
+#20 - Pippinthehobbit - 9 ships
+#21 - WeirdBall - 8 ships
+#22 - Baron VonSchniffle - 8 ships
+#23 - Myra Vixen - 7 ships
+#24 - Severin Talvan - 7 ships
+#25 - Crazymooon - 6 ships
+
+Top Stratios pilots - ISK destroyed
+--------------------------------------------
+#01 - Avacado Salad - 6.69b
+#02 - Mei Long - 5.84b
+#03 - Malak Saren - 4.85b
+#04 - Reed Icculus - 4.36b
+#05 - TOPSTER - 3.50b
+#06 - Jin Hadah - 3.25b
+#07 - WeirdBall - 2.68b
+#08 - minold heifer - 2.56b
+#09 - Buster Atmosk - 2.18b
+#10 - Czechbox - 1.99b
+#11 - Al3x Oaks - 1.90b
+#12 - Myra Vixen - 1.82b
+#13 - Ronni Ormand - 1.51b
+#14 - Soldier Isu - 1.46b
+#15 - Epoch Veli - 1.30b
+#16 - Delta Rescue - 1.09b
+#17 - Bdan en Gravonere - 1.07b
+#18 - Kanly Aideron - 1.02b
+#19 - Ransom Odunen - 0.92b
+#20 - NoGo Rose - 0.90b
+#21 - Crazymooon - 0.87b
+#22 - Daff Punk - 0.85b
+#23 - Crankball - 0.72b
+#24 - Arcdale - 0.72b
+#25 - Pippinthehobbit - 0.69b

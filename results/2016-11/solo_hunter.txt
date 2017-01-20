@@ -1,0 +1,55 @@
+Solo ships destroyed
+--------------------------------------------
+#01 - Al3x Oaks - 74 ships
+#02 - Arcdale - 61 ships
+#03 - Avacado Salad - 59 ships
+#04 - Capcan - 54 ships
+#05 - TOPSTER - 36 ships
+#06 - Bdan en Gravonere - 29 ships
+#07 - Mei Long - 25 ships
+#08 - Sachenka Cadelanne - 22 ships
+#09 - Myra Vixen - 20 ships
+#10 - Reed Icculus - 20 ships
+#11 - Blackhawk Bordeaux - 20 ships
+#12 - NoGo Rose - 18 ships
+#13 - Mister McQueen - 16 ships
+#14 - Corrupted Aideron - 15 ships
+#15 - Grant Adoudel - 15 ships
+#16 - Baron VonSchniffle - 15 ships
+#17 - Nik Volsk - 14 ships
+#18 - Terram alWathani - 14 ships
+#19 - Fash Zifsork - 14 ships
+#20 - Buster Atmosk - 12 ships
+#21 - Jin Hadah - 12 ships
+#22 - Mike X Katelo - 12 ships
+#23 - Crankball - 11 ships
+#24 - Crazy Dogbreath - 10 ships
+#25 - Chance Ravinne - 10 ships
+
+Solo ISK destroyed
+--------------------------------------------
+#01 - SoftCore - 2.59b
+#02 - Al3x Oaks - 1.93b
+#03 - Epoch Veli - 1.13b
+#04 - Avacado Salad - 1.13b
+#05 - Bdan en Gravonere - 0.96b
+#06 - Arcdale - 0.89b
+#07 - Buster Atmosk - 0.63b
+#08 - Mei Long - 0.56b
+#09 - Reed Icculus - 0.56b
+#10 - Baron VonSchniffle - 0.47b
+#11 - Jin Hadah - 0.44b
+#12 - Nesver Rahn - 0.44b
+#13 - Polly Agstrom - 0.42b
+#14 - Grant Adoudel - 0.42b
+#15 - Blackhawk Bordeaux - 0.38b
+#16 - Severin Talvan - 0.37b
+#17 - Ronni Ormand - 0.34b
+#18 - Mister McQueen - 0.33b
+#19 - Orianna Okanata - 0.33b
+#20 - Bustrr Bluth - 0.29b
+#21 - TOPSTER - 0.28b
+#22 - Lucien Dracco - 0.28b
+#23 - Capcan - 0.27b
+#24 - Soldier Isu - 0.26b
+#25 - Wolvy Badasaz - 0.24b

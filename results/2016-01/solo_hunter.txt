@@ -1,0 +1,55 @@
+Solo ships destroyed
+--------------------------------------------
+#01 - Eridanii - 91 ships
+#02 - Myra Vixen - 45 ships
+#03 - Al3x Oaks - 40 ships
+#04 - brainwhacker - 32 ships
+#05 - Bustrr Bluth - 29 ships
+#06 - Tasmine Cha-Tien - 23 ships
+#07 - Dakodai - 18 ships
+#08 - Massive Black - 18 ships
+#09 - Sharps - 17 ships
+#10 - Zip Zap WaPZaP - 17 ships
+#11 - Greattorian - 15 ships
+#12 - Inta Vakaria - 15 ships
+#13 - Reed Icculus - 15 ships
+#14 - Touretes - 14 ships
+#15 - Estebanzo Rufius - 13 ships
+#16 - Lenai Chelien - 13 ships
+#17 - Boexl - 12 ships
+#18 - Narcisse Nightmare - 11 ships
+#19 - Tisiphone Dira - 11 ships
+#20 - Galinik Jmob - 10 ships
+#21 - Merlin Avalon - 10 ships
+#22 - choo t - 10 ships
+#23 - Sabrez Haklar - 9 ships
+#24 - Tora SenPie - 9 ships
+#25 - Mei Long - 9 ships
+
+Solo ISK destroyed
+--------------------------------------------
+#01 - Dakodai - 2.81b
+#02 - Estebanzo Rufius - 2.47b
+#03 - Al3x Oaks - 2.42b
+#04 - Hateful Heart - 1.64b
+#05 - Eridanii - 1.56b
+#06 - Tasmine Cha-Tien - 1.28b
+#07 - Myra Vixen - 1.10b
+#08 - Zip Zap WaPZaP - 0.94b
+#09 - Massive Black - 0.88b
+#10 - brainwhacker - 0.85b
+#11 - Zen Dad - 0.83b
+#12 - Onimuru - 0.80b
+#13 - Greattorian - 0.78b
+#14 - Galinik Jmob - 0.66b
+#15 - Saria Dehmov - 0.57b
+#16 - Junako Zelkarr - 0.43b
+#17 - Narcisse Nightmare - 0.40b
+#18 - Merlin Avalon - 0.38b
+#19 - Rob Tsukaya - 0.37b
+#20 - Touretes - 0.36b
+#21 - Bustrr Bluth - 0.35b
+#22 - Sharps - 0.35b
+#23 - Inta Vakaria - 0.30b
+#24 - Dentric Crendraven - 0.29b
+#25 - Vargo Shahni - 0.29b

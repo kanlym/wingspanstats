@@ -1,0 +1,23 @@
+
+.results {
+  border-collapse: collapse;
+}
+
+.results th {
+  border-bottom: 1px solid;
+}
+.results td, .results th {
+  border-left: 1px solid;
+  padding: 5px 10px;
+}
+.results td:first-child, .results th:first-child {
+  border-left: none;
+}
+
+.sortorder:after {
+  content: '\25b2';   // BLACK UP-POINTING TRIANGLE
+}
+.sortorder.reverse:after {
+  content: '\25bc';   // BLACK DOWN-POINTING TRIANGLE
+}
+

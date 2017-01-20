@@ -1,0 +1,55 @@
+Ships destroyed in a fleet
+--------------------------------------------
+#01 - Avacado Salad - 84 ships
+#02 - Malak Saren - 58 ships
+#03 - TOPSTER - 53 ships
+#04 - Mei Long - 47 ships
+#05 - minold heifer - 37 ships
+#06 - Gillion Wyrddych - 36 ships
+#07 - Jin Hadah - 36 ships
+#08 - Al3x Oaks - 32 ships
+#09 - Czechbox - 31 ships
+#10 - Pippinthehobbit - 30 ships
+#11 - NoGo Rose - 30 ships
+#12 - Lexa Griffin - 29 ships
+#13 - Mo Todoka - 28 ships
+#14 - Ronni Ormand - 27 ships
+#15 - Trip Erata - 27 ships
+#16 - Bdan en Gravonere - 26 ships
+#17 - Baron VonSchniffle - 25 ships
+#18 - Buster Atmosk - 25 ships
+#19 - Schrade - 25 ships
+#20 - Reed Icculus - 25 ships
+#21 - Vek Chiasson - 22 ships
+#22 - Ishtar d'Asmodai - 21 ships
+#23 - Fash Zifsork - 20 ships
+#24 - Fyodor Ivanov Svoboda - 18 ships
+#25 - SsjGhost - 16 ships
+
+ISK destroyed in a fleet
+--------------------------------------------
+#01 - Avacado Salad - 17.94b
+#02 - Malak Saren - 11.97b
+#03 - minold heifer - 10.92b
+#04 - Schrade - 10.83b
+#05 - Lexa Griffin - 10.78b
+#06 - Trip Erata - 10.66b
+#07 - Mei Long - 9.08b
+#08 - Gillion Wyrddych - 8.69b
+#09 - Czechbox - 8.47b
+#10 - Buster Atmosk - 8.28b
+#11 - Mo Todoka - 7.73b
+#12 - Vek Chiasson - 6.89b
+#13 - Pippinthehobbit - 6.53b
+#14 - lashana darkmoon - 6.35b
+#15 - Rmdir Fdisk - 5.77b
+#16 - Al3x Oaks - 5.71b
+#17 - WeirdBall - 5.60b
+#18 - Jin Hadah - 5.45b
+#19 - TOPSTER - 4.81b
+#20 - NoGo Rose - 4.70b
+#21 - Grimm Horizon - 4.67b
+#22 - Fash Zifsork - 4.41b
+#23 - Reed Icculus - 3.84b
+#24 - Wolvy Badasaz - 3.72b
+#25 - Djari Sah - 3.52b

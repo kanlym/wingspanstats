@@ -1,0 +1,55 @@
+Top Recon pilots - ships destroyed
+--------------------------------------------
+#01 - Mei Long - 31 ships
+#02 - Tasmine Cha-Tien - 22 ships
+#03 - SsjGhost - 12 ships
+#04 - Revan Wake - 12 ships
+#05 - Arcdale - 11 ships
+#06 - minold heifer - 10 ships
+#07 - Gillion Wyrddych - 9 ships
+#08 - Bails Naskingar - 9 ships
+#09 - Avacado Salad - 9 ships
+#10 - Reed Icculus - 8 ships
+#11 - Stanis Solar - 7 ships
+#12 - Blackhawk Bordeaux - 7 ships
+#13 - Eithros - 6 ships
+#14 - Pippinthehobbit - 6 ships
+#15 - Jedi VanDiemen - 6 ships
+#16 - Xepheer - 6 ships
+#17 - Vothor - 5 ships
+#18 - Jin Hadah - 5 ships
+#19 - Menaiya Zamayid - 5 ships
+#20 - TOPSTER - 5 ships
+#21 - Jack The Slipper - 4 ships
+#22 - Doris Andedarie - 4 ships
+#23 - QuarantineEng - 3 ships
+#24 - Hyper Traxx - 3 ships
+#25 - Sharps - 2 ships
+
+Top Recon pilots - ISK destroyed
+--------------------------------------------
+#01 - Mei Long - 9.17b
+#02 - Bails Naskingar - 5.53b
+#03 - SsjGhost - 4.71b
+#04 - Blackhawk Bordeaux - 4.02b
+#05 - Avacado Salad - 3.88b
+#06 - Tasmine Cha-Tien - 3.47b
+#07 - Pippinthehobbit - 3.46b
+#08 - minold heifer - 3.42b
+#09 - Vothor - 3.15b
+#10 - Gillion Wyrddych - 2.46b
+#11 - Stanis Solar - 1.95b
+#12 - Doris Andedarie - 1.84b
+#13 - TOPSTER - 1.76b
+#14 - Dakodai - 1.70b
+#15 - Eithros - 1.10b
+#16 - Jin Hadah - 0.99b
+#17 - Reed Icculus - 0.97b
+#18 - Arcdale - 0.78b
+#19 - Jedi VanDiemen - 0.72b
+#20 - Revan Wake - 0.70b
+#21 - NoGo Rose - 0.49b
+#22 - Jack The Slipper - 0.47b
+#23 - Schrade - 0.43b
+#24 - QuarantineEng - 0.33b
+#25 - Menaiya Zamayid - 0.23b

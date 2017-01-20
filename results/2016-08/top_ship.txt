@@ -1,0 +1,55 @@
+Ships destroyed by a specific hull
+--------------------------------------------
+#01 - Stratios - 431 ships
+#02 - Manticore - 169 ships
+#03 - Nemesis - 122 ships
+#04 - Purifier - 96 ships
+#05 - Pilgrim - 70 ships
+#06 - Proteus - 59 ships
+#07 - Hound - 52 ships
+#08 - Astero - 52 ships
+#09 - Svipul - 37 ships
+#10 - Nestor - 31 ships
+#11 - Falcon - 26 ships
+#12 - Rapier - 21 ships
+#13 - Arazu - 21 ships
+#14 - Tengu - 20 ships
+#15 - Loki - 20 ships
+#16 - Sabre - 19 ships
+#17 - Orthrus - 17 ships
+#18 - Federation Navy Comet - 14 ships
+#19 - Hecate - 11 ships
+#20 - Onyx - 10 ships
+#21 - Widow - 9 ships
+#22 - Breacher - 9 ships
+#23 - Tristan - 8 ships
+#24 - Heretic - 8 ships
+#25 - Condor - 8 ships
+
+ISK destroyed by a specific hull
+--------------------------------------------
+#01 - Stratios - 158.11b
+#02 - Nemesis - 58.53b
+#03 - Manticore - 49.09b
+#04 - Purifier - 29.67b
+#05 - Hound - 17.94b
+#06 - Proteus - 14.95b
+#07 - Astero - 10.87b
+#08 - Arazu - 10.20b
+#09 - Legion - 9.92b
+#10 - Pilgrim - 8.97b
+#11 - Falcon - 7.91b
+#12 - Eris - 7.28b
+#13 - Curse - 6.36b
+#14 - Nestor - 5.09b
+#15 - Rapier - 4.56b
+#16 - Tengu - 3.62b
+#17 - Heretic - 2.87b
+#18 - Orthrus - 2.53b
+#19 - Loki - 2.12b
+#20 - Nightmare - 1.99b
+#21 - Widow - 1.98b
+#22 - Confessor - 1.91b
+#23 - Phobos - 1.88b
+#24 - Onyx - 1.79b
+#25 - Megathron - 1.72b

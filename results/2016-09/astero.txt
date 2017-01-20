@@ -1,0 +1,47 @@
+Top Astero pilots - ships destroyed
+--------------------------------------------
+#01 - Alebrelle Kuatu - 14 ships
+#02 - Avacado Salad - 14 ships
+#03 - Arcdale - 13 ships
+#04 - Inta Vakaria - 8 ships
+#05 - Vhiric - 4 ships
+#06 - Eithros - 4 ships
+#07 - Fl0w Onzo - 4 ships
+#08 - Bdan en Gravonere - 4 ships
+#09 - Blast Infinity - 3 ships
+#10 - Valiant Winter - 3 ships
+#11 - Ransom Odunen - 2 ships
+#12 - Vignar - 2 ships
+#13 - Iracus Varanu - 2 ships
+#14 - Stanis Solar - 2 ships
+#15 - Mrs Boom - 2 ships
+#16 - Vothor - 1 ships
+#17 - Jeremaya Bones - 1 ships
+#18 - Ronni Ormand - 1 ships
+#19 - Grant Adoudel - 1 ships
+#20 - Darth Hinken - 1 ships
+#21 - Fronstryns Tiger - 1 ships
+
+Top Astero pilots - ISK destroyed
+--------------------------------------------
+#01 - Blast Infinity - 1.64b
+#02 - Alebrelle Kuatu - 0.97b
+#03 - Arcdale - 0.48b
+#04 - Avacado Salad - 0.41b
+#05 - Vignar - 0.25b
+#06 - Fl0w Onzo - 0.16b
+#07 - Ronni Ormand - 0.13b
+#08 - Fronstryns Tiger - 0.09b
+#09 - Inta Vakaria - 0.08b
+#10 - Stanis Solar - 0.08b
+#11 - Valiant Winter - 0.08b
+#12 - Iracus Varanu - 0.07b
+#13 - Ransom Odunen - 0.04b
+#14 - Darth Hinken - 0.04b
+#15 - Vothor - 0.03b
+#16 - Eithros - 0.01b
+#17 - Mrs Boom - 0.00b
+#18 - Jeremaya Bones - 0.00b
+#19 - Bdan en Gravonere - 0.00b
+#20 - Vhiric - 0.00b
+#21 - Grant Adoudel - 0.00b

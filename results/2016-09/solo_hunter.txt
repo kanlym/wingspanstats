@@ -1,0 +1,55 @@
+Solo ships destroyed
+--------------------------------------------
+#01 - Jeremaya Bones - 104 ships
+#02 - Avacado Salad - 52 ships
+#03 - Tasmine Cha-Tien - 42 ships
+#04 - Al3x Oaks - 36 ships
+#05 - Okaga Utama - 26 ships
+#06 - Reed Icculus - 25 ships
+#07 - Arcdale - 25 ships
+#08 - Kanly Aideron - 21 ships
+#09 - Myra Vixen - 20 ships
+#10 - Eithros - 18 ships
+#11 - Swift Isu - 16 ships
+#12 - Sharps - 15 ships
+#13 - Bdan en Gravonere - 14 ships
+#14 - DeLlave Verdun - 13 ships
+#15 - Corrupted Aideron - 12 ships
+#16 - Mei Long - 12 ships
+#17 - Crankball - 10 ships
+#18 - Malak Saren - 9 ships
+#19 - Findlaech - 9 ships
+#20 - Grant Adoudel - 8 ships
+#21 - Chance Ravinne - 7 ships
+#22 - Lexa Griffin - 6 ships
+#23 - Sabrez Haklar - 6 ships
+#24 - Iwata s - 6 ships
+#25 - Stanis Solar - 6 ships
+
+Solo ISK destroyed
+--------------------------------------------
+#01 - Tasmine Cha-Tien - 7.48b
+#02 - Jeremaya Bones - 1.74b
+#03 - Okaga Utama - 1.63b
+#04 - Ronni Ormand - 0.86b
+#05 - Avacado Salad - 0.83b
+#06 - Bdan en Gravonere - 0.78b
+#07 - DeLlave Verdun - 0.77b
+#08 - Corrupted Aideron - 0.75b
+#09 - Al3x Oaks - 0.59b
+#10 - Malak Saren - 0.55b
+#11 - Blackhawk Bordeaux - 0.47b
+#12 - Lovix - 0.46b
+#13 - Kanly Aideron - 0.45b
+#14 - Arcdale - 0.43b
+#15 - Eithros - 0.38b
+#16 - Narcisse Nightmare - 0.34b
+#17 - Reed Icculus - 0.31b
+#18 - Swift Isu - 0.29b
+#19 - Miles Bothari - 0.29b
+#20 - Jessica Two-Wolves - 0.28b
+#21 - Vothor - 0.27b
+#22 - Grant Adoudel - 0.26b
+#23 - Vignar - 0.25b
+#24 - Stanis Solar - 0.23b
+#25 - Mike X Katelo - 0.19b

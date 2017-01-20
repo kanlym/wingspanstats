@@ -1,0 +1,55 @@
+Top Stratios pilots - ships destroyed
+--------------------------------------------
+#01 - Avacado Salad - 81 ships
+#02 - WeirdBall - 35 ships
+#03 - Findlaech - 27 ships
+#04 - Ben D'Eath - 23 ships
+#05 - Quintus Va'Lari - 19 ships
+#06 - Arcdale - 19 ships
+#07 - Narcisse Nightmare - 18 ships
+#08 - Psyche Ambraelle - 13 ships
+#09 - Alebrelle Kuatu - 12 ships
+#10 - Gillion Wyrddych - 11 ships
+#11 - SoftCore - 11 ships
+#12 - Valtyr Farshield - 11 ships
+#13 - Okaga Utama - 11 ships
+#14 - Mei Long - 11 ships
+#15 - Amielia Evangelon - 9 ships
+#16 - Glade Radner - 8 ships
+#17 - v3rmin - 8 ships
+#18 - Xavier Hex - 8 ships
+#19 - Grant Adoudel - 7 ships
+#20 - Bails Naskingar - 7 ships
+#21 - Darth Hinken - 5 ships
+#22 - Mrs Boom - 5 ships
+#23 - Banshee Legend - 5 ships
+#24 - Dakodai - 5 ships
+#25 - Inta Vakaria - 5 ships
+
+Top Stratios pilots - ISK destroyed
+--------------------------------------------
+#01 - Findlaech - 25.40b
+#02 - Valtyr Farshield - 18.95b
+#03 - Avacado Salad - 15.07b
+#04 - WeirdBall - 12.76b
+#05 - Ben D'Eath - 12.23b
+#06 - v3rmin - 8.00b
+#07 - Glaedyr - 7.26b
+#08 - Glade Radner - 7.09b
+#09 - Pyro Silf - 6.96b
+#10 - Narcisse Nightmare - 5.54b
+#11 - Quintus Va'Lari - 4.40b
+#12 - Mei Long - 4.37b
+#13 - Alebrelle Kuatu - 2.84b
+#14 - Amielia Evangelon - 2.55b
+#15 - Grant Adoudel - 2.54b
+#16 - Gillion Wyrddych - 2.09b
+#17 - SoftCore - 2.06b
+#18 - Bails Naskingar - 2.01b
+#19 - Xavier Hex - 1.81b
+#20 - Arcdale - 1.49b
+#21 - Banshee Legend - 1.46b
+#22 - Mrs Boom - 1.32b
+#23 - Lexa Griffin - 1.21b
+#24 - Inta Vakaria - 1.17b
+#25 - Okaga Utama - 0.94b

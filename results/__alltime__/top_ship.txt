@@ -1,0 +1,55 @@
+Ships destroyed by a specific hull
+--------------------------------------------
+#01 - Stratios - 645 ships
+#02 - Astero - 285 ships
+#03 - Tengu - 240 ships
+#04 - Nemesis - 186 ships
+#05 - Manticore - 170 ships
+#06 - Hound - 100 ships
+#07 - Rapier - 64 ships
+#08 - Orthrus - 50 ships
+#09 - Thrasher - 41 ships
+#10 - Caracal - 37 ships
+#11 - Proteus - 31 ships
+#12 - Vexor - 31 ships
+#13 - Omen - 31 ships
+#14 - Dramiel - 29 ships
+#15 - Falcon - 25 ships
+#16 - Purifier - 23 ships
+#17 - Loki - 23 ships
+#18 - Sabre - 22 ships
+#19 - Onyx - 21 ships
+#20 - Broadsword - 20 ships
+#21 - Pilgrim - 15 ships
+#22 - Heron - 13 ships
+#23 - Vigilant - 12 ships
+#24 - Nestor - 10 ships
+#25 - Sleipnir - 9 ships
+
+ISK destroyed by a specific hull
+--------------------------------------------
+#01 - Stratios - 119.90b
+#02 - Manticore - 70.35b
+#03 - Nemesis - 57.49b
+#04 - Tengu - 51.12b
+#05 - Hound - 48.17b
+#06 - Caracal - 29.91b
+#07 - Astero - 25.94b
+#08 - Rapier - 18.40b
+#09 - Purifier - 9.53b
+#10 - Orthrus - 7.36b
+#11 - Dramiel - 7.14b
+#12 - Sleipnir - 6.42b
+#13 - Loki - 6.37b
+#14 - Scythe - 6.18b
+#15 - Onyx - 6.17b
+#16 - Legion - 6.01b
+#17 - Nidhoggur - 5.87b
+#18 - Sacrilege - 5.46b
+#19 - Vexor - 5.26b
+#20 - Falcon - 4.86b
+#21 - Naglfar - 4.37b
+#22 - Curse - 4.21b
+#23 - Bellicose - 3.67b
+#24 - Eagle - 3.67b
+#25 - Moa - 3.66b

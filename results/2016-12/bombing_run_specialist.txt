@@ -1,0 +1,27 @@
+Top Bombing Run Specialists - ships destroyed
+--------------------------------------------
+#01 - Ladas Gladius Augustus - 13 ships
+#02 - ianDao - 12 ships
+#03 - Daniel Miguel Valiente - 11 ships
+#04 - Shaellon - 5 ships
+#05 - Corren Constantine - 3 ships
+#06 - Alex Kiorn - 2 ships
+#07 - Bustrr Bluth - 2 ships
+#08 - TOPSTER - 2 ships
+#09 - Mei Long - 1 ships
+#10 - WeirdBall - 1 ships
+#11 - Procyon Alcyone - 1 ships
+
+Top Bombing Run Specialists - ISK destroyed
+--------------------------------------------
+#01 - Shaellon - 2.65b
+#02 - ianDao - 0.86b
+#03 - Ladas Gladius Augustus - 0.82b
+#04 - Daniel Miguel Valiente - 0.77b
+#05 - Corren Constantine - 0.09b
+#06 - Alex Kiorn - 0.04b
+#07 - TOPSTER - 0.04b
+#08 - WeirdBall - 0.03b
+#09 - Procyon Alcyone - 0.03b
+#10 - Bustrr Bluth - 0.00b
+#11 - Mei Long - 0.00b

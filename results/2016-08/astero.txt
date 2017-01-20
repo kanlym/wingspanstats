@@ -1,0 +1,31 @@
+Top Astero pilots - ships destroyed
+--------------------------------------------
+#01 - Arcdale - 18 ships
+#02 - Avacado Salad - 13 ships
+#03 - Vignar - 7 ships
+#04 - Alebrelle Kuatu - 3 ships
+#05 - Vargo Shahni - 2 ships
+#06 - Amielia Evangelon - 2 ships
+#07 - Xan Dievs - 1 ships
+#08 - Ronni Ormand - 1 ships
+#09 - Ishtar d'Asmodai - 1 ships
+#10 - Darth Hinken - 1 ships
+#11 - Inta Vakaria - 1 ships
+#12 - Gort getrekt - 1 ships
+#13 - Zivilis Windrunner - 1 ships
+
+Top Astero pilots - ISK destroyed
+--------------------------------------------
+#01 - Alebrelle Kuatu - 7.33b
+#02 - Avacado Salad - 1.37b
+#03 - Vignar - 0.56b
+#04 - Arcdale - 0.53b
+#05 - Vargo Shahni - 0.35b
+#06 - Darth Hinken - 0.30b
+#07 - Amielia Evangelon - 0.19b
+#08 - Xan Dievs - 0.12b
+#09 - Ishtar d'Asmodai - 0.08b
+#10 - Zivilis Windrunner - 0.02b
+#11 - Ronni Ormand - 0.01b
+#12 - Inta Vakaria - 0.00b
+#13 - Gort getrekt - 0.00b

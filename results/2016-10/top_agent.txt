@@ -1,0 +1,55 @@
+Ships destroyed
+--------------------------------------------
+#01 - Mei Long - 128 ships
+#02 - Kanly Aideron - 123 ships
+#03 - Tasmine Cha-Tien - 121 ships
+#04 - Avacado Salad - 116 ships
+#05 - Mister McQueen - 90 ships
+#06 - Jin Hadah - 84 ships
+#07 - Stanis Solar - 79 ships
+#08 - Lexa Griffin - 78 ships
+#09 - DeLlave Verdun - 72 ships
+#10 - Pippinthehobbit - 64 ships
+#11 - Cristos Grimblade - 63 ships
+#12 - Priestez - 60 ships
+#13 - Malak Saren - 58 ships
+#14 - Cross Ghasha - 55 ships
+#15 - Doris Andedarie - 53 ships
+#16 - Jack The Slipper - 52 ships
+#17 - SsjGhost - 52 ships
+#18 - Ishtar d'Asmodai - 51 ships
+#19 - Schrade - 51 ships
+#20 - Al3x Oaks - 49 ships
+#21 - Okaga Utama - 49 ships
+#22 - Arcdale - 47 ships
+#23 - Revan Wake - 46 ships
+#24 - Quintus Va'Lari - 45 ships
+#25 - Billy Dee Billions - 44 ships
+
+ISK destroyed
+--------------------------------------------
+#01 - Lexa Griffin - 27.49b
+#02 - Mei Long - 27.11b
+#03 - Avacado Salad - 22.39b
+#04 - Kanly Aideron - 20.73b
+#05 - Tasmine Cha-Tien - 20.36b
+#06 - Priestez - 16.30b
+#07 - Stanis Solar - 14.67b
+#08 - Jin Hadah - 13.01b
+#09 - Schrade - 12.55b
+#10 - Buster Atmosk - 12.52b
+#11 - Archimedes Vanguard - 9.93b
+#12 - Pippinthehobbit - 9.92b
+#13 - Sharps - 9.89b
+#14 - minold heifer - 9.58b
+#15 - Mister McQueen - 9.31b
+#16 - Inta Vakaria - 9.21b
+#17 - Mrs Boom - 8.83b
+#18 - Bails Naskingar - 8.55b
+#19 - Sabrez Haklar - 8.54b
+#20 - Grant Adoudel - 7.94b
+#21 - Zontor - 7.94b
+#22 - Alebrelle Kuatu - 7.92b
+#23 - Revan Wake - 7.79b
+#24 - Terram alWathani - 7.62b
+#25 - Caligulas - 7.58b

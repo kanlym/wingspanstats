@@ -1,0 +1,55 @@
+Solo ships destroyed
+--------------------------------------------
+#01 - Al3x Oaks - 118 ships
+#02 - Avacado Salad - 107 ships
+#03 - Capcan - 99 ships
+#04 - Bdan en Gravonere - 70 ships
+#05 - DeLlave Verdun - 61 ships
+#06 - TOPSTER - 58 ships
+#07 - Shaellon - 53 ships
+#08 - Mei Long - 37 ships
+#09 - WeirdBall - 36 ships
+#10 - Crazy Dogbreath - 34 ships
+#11 - Cloaks McGee - 33 ships
+#12 - Pippinthehobbit - 33 ships
+#13 - CyanideLeviathan - 30 ships
+#14 - Jessi MalDoran - 28 ships
+#15 - Okaga Utama - 28 ships
+#16 - Arcdale - 28 ships
+#17 - Epoch Veli - 27 ships
+#18 - Malak Saren - 26 ships
+#19 - Swift Isu - 21 ships
+#20 - Crankball - 21 ships
+#21 - Terram alWathani - 21 ships
+#22 - Vek Chiasson - 20 ships
+#23 - Darum Rinah - 19 ships
+#24 - Colin Landis - 19 ships
+#25 - Corrupted Aideron - 18 ships
+
+Solo ISK destroyed
+--------------------------------------------
+#01 - WeirdBall - 5.36b
+#02 - Avacado Salad - 2.74b
+#03 - Al3x Oaks - 2.42b
+#04 - Bdan en Gravonere - 1.84b
+#05 - Terram alWathani - 1.58b
+#06 - Capcan - 1.56b
+#07 - Colin Landis - 1.32b
+#08 - Quintus Va'Lari - 1.14b
+#09 - Chance Ravinne - 1.11b
+#10 - Severin Talvan - 1.02b
+#11 - Darum Rinah - 0.85b
+#12 - Mei Long - 0.72b
+#13 - Trip Erata - 0.67b
+#14 - DeLlave Verdun - 0.62b
+#15 - Inta Vakaria - 0.61b
+#16 - Pippinthehobbit - 0.61b
+#17 - Tasmine Cha-Tien - 0.53b
+#18 - Arcdale - 0.53b
+#19 - Cloaks McGee - 0.49b
+#20 - Malak Saren - 0.47b
+#21 - TOPSTER - 0.45b
+#22 - Baron VonSchniffle - 0.39b
+#23 - Jessi MalDoran - 0.39b
+#24 - Zevenz - 0.37b
+#25 - Flint Lowell - 0.36b

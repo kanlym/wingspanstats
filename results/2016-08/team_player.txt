@@ -1,0 +1,55 @@
+Ships destroyed in a fleet
+--------------------------------------------
+#01 - Avacado Salad - 77 ships
+#02 - Quintus Va'Lari - 56 ships
+#03 - Amielia Evangelon - 50 ships
+#04 - Xavier Hex - 45 ships
+#05 - Nicholas Chance Kile - 40 ships
+#06 - Albin wood - 35 ships
+#07 - Mei Long - 30 ships
+#08 - WeirdBall - 26 ships
+#09 - Ben D'Eath - 26 ships
+#10 - QuarantineEng - 26 ships
+#11 - Alebrelle Kuatu - 25 ships
+#12 - Okaga Utama - 24 ships
+#13 - Lexa Griffin - 23 ships
+#14 - Tasmine Cha-Tien - 23 ships
+#15 - Findlaech - 20 ships
+#16 - Valtyr Farshield - 19 ships
+#17 - SoftCore - 18 ships
+#18 - Cap'n Rick Clusterbomb - 18 ships
+#19 - Sabrez Haklar - 18 ships
+#20 - minold heifer - 18 ships
+#21 - Bails Naskingar - 17 ships
+#22 - Gillion Wyrddych - 16 ships
+#23 - Revan Wake - 16 ships
+#24 - Gort getrekt - 14 ships
+#25 - Miranda Aenigma - 13 ships
+
+ISK destroyed in a fleet
+--------------------------------------------
+#01 - Valtyr Farshield - 23.23b
+#02 - Quintus Va'Lari - 19.98b
+#03 - Cap'n Rick Clusterbomb - 19.25b
+#04 - Xavier Hex - 18.53b
+#05 - Avacado Salad - 17.84b
+#06 - Gillion Wyrddych - 17.44b
+#07 - Nicholas Chance Kile - 14.53b
+#08 - Alebrelle Kuatu - 12.86b
+#09 - Ben D'Eath - 12.31b
+#10 - Okaga Utama - 11.89b
+#11 - Findlaech - 11.61b
+#12 - WeirdBall - 11.37b
+#13 - Lexa Griffin - 11.16b
+#14 - Mei Long - 10.42b
+#15 - Gort getrekt - 10.19b
+#16 - Sabrez Haklar - 10.08b
+#17 - minold heifer - 9.75b
+#18 - Ishtar d'Asmodai - 8.22b
+#19 - v3rmin - 8.00b
+#20 - scufitza - 7.52b
+#21 - Blackhawk Bordeaux - 7.26b
+#22 - Glaedyr - 7.26b
+#23 - Glade Radner - 7.09b
+#24 - CreeoniX - 6.96b
+#25 - Pyro Silf - 6.96b

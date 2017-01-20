@@ -1,0 +1,55 @@
+Solo ships destroyed
+--------------------------------------------
+#01 - Al3x Oaks - 42 ships
+#02 - Arcdale - 32 ships
+#03 - Avacado Salad - 26 ships
+#04 - Okaga Utama - 23 ships
+#05 - Findlaech - 23 ships
+#06 - Inta Vakaria - 19 ships
+#07 - WeirdBall - 16 ships
+#08 - Narcisse Nightmare - 15 ships
+#09 - Bails Naskingar - 15 ships
+#10 - Tasmine Cha-Tien - 15 ships
+#11 - Psyche Ambraelle - 13 ships
+#12 - Amielia Evangelon - 9 ships
+#13 - Ethnicolor Akiga - 9 ships
+#14 - Estebanzo Rufius - 8 ships
+#15 - Cap'n Rick Clusterbomb - 8 ships
+#16 - Swift Isu - 8 ships
+#17 - Xavier Hex - 8 ships
+#18 - Quintus Va'Lari - 7 ships
+#19 - Myra Vixen - 6 ships
+#20 - Blackhawk Bordeaux - 6 ships
+#21 - Nicholas Chance Kile - 6 ships
+#22 - Vignar - 6 ships
+#23 - Sharps - 5 ships
+#24 - Mister McQueen - 5 ships
+#25 - Crazy Dogbreath - 5 ships
+
+Solo ISK destroyed
+--------------------------------------------
+#01 - Findlaech - 18.34b
+#02 - Narcisse Nightmare - 2.51b
+#03 - WeirdBall - 1.80b
+#04 - Cap'n Rick Clusterbomb - 1.65b
+#05 - Tasmine Cha-Tien - 1.63b
+#06 - Inta Vakaria - 1.56b
+#07 - Arcdale - 1.07b
+#08 - Okaga Utama - 0.94b
+#09 - Avacado Salad - 0.86b
+#10 - Estebanzo Rufius - 0.69b
+#11 - Cloaks McGee - 0.44b
+#12 - Vignar - 0.43b
+#13 - Rob Tsukaya - 0.39b
+#14 - Amielia Evangelon - 0.36b
+#15 - Vargo Shahni - 0.35b
+#16 - Xavier Hex - 0.29b
+#17 - Al3x Oaks - 0.23b
+#18 - Crazy Dogbreath - 0.23b
+#19 - Swift Isu - 0.23b
+#20 - Mei Long - 0.20b
+#21 - Psyche Ambraelle - 0.18b
+#22 - Blackhawk Bordeaux - 0.18b
+#23 - Ethnicolor Akiga - 0.17b
+#24 - Myra Vixen - 0.16b
+#25 - Eithros - 0.15b

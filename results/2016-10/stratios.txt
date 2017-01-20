@@ -1,0 +1,55 @@
+Top Stratios pilots - ships destroyed
+--------------------------------------------
+#01 - Kanly Aideron - 84 ships
+#02 - Avacado Salad - 50 ships
+#03 - Mei Long - 41 ships
+#04 - Arcdale - 33 ships
+#05 - Al3x Oaks - 23 ships
+#06 - Archimedes Vanguard - 18 ships
+#07 - Grant Adoudel - 18 ships
+#08 - Sabrez Haklar - 18 ships
+#09 - Mrs Boom - 17 ships
+#10 - Jin Hadah - 16 ships
+#11 - Rev A - 16 ships
+#12 - Jack The Slipper - 15 ships
+#13 - wvshadow miller - 15 ships
+#14 - Cristos Grimblade - 15 ships
+#15 - Ronni Ormand - 14 ships
+#16 - QuarantineEng - 12 ships
+#17 - Reed Icculus - 10 ships
+#18 - Gareth Adoudel - 10 ships
+#19 - Ishtar d'Asmodai - 7 ships
+#20 - Ben D'Eath - 7 ships
+#21 - Terram alWathani - 6 ships
+#22 - Crankball - 6 ships
+#23 - Eithros - 6 ships
+#24 - May'n Nome - 6 ships
+#25 - SoftCore - 6 ships
+
+Top Stratios pilots - ISK destroyed
+--------------------------------------------
+#01 - Avacado Salad - 12.10b
+#02 - Kanly Aideron - 9.98b
+#03 - Mrs Boom - 8.71b
+#04 - Mei Long - 7.71b
+#05 - Sabrez Haklar - 7.06b
+#06 - Grant Adoudel - 6.76b
+#07 - Eithros - 5.24b
+#08 - Gareth Adoudel - 5.09b
+#09 - Archimedes Vanguard - 4.80b
+#10 - Alebrelle Kuatu - 3.87b
+#11 - Jack The Slipper - 3.13b
+#12 - Myra Vixen - 2.54b
+#13 - Okaga Utama - 2.52b
+#14 - Darth Hinken - 2.52b
+#15 - Caligulas - 2.50b
+#16 - Jin Hadah - 2.38b
+#17 - Ronni Ormand - 2.16b
+#18 - Arcdale - 2.03b
+#19 - Reed Icculus - 1.80b
+#20 - Al3x Oaks - 1.63b
+#21 - Rev A - 1.43b
+#22 - QuarantineEng - 1.37b
+#23 - Cristos Grimblade - 1.08b
+#24 - Gillion Wyrddych - 0.99b
+#25 - Quintus Va'Lari - 0.96b
