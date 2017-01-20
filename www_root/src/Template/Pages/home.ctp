@@ -39,30 +39,29 @@ endif;
             <div class="row">
             <?
                 // debug($shipsData->ships);die();
+                // debug($bombersData);die();
             ?>
-               <?= $this->element('headrows/row',array('icon'=>'fa-trophy','title'=>'Top agents','headNumber'=>'1/'.count($agentData->agents) .' agents','headText'=>$agentData->agents[0]->character_name,'color'=>'wingspan','link'=>'/stats/agents/'/* yellow */));?>
-               <?= $this->element('headrows/row',array('icon'=>'fa-tasks','title'=>'Top ships','headNumber'=>$shipsData->ships[0]->ships_destroyed . ' kills','headText'=>$shipsData->ships[0]->ship_name,'color'=>'wingspan','link'=>'/home' /* yellow */));?>
-               <?= $this->element('headrows/row',array('icon'=>'fa-rocket','title'=>'Top stratios kills','headNumber'=>$stratiosData->agents[0]->ships_destroyed .' kills','headText'=>$stratiosData->agents[0]->character_name,'color'=>'wingspan','link'=>'/stats/stratios/' /* yellow */));?>
-               <?= $this->element('headrows/row',array('icon'=>'fa-bomb','title'=>'Top bomber kills','headNumber'=>$bombersData->agents[0]->ships_destroyed .' kills','headText'=>$bombersData->agents[0]->character_name,'color'=>'wingspan','link'=>'/stats/bomber/' /* yellow */));?>
+               <?= $this->element('headrows/row',array('icon'=>'fa-trophy','title'=>'Top agents','headNumber'=>'1/'.count($agentData) .' agents','headText'=>$agentData[0]['character_name'],'color'=>'wingspan','link'=>'/stats/agents/'/* yellow */));?>
+               <?= $this->element('headrows/row',array('icon'=>'fa-tasks','title'=>'Top ships','headNumber'=>$shipsData['0']['totalKills'] . ' kills','headText'=>$shipsData[0]['name'],'color'=>'wingspan','link'=>'/home' /* yellow */));?>
+               <?= $this->element('headrows/row',array('icon'=>'fa-rocket','title'=>'Top stratios kills','headNumber'=>$stratiosData[0]['noOfKills'] .' kills','headText'=>$stratiosData[0]['agent'],'color'=>'wingspan','link'=>'/stats/stratios/' /* yellow */));?>
+               <?= $this->element('headrows/row',array('icon'=>'fa-bomb','title'=>'Top bomber kills','headNumber'=>$bombersData[0]['ships_killed'] .' kills','headText'=>$bombersData[0]['character_name'],'color'=>'wingspan','link'=>'/stats/bomber/' /* yellow */));?>
             </div>
             <?
-
-            $agentChart = $soloData->agents;
 
             $agentChartData = array();
             for ($i = 0; $i < 8;$i++){
 
                 $agentChartData[] = array(
-                        'nume'=>$agentChart[$i]->character_name,
-                        'ships'=>$agentChart[$i]->ships_destroyed,
+                        'nume'=>$soloData[$i]['character_name'],
+                        'ships'=>$soloData[$i]['ships_killed'],
                         'id'=>'agent_'.$i,
-                        'bani'=>round($agentChart[$i]->isk_destroyed/1000000000,2)
+                        'bani'=>round($soloData[$i]['isk'],2)
                     );
 
             }
             
 
-            // debug($agentChart);die();
+            // debug($generalData);die();
             ?>
                                          
             <script>
@@ -97,12 +96,12 @@ Morris.Bar({
         element: 'general-bar-chart',
         data: [
             <?
-                foreach ($generalData->wh_stats as $g){
+                foreach ($generalData['wh']['details'] as $g){
                     ?>
                      {
-                        y: '<?= $g->type ?>'.toUpperCase(),
-                        a: <?= round($g->total_value / 1000000000,2)  ?>,
-                        b: <?= $g->destroyed ?>
+                        y: 'C<?= $g['system'] ?>'.toUpperCase(),
+                        a: <?= round($g['isk'],2)  ?>,
+                        b: <?= $g['ships'] ?>
                     },
                     <?
                 }
@@ -124,12 +123,12 @@ Morris.Bar({
         data: [
                 <?
                 $pctLeft =  100;
-                    foreach ($shipsChart as $i => $s){
-                        $pctLeft -= $s->pct;
+                    foreach ($shipsData as $i => $s){
+                        $pctLeft -= $s['pct'];
                         ?>
                             {
-                            label: "<?= $s->ship_name . ' ['.$s->ships_destroyed.' kills] ' ?>",
-                            value: <?= $s->pct ?>
+                            label: "<?= $s['name'] . ' ['.$s['totalKills'].' kills] ' ?>",
+                            value: <?= $s['pct'] ?>
                         },
                         <?
                         if ($i == 5) {
@@ -206,28 +205,18 @@ Morris.Bar({
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                             <?
+                                                foreach ($generalData as $g){
+                                            ?>
                                             <tr>
-                                                <td>Wormholes</td>
-                                                <td><?= $generalData->total_kills_wh ?></td>
-                                                <td><?= round($generalData->total_value_wh / 1000000000,2) ?>b</td>
+                                                <td><?= $g['system'] ?></td>
+                                                <td><?= $g['ships'] ?></td>
+                                                <td><?= round($g['isk'] ,2) ?>b</td>
                                             </tr>
 
-                                             <tr>
-                                                <td>High Sec</td>
-                                                <td><?= $generalData->total_kills_hs ?></td>
-                                                <td><?= round($generalData->total_value_hs / 1000000000,2) ?>b</td>
-                                            </tr>
-                                             <tr>
-                                                <td>Low Sec</td>
-                                                <td><?= $generalData->total_kills_ls ?></td>
-                                                <td><?= round($generalData->total_value_ls / 1000000000,2) ?>b</td>
-                                            </tr>
-                                             <tr>
-                                                <td>Null Sec</td>
-                                                <td><?= $generalData->total_kills_ns ?></td>
-                                                <td><?= round($generalData->total_value_ns / 1000000000,2) ?>b</td>
-                                            </tr>                                            
+                                                   
                                             <?
+                                            }
                                             ?>
                                                
                                                 

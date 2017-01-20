@@ -32,6 +32,12 @@ class PagesController extends AppController
         parent::beforeFilter($event);
     $options = array( 'agents', 'astero',  'blops', 'bombers',  'explorer',  'industry', 'interdictors', 'miner', 'nestor', 'recons',  'solo', 'stratios', 't3', 'team', 'thera');
     $this->set('optionsMenu',$options);
+    $this->loadModel('Stats');
+    }
+    public function initialize()
+    {
+        parent::initialize();
+
     }
     /**
      * Displays a view
@@ -43,6 +49,33 @@ class PagesController extends AppController
      */
 
     public function home(){
+        $agentData = $this->Stats->agents($this->dateStart,$this->dateEnd);
+        if (empty($agentData)){
+            die("Crunching numbers, return later");
+        }
+        $shipsData = $this->Stats->topShips($this->dateStart,$this->dateEnd);
+        $stratiosData = $this->Stats->ship('stratios',$this->dateStart ,$this->dateEnd);
+
+
+        $solo = 0;//can be 0 
+        $bombersData = $this->Stats->getGenericByFlownShip($this->Stats->bombers,$solo,$this->dateStart,$this->dateEnd);
+        $soloData = $this->Stats->solo($this->dateStart,$this->dateEnd);
+        
+        $totalNave = 0;
+        foreach ($shipsData as $s){
+            $totalNave += $s['totalKills'];
+        }
+        foreach ($shipsData as $i => $s){
+            $shipsData[$i]['pct'] = round($s['totalKills'] * 100 / $totalNave);
+        }
+        $generalData = $this->Stats->locations($this->dateStart,$this->dateEnd);
+        
+        $this->set(compact('agentData','shipsData','stratiosData','bombersData','soloData','shipsChart','totalNave','generalData'));
+        $this->set(compact('agentData'));
+
+    }
+
+    public function oldhome(){
         // $d = date('Y-m');
         $d ='2017-01';
         $root = 'results/'.$d.'/';

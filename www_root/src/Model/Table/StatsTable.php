@@ -169,7 +169,7 @@ class StatsTable extends Table
         foreach ($results as $r){
             $output[] = $r;
         }
-        $output[] = $wh;
+        $output['wh'] = $wh;
         return $output;
     }
 
@@ -185,7 +185,7 @@ class StatsTable extends Table
                     and kills.date > '$dateStart 00:00:00'
                     and kills.date < '$dateEnd 00:00:00'
                     and partiesInvolved = 1
-                    group by c.character_id,ak.ship_type_id
+                    group by c.character_id
                     ORDER by ships_killed DESC";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
@@ -363,12 +363,32 @@ class StatsTable extends Table
                     WHERE 
                         isOurLoss = 1
                         and c.character_id > 0
+                        and kills.date > '$dateStart 00:00:00'
+                        and kills.date < '$dateEnd 00:00:00'
                     GROUP BY c.character_id
                     ORDER BY efficency DESC";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
         return $results;
-    }        
+    }  
+    public function topShips( $dateStart = false, $dateEnd = false){
+        $ships = implode(',',$this->blops);
+       
+          $query = "SELECT sum(kills.value)/1000000000 as isk, count(kills.kill_id) as totalKills, ship.name from agent_kills as ak
+                        join kills on kills.kill_id = ak.kill_id
+                        join ship_types as ship on ship.ship_type_id = ak.ship_type_id
+                    WHERE 
+                        ak.killingBlow = 1
+                        and kills.isOurLoss = 0
+                        and totalWingspanPct >24
+                        and kills.date > '$dateStart 00:00:00'
+                        and kills.date < '$dateEnd 00:00:00'
+                    GROUP BY ship.ship_type_id
+                    ORDER BY isk DESC";
+        $connection = ConnectionManager::get('default');
+        $results = $connection->execute($query)->fetchAll('assoc');
+        return $results;
+    }      
     /**
      * Default validation rules.
      *

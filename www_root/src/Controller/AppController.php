@@ -28,7 +28,8 @@ use Cake\Event\Event;
  */
 class AppController extends Controller
 {
-
+    public $dateStart = 'unset';
+    public $dateEnd = '';
     /**
      * Initialization hook method.
      *
@@ -55,15 +56,20 @@ class AppController extends Controller
         $this->Cookie->configKey('stats', 'encryption', false);
         $stats = $this->Cookie->read('stats');
         if ($stats == null){
+            $this->dateStart =  $dateStart = '2016-10';
+            $this->dateEnd = $dateEnd = '2016-11';
             $dateStart = date('Y-m').'-01';
             $dateEnd = date('Y-m',strtotime('+1 month')).'-01';
+
             $this->Cookie->write('stats',
                 ['dateStart'=>$dateStart, 'dateEnd'=>$dateEnd]
                 );
         }else{
-            $dateStart= $stats['dateStart'];
-            $dateEnd = $stats['dateEnd'];
+           $this->dateStart = $dateStart= $stats['dateStart'];
+            $this->dateEnd = $dateEnd = $stats['dateEnd'];
         }
+        $this->dateStart =  $dateStart = '2016-10';
+        $this->dateEnd = $dateEnd = '2016-11';
         $this->set(compact('dateStart','dateEnd'));
          $this->set('_serialize', ['dateStart','dateEnd']);
 
