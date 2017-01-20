@@ -6,7 +6,7 @@ use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 use Cake\Datasource\ConnectionManager;
-
+use Cake\Cache\Cache;
 /**
  * Monthstats Model
  *
@@ -71,7 +71,11 @@ class StatsTable extends Table
         $this->primaryKey('statsname');
     }
 
-    public function agents($dateStart,$dateEnd){
+    public function agents($dateStart = false,$dateEnd = false){
+        $cacheKey = 'agents_' . $dateStart. '_'. $dateEnd;
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            return $output;
+        }        
          $query = "SELECT 
             count(ak.kill_id) as kills, c.character_name,sum(value) as isk from agent_kills as ak join kills on kills.kill_id = ak.kill_id
             join characters as c on c.character_id = ak.character_id
@@ -82,10 +86,15 @@ class StatsTable extends Table
             ORDER BY kills DESC";
                 $connection = ConnectionManager::get('default');
                 $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'fivemin');
         return $results;
     }
 
      public function ship($shipName = 'stratios',$dateStart = false,$dateEnd = false){
+        $cacheKey = 'ships_' . $dateStart. '_'. $dateEnd. '_'.md5($shipName);
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            return $output;
+        }
         $query = "SELECT count(ak.kill_id) as noOfKills,
                         sum(damageDone) as damageDone,
                         sum(value)/1000000000 as isk,
@@ -106,10 +115,15 @@ class StatsTable extends Table
                         ";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'fivemin');
         return $results;
     }
 
      public function pilots($pilotName = 'Kanly Aideron',$dateStart = false,$dateEnd = false){
+        $cacheKey = 'pilots_' . $dateStart. '_'. $dateEnd. '_'.md5($pilotName);
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            return $output;
+        }
         $query = "SELECT count(ak.kill_id) as noOfKills,
             sum(ak.killingBlow) as killingShot,
             sum(damageDone) as damageDone,
@@ -132,9 +146,14 @@ class StatsTable extends Table
                         ";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'fivemin');
         return $results;
     }
     public function locations($dateStart = false, $dateEnd = false){
+        $cacheKey = 'locations_' . $dateStart. '_'. $dateEnd;
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            return $output;
+        }
         $query = "SELECT sum(value)/1000000000 as isk,count(kills.kill_id) as ships,system.type as system,isWh,'billion' as currency from kills
                  join solar_systems as system on system.solar_system_id = kills.solar_system_id
 
@@ -170,10 +189,15 @@ class StatsTable extends Table
             $output[] = $r;
         }
         $output['wh'] = $wh;
+        Cache::write($cacheKey,$output,'fivemin');
         return $output;
     }
 
      public function solo($dateStart = false,$dateEnd = false){
+        $cacheKey = 'solo_' . $dateStart. '_'. $dateEnd;
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            return $output;
+        }        
         $query = "SELECT sum(kills.value) /1000000000 as isk ,count(kills.kill_id) as ships_killed ,c.character_name
                     from kills join characters as c on c.character_id = kills.agent_id
                     join agent_kills as ak on kills.kill_id = ak.kill_id and ak.character_id = kills.agent_id
@@ -189,9 +213,14 @@ class StatsTable extends Table
                     ORDER by ships_killed DESC";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'fivemin');
         return $results;
     }
     public function getGenericByFlownShip($ship = array(),$solo = 1, $dateStart = false, $dateEnd = false){
+        $cacheKey = 'sgetGenericByFlownShip_' . $dateStart. '_'. $dateEnd . '_'. $solo .'_' . implode('_',$ship);
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            return $output;
+        }       
         $ships = implode(',',$ship);
         $soloConditions = " and partiesInvolved > 1 ";
         if ($solo == 1){
@@ -213,9 +242,14 @@ class StatsTable extends Table
                     ORDER by ships_killed DESC";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'fivemin');
         return $results;
     }       
     public function getGenericByDestroyedShip($ship = array(),$solo = 1, $dateStart = false, $dateEnd = false){
+         $cacheKey = 'getGenericByDestroyedShip_' . $dateStart. '_'. $dateEnd . '_'. $solo .'_' . implode('_',$ships);
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            return $output;
+        } 
         $ships = implode(',',$ship);
         $soloConditions = " and partiesInvolved > 1 ";
         if ($solo == 1){
@@ -237,9 +271,14 @@ class StatsTable extends Table
                     ORDER by ships_killed DESC";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'fivemin');
         return $results;
     }
       public function getGenericShipFlownShipDestroyed($agntShip = array(),$vicShip = array(),$solo = 1, $dateStart = false, $dateEnd = false){
+        $cacheKey = 'getGenericShipFlownShipDestroyed_' . $dateStart. '_'. $dateEnd . '_'. $solo .'_' . implode('_',$agntShip) .implode('_',$vicShips);
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            return $output;
+        } 
         $agntShips = implode(',',$agntShip);
         $vicShips = implode(',',$vicShip);
         $soloConditions = " and partiesInvolved > 1 ";
@@ -263,10 +302,15 @@ class StatsTable extends Table
                     ORDER by ships_killed DESC";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'fivemin');
         return $results;
     }
     
     public function getLosses($dateStart = false,$dateEnd = false){
+        $cacheKey = 'getLosses_' . $dateStart. '_'. $dateEnd;
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            return $output;
+        } 
         $query = "SELECT 
                             count(ak.kill_id) as kills, 
                             c.character_name,
@@ -283,9 +327,14 @@ class StatsTable extends Table
                 ORDER BY kills DESC;";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'fivemin');
         return $results;
     }
     public function getBiggestLoss($dateStart = false,$dateEnd = false){
+        $cacheKey = 'getBiggestLoss_' . $dateStart. '_'. $dateEnd;
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            return $output;
+        }
         $query = "SELECT 
                             kills.value /  1000000000 as isk,
                             ship.name,
@@ -303,9 +352,14 @@ class StatsTable extends Table
                 ORDER BY isk DESC;";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'fivemin');
         return $results;
     }
     public function miniBlops( $dateStart = false, $dateEnd = false){
+         $cacheKey = 'miniBlops_' . $dateStart. '_'. $dateEnd;
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            return $output;
+        }
         $ships = implode(',',$this->blops);
        
           $query = "SELECT sum(kills.value) / 1000000000 as isk ,count(kills.kill_id) as ships_killed ,c.character_name,partiesInvolved
@@ -324,9 +378,14 @@ class StatsTable extends Table
                     ORDER by ships_killed DESC";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'fivemin');
         return $results;
     }
     public function getAverageDestroyed( $dateStart = false, $dateEnd = false){
+        $cacheKey = 'getAverageDestroyed_' . $dateStart. '_'. $dateEnd;
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            return $output;
+        }
         $ships = implode(',',$this->blops);
        
           $query = "SELECT 
@@ -347,9 +406,14 @@ class StatsTable extends Table
                 ORDER BY efficency DESC";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'fivemin');
         return $results;
     }
     public function getAverageLost( $dateStart = false, $dateEnd = false){
+         $cacheKey = 'getAverageLost_' . $dateStart. '_'. $dateEnd;
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            return $output;
+        }
         $ships = implode(',',$this->blops);
        
           $query = "SELECT 
@@ -369,9 +433,14 @@ class StatsTable extends Table
                     ORDER BY efficency DESC";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'fivemin');
         return $results;
     }  
     public function topShips( $dateStart = false, $dateEnd = false){
+         $cacheKey = 'topShips_' . $dateStart. '_'. $dateEnd;
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            return $output;
+        }
         $ships = implode(',',$this->blops);
        
           $query = "SELECT sum(kills.value)/1000000000 as isk, count(kills.kill_id) as totalKills, ship.name from agent_kills as ak
@@ -387,6 +456,7 @@ class StatsTable extends Table
                     ORDER BY isk DESC";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
+         Cache::write($cacheKey,$results,'fivemin');
         return $results;
     }      
     /**
