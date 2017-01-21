@@ -1,5 +1,4 @@
 <?
-// debug($parsedData);die();
 ?>
 <script>
  $(function() {
@@ -35,7 +34,7 @@
                 <div class="col-lg-8">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <?= $page ?>
+                            Filters
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">

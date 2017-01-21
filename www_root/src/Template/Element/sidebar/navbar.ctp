@@ -24,10 +24,19 @@
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> General stats<span class="fa arrow"></span></a>
                              <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/pages/losses/biggest">Biggest losses</a>
+                                    <a href="/pages/ships"> Top Ships </a>
                                 </li>
                                 <li>
-                                    <a href="/pages/losses/normal">All losses</a>
+                                    <a href="/pages/stats/agents"> Top Agents</a>
+                                </li>
+                                <li>
+                                    <a href="/pages/stats/solo"> Top Solo Agents</a>
+                                </li>
+                                <li>
+                                    <a href="/pages/losses/biggest">Biggest Loss</a>
+                                </li>
+                                <li>
+                                    <a href="/pages/losses/normal">Dedication</a>
                                 </li>
                              </ul>
                         </li>        
@@ -35,13 +44,13 @@
                             <a href="#"><i class="fa fa-table fa-fw"></i> Tripwire stats</a>
                         </li>       
                         <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Agent Stats [LAST HITS]<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Ship stats <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                             <?
-                                foreach ($optionsMenu as $o){
+                                foreach ($optionsMenu as $o => $n){
                                     ?>
                                         <li>
-                                            <a href="/pages/stats/<?=$o?>"><?= $o ?></a>
+                                            <a href="/pages/stats/<?=$o?>"><?= $n ?></a>
                                         </li>
                                         
                                     <?    

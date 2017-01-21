@@ -427,7 +427,7 @@ class ParseShell extends Shell{
 	}
 	public function main(){
 		// $this->updateCorporationForUser(0,1);die();
-		$this->parseOldData();
+		// $this->parseOldData();
 		$this->parseCurrentMonth();
 		// $this->parseJsonSystems();
 		// $this->parseKills();

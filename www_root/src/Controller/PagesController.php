@@ -31,21 +31,18 @@ class PagesController extends AppController
     public function beforeFilter(Event $event){
         parent::beforeFilter($event);
     $options = array( 
-        'agents'
-        , 'astero'
-        ,  'blops'
-        , 'miniBlops'
-        , 'bombers'
-        ,  'explorer'
-
-        ,  'industry'
-        , 'interdictors'
-        , 'miner'
-        , 'nestor'
-        , 'recons'
-        ,  'solo'
-        , 'stratios'
-        , 't3'
+         'astero' => "Flying asteros"
+        ,  'blops' => "Flying blops"
+        , 'miniBlops' => "Flying miniblops"
+        , 'bombers' => "Flying bombers"        
+        , 'interdictors' => "Flying interdictors"    
+        , 'nestor' =>"Flying nestors"
+        , 'recons' =>"Flying recons"
+        , 'stratios' => "Flying strats"
+        , 't3' => "Flyng T3"
+        , 'explorer' => "Killing explorers"
+        , 'industry' => "Killing industrials"
+        , 'miner' => "Killing miners"
         
         
         );
@@ -69,9 +66,9 @@ class PagesController extends AppController
 
     public function home(){
         $agentData = $this->Stats->agents($this->dateStart,$this->dateEnd);
-        if (empty($agentData)){
-            die("Crunching numbers, return later");
-        }
+        // if (empty($agentData)){
+        //     die("Crunching numbers, return later");
+        // }
         $shipsData = $this->Stats->topShips($this->dateStart,$this->dateEnd);
         $solo = 0;//can be 0 
         $stratiosData = $this->Stats->getGenericByFlownShip($this->Stats->stratios,$solo,$this->dateStart,$this->dateEnd);
@@ -89,8 +86,23 @@ class PagesController extends AppController
         $generalData = $this->Stats->locations($this->dateStart,$this->dateEnd);
         
         $this->set(compact('agentData','shipsData','stratiosData','bombersData','soloData','shipsChart','totalNave','generalData'));
-        $this->set(compact('agentData'));
 
+    }
+    public function ships(){
+        $this->viewBuilder()->layout('wingspan');
+         $parsedData = $this->Stats->topShips($this->dateStart,$this->dateEnd);
+           $propList = array(
+                'name',
+                    'totalKills',
+                    'isk',
+                    
+                );
+                $head = array(
+                    'Top Ship',
+                    'Kills',
+                    'Isk Lost',
+                    );
+         $this->set(compact('parsedData','propList','head'));
     }
     public function losses($page = false){
         $this->viewBuilder()->layout('wingspan');
@@ -103,6 +115,7 @@ class PagesController extends AppController
                     'isk',
                     
                 );
+                 $page = "Biggest WDS Loss";
                 $head = array(
                     'Agent',
                     'Ship',
@@ -117,12 +130,14 @@ class PagesController extends AppController
                     'isk',
                     
                 );
+                 $page = "All losses";
                 $head = array(
                     'Agent',
                     'Ships destroyed',
                     'Isk Lost',
                     );
                 break;
+
             default: $parsedData = false;
         }
         
@@ -132,13 +147,24 @@ class PagesController extends AppController
         // $date = '2017-01';
         $this->viewBuilder()->layout('wingspan');
         $prop = 'agents';
+        $extraData = array();
         switch ($page) {
             case 'agents': $parsedData = $this->Stats->agents($this->dateStart,$this->dateEnd);;break;
             case 'astero': $prop = 'ships'; $parsedData = $this->Stats->getGenericByFlownShip($this->Stats->astero,0,$this->dateStart,$this->dateEnd);break;
             // case 'awoxes': $parsedData = 'awoxes'; $prop='kills'; break;
             case 'blops': $prop = 'ships'; $parsedData = $this->Stats->getGenericByFlownShip($this->Stats->blops,0,$this->dateStart,$this->dateEnd);break;
             case 'miniBlops': $prop = 'ships'; $parsedData = $this->Stats->miniBlops($this->dateStart,$this->dateEnd);break;
-            case 'bombers': $prop = 'ships'; $parsedData = $this->Stats->getGenericByFlownShip($this->Stats->bombers,0,$this->dateStart,$this->dateEnd);break;
+            case 'bombers': 
+                $prop = 'ships'; 
+
+                $parsedData = $this->Stats->getGenericByFlownShip($this->Stats->bombers,0,$this->dateStart,$this->dateEnd);
+                $extraData = array(
+                        'nemesis'=> ['data'=> $this->Stats->getGenericByFlownShip(array(11377),1,$this->dateStart,$this->dateEnd),'label'=>'nemesis','name'=>'Nemesis kills'],
+                        'purifier'=> ['data'=> $this->Stats->getGenericByFlownShip(array(12038),1,$this->dateStart,$this->dateEnd), 'label'=>'purifier','name'=>'Purifier kills'],
+                        'hound'=> ['data'=> $this->Stats->getGenericByFlownShip(array(12034),1,$this->dateStart,$this->dateEnd),'label'=>'hound','name'=>'Hound kills'],
+                        'manticore'=> ['data'=> $this->Stats->getGenericByFlownShip(array(12032),1,$this->dateStart,$this->dateEnd),'label'=>'manti','name'=>'Manticore kills'],
+                    );
+                break;
             // case 'bombing': $parsedData = 'bombing_run_specialists';break;
             case 'capitals': $prop = 'ships'; $parsedData = $this->Stats->getGenericByDestroyedShip($this->Stats->caps,0,$this->dateStart,$this->dateEnd); $prop='kills'; break;
             case 'explorer': $parsedData = $this->Stats->getExplorerKills(0,$this->dateStart,$this->dateEnd);break;
@@ -211,7 +237,7 @@ class PagesController extends AppController
                 'Isk Destroyed',
                 );
         }
-        $this->set(compact('parsedData','propList','head','page'));
+        $this->set(compact('parsedData','propList','head','page','extraData'));
     }
     
     public function display()
