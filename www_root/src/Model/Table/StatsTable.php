@@ -77,7 +77,7 @@ class StatsTable extends Table
             return $output;
         }        
          $query = "SELECT 
-            count(ak.kill_id) as kills, c.character_name,sum(value) as isk from agent_kills as ak join kills on kills.kill_id = ak.kill_id
+            count(ak.kill_id) as kills, c.character_name,sum(value)/1000000000 as isk from agent_kills as ak join kills on kills.kill_id = ak.kill_id
             join characters as c on c.character_id = ak.character_id
             where date > '$dateStart 00:00:00'
             and date < '$dateEnd 00:00:00'
@@ -217,7 +217,8 @@ class StatsTable extends Table
         return $results;
     }
     public function getGenericByFlownShip($ship = array(),$solo = 1, $dateStart = false, $dateEnd = false){
-        $cacheKey = 'sgetGenericByFlownShip_' . $dateStart. '_'. $dateEnd . '_'. $solo .'_' . implode('_',$ship);
+
+        $cacheKey = 'sgetGenericByFlownShip_' . $dateStart. '_'. $dateEnd . '_'. $solo .'_' . md5(implode('_',$ship));
         if (($output = Cache::read($cacheKey,'fivemin')) !== false){
             return $output;
         }       
@@ -226,13 +227,14 @@ class StatsTable extends Table
         if ($solo == 1){
             $soloConditions = " and partiesInvolved = 1 ";
         }
+
           $query = "SELECT sum(kills.value)/1000000000 as isk ,count(kills.kill_id) as ships_killed ,c.character_name,agntShip.name as agentFlying
                     from kills join characters as c on c.character_id = kills.agent_id
                     join agent_kills as ak on kills.kill_id = ak.kill_id and ak.character_id = kills.agent_id
                     join ship_types as vicShip on vicShip.ship_type_id = kills.ship_type_id
                     join ship_types as agntShip on agntShip.ship_type_id = ak.ship_type_id
-                    where killingBlow = 1
-                    and isOurLoss = 0
+                    where isOurLoss = 0
+                    and killingBlow = 1
                     and totalWingspanPct > 24
                     and kills.date > '$dateStart 00:00:00'
                     and kills.date < '$dateEnd 00:00:00'
@@ -246,7 +248,7 @@ class StatsTable extends Table
         return $results;
     }       
     public function getGenericByDestroyedShip($ship = array(),$solo = 1, $dateStart = false, $dateEnd = false){
-         $cacheKey = 'getGenericByDestroyedShip_' . $dateStart. '_'. $dateEnd . '_'. $solo .'_' . implode('_',$ships);
+         $cacheKey = 'getGenericByDestroyedShip_' . $dateStart. '_'. $dateEnd . '_'. $solo .'_' . md5(implode('_',$ship));
         if (($output = Cache::read($cacheKey,'fivemin')) !== false){
             return $output;
         } 
@@ -260,8 +262,8 @@ class StatsTable extends Table
                     join agent_kills as ak on kills.kill_id = ak.kill_id and ak.character_id = kills.agent_id
                     join ship_types as vicShip on vicShip.ship_type_id = kills.ship_type_id
                     join ship_types as agntShip on agntShip.ship_type_id = ak.ship_type_id
-                    where killingBlow = 1
-                    and isOurLoss = 0
+                    where isOurLoss = 0
+                    and killingBlow = 1
                     and totalWingspanPct > 24
                     and kills.date > '$dateStart 00:00:00'
                     and kills.date < '$dateEnd 00:00:00'
@@ -269,6 +271,34 @@ class StatsTable extends Table
                     and kills.ship_type_id in ($ships)
                     group by c.character_id,ak.ship_type_id
                     ORDER by ships_killed DESC";
+        $connection = ConnectionManager::get('default');
+        $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'fivemin');
+        return $results;
+    }
+     public function getExplorerKills($solo = 1, $dateStart = false, $dateEnd = false){
+         $cacheKey = 'getExplorerKills' . $dateStart. '_'. $dateEnd . '_'. $solo;
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            return $output;
+        } 
+        $soloConditions = " and partiesInvolved > 1 ";
+        if ($solo == 1){
+            $soloConditions = " and partiesInvolved = 1 ";
+        }
+          $query = "SELECT sum(kills.value) / 1000000000 as isk ,count(kills.kill_id) as kills ,c.character_name
+                    from kills join characters as c on c.character_id = kills.agent_id
+                    join agent_kills as ak on kills.kill_id = ak.kill_id and ak.character_id = kills.agent_id
+                    join ship_types as vicShip on vicShip.ship_type_id = kills.ship_type_id
+                    join ship_types as agntShip on agntShip.ship_type_id = ak.ship_type_id
+                    where killingBlow = 1
+                    and isExplorer = 1
+                    and isOurLoss = 0
+                    and totalWingspanPct > 24
+                    and kills.date > '$dateStart 00:00:00'
+                    and kills.date < '$dateEnd 00:00:00'
+                    $soloConditions
+                    group by c.character_id
+                    ORDER by kills DESC";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
         Cache::write($cacheKey,$results,'fivemin');
@@ -290,8 +320,8 @@ class StatsTable extends Table
                     join agent_kills as ak on kills.kill_id = ak.kill_id and ak.character_id = kills.agent_id
                     join ship_types as vicShip on vicShip.ship_type_id = kills.ship_type_id
                     join ship_types as agntShip on agntShip.ship_type_id = ak.ship_type_id
-                    where killingBlow = 1
-                    and isOurLoss = 0
+                    where  isOurLoss = 0
+                    and killingBlow = 1
                     and totalWingspanPct > 24
                     and kills.date > '$dateStart 00:00:00'
                     and kills.date < '$dateEnd 00:00:00'
@@ -311,20 +341,17 @@ class StatsTable extends Table
         if (($output = Cache::read($cacheKey,'fivemin')) !== false){
             return $output;
         } 
-        $query = "SELECT 
-                            count(ak.kill_id) as kills, 
-                            c.character_name,
-                            sum(value) / 1000000000 as isk 
-                FROM agent_kills as ak 
-                        join kills on kills.kill_id = ak.kill_id
-                        join characters as c on c.character_id = kills.character_id
-                WHERE 
-                        isOurLoss = 1
-                        and kills.date > '$dateStart 00:00:00'
-                        and kills.date < '$dateEnd 00:00:00'
-                        and kills.character_id != 0
-                GROUP BY kills.`character_id`
-                ORDER BY kills DESC;";
+        $query = "SELECT sum(kills.value)/1000000000 as isk,
+    kills.character_id,c.character_name,ship.name,count(kills.kill_id) as kills from kills 
+    join characters as c on c.character_id = kills.character_id
+    join ship_types as ship on ship.ship_type_id = kills.ship_type_id
+    where isOurLoss = 1
+    and date > '$dateStart 00:00:00'
+    and date < '$dateEnd 00:00:00'    
+    
+    
+    group by kills.character_id
+    order by isk DESC;";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
         Cache::write($cacheKey,$results,'fivemin');
@@ -335,24 +362,39 @@ class StatsTable extends Table
         if (($output = Cache::read($cacheKey,'fivemin')) !== false){
             return $output;
         }
-        $query = "SELECT 
-                            kills.value /  1000000000 as isk,
-                            ship.name,
-                            kills.kill_id,
-                            c.character_name            
-                FROM  kills 
-                        join characters as c on c.character_id = kills.character_id
-                        join ship_types as ship on ship.ship_type_id = kills.ship_type_id
-                WHERE 
-                        isOurLoss = 1
-                        and kills.date > '$dateStart 00:00:00'
-                        and kills.date < '$dateEnd 00:00:00'
-                        and kills.character_id != 0
-
-                ORDER BY isk DESC;";
-        $connection = ConnectionManager::get('default');
-        $results = $connection->execute($query)->fetchAll('assoc');
-        Cache::write($cacheKey,$results,'fivemin');
+        $query = "SELECT kills.value/1000000000 as isk,
+                    kills.character_id,c.character_name,ship.name,kills.kill_id from kills 
+                    join characters as c on c.character_id = kills.character_id
+                    join ship_types as ship on ship.ship_type_id = kills.ship_type_id
+                    where isOurLoss = 1
+                    and date > '$dateStart 00:00:00'
+                    and date < '$dateEnd 00:00:00'    
+                    
+                    order by isk DESC;";
+         $connection = ConnectionManager::get('default');
+        $data = $connection->execute($query)->fetchAll('assoc');
+        // debug($data);die();
+        $characters = array();
+        foreach ($data as $d){
+            $id = $d['character_id'];
+            if (!isset($characters[$id]))
+                { $characters[$id] = array(
+                            'isk'=>$d['isk'],
+                            'max'=>$d['isk'],
+                            'character_name' => $d['character_name'],
+                            'name'=>$d['name']
+                            );
+            }else{
+                if ($d['isk'] > $characters[$id]['max'])
+                     $characters[$id] = array('isk'=>$d['isk'],'max'=>$d['isk'],'character_name' => $d['character_name'],'name'=>$d['name']);
+            }
+        }
+        $results = array();
+        foreach ($characters as $c){
+            $results[] = $c;
+        }
+        usort($results,'cmpISK');
+        Cache::write($cacheKey,$data,'fivemin');
         return $results;
     }
     public function miniBlops( $dateStart = false, $dateEnd = false){

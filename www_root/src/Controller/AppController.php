@@ -56,8 +56,8 @@ class AppController extends Controller
         $this->Cookie->configKey('stats', 'encryption', false);
         $stats = $this->Cookie->read('stats');
         if ($stats == null){
-            $this->dateStart =  $dateStart = '2016-10';
-            $this->dateEnd = $dateEnd = '2016-11';
+            $this->dateStart =  $dateStart = '2016-11';
+            $this->dateEnd = $dateEnd = '2016-12';
             $dateStart = date('Y-m').'-01';
             $dateEnd = date('Y-m',strtotime('+1 month')).'-01';
 
@@ -68,8 +68,8 @@ class AppController extends Controller
            $this->dateStart = $dateStart= $stats['dateStart'];
             $this->dateEnd = $dateEnd = $stats['dateEnd'];
         }
-        $this->dateStart =  $dateStart = '2016-10';
-        $this->dateEnd = $dateEnd = '2016-11';
+        $this->dateStart =  $dateStart = '2016-11';
+        $this->dateEnd = $dateEnd = '2016-12';
         $this->set(compact('dateStart','dateEnd'));
          $this->set('_serialize', ['dateStart','dateEnd']);
 

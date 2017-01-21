@@ -21,13 +21,21 @@
                             <a href="/"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> General stats</a>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> General stats<span class="fa arrow"></span></a>
+                             <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/pages/losses/biggest">Biggest losses</a>
+                                </li>
+                                <li>
+                                    <a href="/pages/losses/normal">All losses</a>
+                                </li>
+                             </ul>
                         </li>        
                         <li>
                             <a href="#"><i class="fa fa-table fa-fw"></i> Tripwire stats</a>
                         </li>       
                         <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Agent Stats<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Agent Stats [LAST HITS]<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                             <?
                                 foreach ($optionsMenu as $o){

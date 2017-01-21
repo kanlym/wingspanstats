@@ -194,7 +194,7 @@ Type::build('datetime')
     ->useImmutable();
 function cmpISK($a, $b)
     {
-        return $a->isk_destroyed < $b->isk_destroyed;
+        return $a['isk'] < $b['isk'];
     }
  function cmpShips($a, $b)
     {

@@ -30,8 +30,27 @@ class PagesController extends AppController
 {
     public function beforeFilter(Event $event){
         parent::beforeFilter($event);
-    $options = array( 'agents', 'astero',  'blops', 'bombers',  'explorer',  'industry', 'interdictors', 'miner', 'nestor', 'recons',  'solo', 'stratios', 't3', 'team', 'thera');
-    $this->set('optionsMenu',$options);
+    $options = array( 
+        'agents'
+        , 'astero'
+        ,  'blops'
+        , 'miniBlops'
+        , 'bombers'
+        ,  'explorer'
+
+        ,  'industry'
+        , 'interdictors'
+        , 'miner'
+        , 'nestor'
+        , 'recons'
+        ,  'solo'
+        , 'stratios'
+        , 't3'
+        
+        
+        );
+    $this->set('optionsMenu'
+        ,$options);
     $this->loadModel('Stats');
     }
     public function initialize()
@@ -54,9 +73,8 @@ class PagesController extends AppController
             die("Crunching numbers, return later");
         }
         $shipsData = $this->Stats->topShips($this->dateStart,$this->dateEnd);
-        $stratiosData = $this->Stats->ship('stratios',$this->dateStart ,$this->dateEnd);
-
-
+        $solo = 0;//can be 0 
+        $stratiosData = $this->Stats->getGenericByFlownShip($this->Stats->stratios,$solo,$this->dateStart,$this->dateEnd);
         $solo = 0;//can be 0 
         $bombersData = $this->Stats->getGenericByFlownShip($this->Stats->bombers,$solo,$this->dateStart,$this->dateEnd);
         $soloData = $this->Stats->solo($this->dateStart,$this->dateEnd);
@@ -74,102 +92,122 @@ class PagesController extends AppController
         $this->set(compact('agentData'));
 
     }
-
-    public function oldhome(){
-        // $d = date('Y-m');
-        $d ='2017-01';
-        $root = 'results/'.$d.'/';
-        // $root = 'results/__alltime__/';
-        $data = file_get_contents($root.'agents.json');
-        $agentData = json_decode($data);
-        usort($agentData->agents,'cmpISK');
-
-        $data = file_get_contents($root.'ships.json');
-        $shipsData = json_decode($data);
-        usort($shipsData->ships,'cmpISK');
-
-        $data = file_get_contents($root.'stratios.json');
-        $stratiosData = json_decode($data);
-        usort($stratiosData->agents,'cmpShips');
-
-        $data = file_get_contents($root.'bombers.json');
-        $bombersData = json_decode($data);
-        usort($bombersData->agents,'cmpShips');
-
-        $data = file_get_contents($root.'solo_hunter.json');
-        $soloData = json_decode($data);
-        usort($soloData->agents,'cmpISK');
-        //calculate ship stats
-        $shipsChart = $shipsData->ships;
-        $totalNave = 0;
-        foreach ($shipsChart as $s){
-            $totalNave += $s->ships_destroyed;
+    public function losses($page = false){
+        $this->viewBuilder()->layout('wingspan');
+        switch ($page) {
+            case 'biggest': 
+                $parsedData = $this->Stats->getBiggestLoss($this->dateStart,$this->dateEnd);
+                 $propList = array(
+                'character_name',
+                    'name',
+                    'isk',
+                    
+                );
+                $head = array(
+                    'Agent',
+                    'Ship',
+                    'Value',
+                    );
+                break;
+            case 'normal': 
+                $parsedData = $this->Stats->getLosses($this->dateStart,$this->dateEnd);
+                 $propList = array(
+                'character_name',
+                    'kills',
+                    'isk',
+                    
+                );
+                $head = array(
+                    'Agent',
+                    'Ships destroyed',
+                    'Isk Lost',
+                    );
+                break;
+            default: $parsedData = false;
         }
-        foreach ($shipsChart as $i => $s){
-            $shipsChart[$i]->pct = round($s->ships_destroyed * 100 / $totalNave);
-        }
-        usort($shipsChart, 'cmpPct');
-
-         $data = file_get_contents($root.'general_stats.json');
-        $generalData = json_decode($data);
         
-        $this->set(compact('agentData','shipsData','stratiosData','bombersData','soloData','shipsChart','totalNave','generalData'));
+        $this->set(compact('parsedData','propList','head','page'));
     }
-
-    public function stats( $page = false,$date = false){
+    public function stats( $page = false){
         // $date = '2017-01';
         $this->viewBuilder()->layout('wingspan');
         $prop = 'agents';
         switch ($page) {
-            case 'agents': $file = 'agents';break;
-            case 'astero': $file = 'astero';break;
-            case 'awoxes': $file = 'awoxes'; $prop='kills'; break;
-            case 'blops': $file = 'blops';break;
-            case 'bombers': $file = 'bombers';break;
-            case 'bombing': $file = 'bombing_run_specialists';break;
-            case 'capitals': $file = 'capital_kills'; $prop='kills'; break;
-            case 'explorer': $file = 'explorer_hunter';break;
-            case 'stats': $file = 'general_stats';break;
-            case 'industry': $file = 'industry_giant';break;
-            case 'interdictors': $file = 'interdictor_ace';break;
-            case 'miner': $file = 'miner_bumper';break;
-            case 'nestor': $file = 'nestor';break;
-            case 'recons': $file = 'recons';break;
-            case 'ships': $file = 'ships';$prop='ships';break;
-            case 'solo': $file = 'solo_hunter';break;
-            case 'stratios': $file = 'stratios';break;
-            case 't3': $file = 't3cruiser';break;
-            case 'team': $file = 'team_player';break;
-            case 'thera': $file = 'thera_crusader';break;
+            case 'agents': $parsedData = $this->Stats->agents($this->dateStart,$this->dateEnd);;break;
+            case 'astero': $prop = 'ships'; $parsedData = $this->Stats->getGenericByFlownShip($this->Stats->astero,0,$this->dateStart,$this->dateEnd);break;
+            // case 'awoxes': $parsedData = 'awoxes'; $prop='kills'; break;
+            case 'blops': $prop = 'ships'; $parsedData = $this->Stats->getGenericByFlownShip($this->Stats->blops,0,$this->dateStart,$this->dateEnd);break;
+            case 'miniBlops': $prop = 'ships'; $parsedData = $this->Stats->miniBlops($this->dateStart,$this->dateEnd);break;
+            case 'bombers': $prop = 'ships'; $parsedData = $this->Stats->getGenericByFlownShip($this->Stats->bombers,0,$this->dateStart,$this->dateEnd);break;
+            // case 'bombing': $parsedData = 'bombing_run_specialists';break;
+            case 'capitals': $prop = 'ships'; $parsedData = $this->Stats->getGenericByDestroyedShip($this->Stats->caps,0,$this->dateStart,$this->dateEnd); $prop='kills'; break;
+            case 'explorer': $parsedData = $this->Stats->getExplorerKills(0,$this->dateStart,$this->dateEnd);break;
+            // case 'stats': $parsedData = 'general_stats';break;
+            case 'industry': $prop = 'ships'; $parsedData = $this->Stats->getGenericByDestroyedShip($this->Stats->industrials,0,$this->dateStart,$this->dateEnd);break;
+            case 'interdictors': $prop = 'ships'; $parsedData = $this->Stats->getGenericByFlownShip($this->Stats->interdictors,0,$this->dateStart,$this->dateEnd);break;
+            case 'miner': $prop = 'ships'; $parsedData = $this->Stats->getGenericByDestroyedShip($this->Stats->miners,0,$this->dateStart,$this->dateEnd);break;
+            case 'nestor': $prop = 'ships'; $parsedData = $this->Stats->getGenericByFlownShip($this->Stats->nestor,0,$this->dateStart,$this->dateEnd);break;
+            case 'recons': $prop = 'ships'; $parsedData = $this->Stats->getGenericByFlownShip($this->Stats->recons,0,$this->dateStart,$this->dateEnd);;break;
+            case 'ships': $parsedData = 'ships';$prop='ships';break;
+            case 'solo': $parsedData = $this->Stats->solo($this->dateStart,$this->dateEnd);$prop='solo';break;
+            case 'stratios': $prop = 'ships'; $parsedData = $this->Stats->getGenericByFlownShip($this->Stats->stratios,0,$this->dateStart,$this->dateEnd);;break;
+            case 't3': $prop = 'ships'; $parsedData = $this->Stats->getGenericByFlownShip($this->Stats->strategicCruiser,0,$this->dateStart,$this->dateEnd);;break;
+            // case 'team': $data = 'team_player';break;
+            // case 'thera': $data = 'thera_crusader';break;
             default:               
                 $file = 'general_stats';
                 break;
 
 
         }
-        if ($date == false){
-            $date = date('Y-m');
-            // $date = '2017-01';
-        }else{
-            $d = explode('-',$date);
-            if (count($d) < 2) throw new ForbiddenException("Invalid date");
-            if ($d[1] < 1 && $d[0] < 2014) throw new ForbiddenException("Invalid date");
-        }
-          $root = 'results/'.$date.'/';
-        // $root = 'results/__alltime__/';
-        $data = file_get_contents($root.$file.'.json');
-        $parsedData = json_decode($data);
-        $parsedData = $parsedData->$prop;
+        // if ($date == false){
+        //     $date = date('Y-m');
+        //     // $date = '2017-01';
+        // }else{
+        //     $d = explode('-',$date);
+        //     if (count($d) < 2) throw new ForbiddenException("Invalid date");
+        //     if ($d[1] < 1 && $d[0] < 2014) throw new ForbiddenException("Invalid date");
+        // }
+        //   $root = 'results/'.$date.'/';
+        // // $root = 'results/__alltime__/';
+        // $data = file_get_contents($root.$file.'.json');
+        // $parsedData = json_decode($data);
+        // $parsedData = $parsedData->$prop;
         if ($prop == 'agents'){
             $propList = array(
                 'character_name',
-                    'ships_destroyed',
-                    'isk_destroyed',
+                    'kills',
+                    'isk',
                     
                 );
             $head = array(
                 'Agent',
-                'Ships destroied',
+                'Ships destroyed',
+                'Isk Destroyed',
+                );
+        }
+        elseif ($prop == 'ships'){
+            $propList = array(
+                'character_name',
+                    'ships_killed',
+                    'isk',
+                    
+                );
+            $head = array(
+                'Agent',
+                'Ships destroyed',
+                'Isk Destroyed',
+                );
+        }elseif ($prop == 'solo'){
+             $propList = array(
+                'character_name',
+                    'ships_killed',
+                    'isk',
+                    
+                );
+            $head = array(
+                'Agent',
+                'Ships destroyed',
                 'Isk Destroyed',
                 );
         }
