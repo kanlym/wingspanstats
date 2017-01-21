@@ -127,6 +127,9 @@ class StatsTable extends Table
         if (($output = Cache::read($cacheKey,'fivemin')) !== false){
             if (!empty($output)) return $output;
         }
+        // solo
+        // participated
+        // loss
         $query = "SELECT count(ak.kill_id) as noOfKills,
             sum(ak.killingBlow) as killingShot,
             sum(damageDone) as damageDone,

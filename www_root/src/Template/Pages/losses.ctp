@@ -1,5 +1,6 @@
 <?
 // debug($parsedData);die();
+if ($hasChart){
 ?>
 <script>
  $(function() {
@@ -31,8 +32,9 @@
     });
 });
 </script>
+<? } ?>
 <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-<?= $hasChart ? 8 : 12 ?>">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <?= $page ?>
@@ -91,6 +93,7 @@
                     </div>
                     <!-- /.panel -->
                 </div>
+                <? if ($hasChart){ ?>
                 <!-- /.col-lg-8 -->
                 <div class="col-lg-4">
                     <div class="panel panel-default">
@@ -103,6 +106,7 @@
                                     </div>
                     </div>
                 </div>
+                <? } ?>
             </div>
     <script src="/vendor/datatables/js/jquery.dataTables.min.js"></script>
     <script src="/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
@@ -112,7 +116,8 @@
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
             aaSorting: [],
-            responsive: true
+            responsive: true,
+            "pageLength": 8
         });
     });
     </script>

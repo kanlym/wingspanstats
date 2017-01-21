@@ -66,6 +66,7 @@ class PagesController extends AppController
 
     public function home(){
         $agentData = $this->Stats->agents($this->dateStart,$this->dateEnd);
+        if (empty($agentData)) $this->redirect('/'); //in case cache fails, we retry cuz fuck cake
         // if (empty($agentData)){
         //     die("Crunching numbers, return later");
         // }
@@ -106,6 +107,7 @@ class PagesController extends AppController
     }
     public function losses($page = false){
         $this->viewBuilder()->layout('wingspan');
+        $hasChart = true;
         switch ($page) {
             case 'biggest': 
                 $parsedData = $this->Stats->getBiggestLoss($this->dateStart,$this->dateEnd);
@@ -121,6 +123,7 @@ class PagesController extends AppController
                     'Ship',
                     'Value',
                     );
+                $hasChart = false;
                 break;
             case 'normal': 
                 $parsedData = $this->Stats->getLosses($this->dateStart,$this->dateEnd);
@@ -141,7 +144,7 @@ class PagesController extends AppController
             default: $parsedData = false;
         }
         
-        $this->set(compact('parsedData','propList','head','page'));
+        $this->set(compact('parsedData','propList','head','page','hasChart'));
     }
     public function stats( $page = false){
         // $date = '2017-01';
