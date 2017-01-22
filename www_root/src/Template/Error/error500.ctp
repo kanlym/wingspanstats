@@ -2,7 +2,7 @@
 use Cake\Core\Configure;
 use Cake\Error\Debugger;
 
-$this->layout = 'error';
+$this->layout = 'wingspan';
 
 if (Configure::read('debug')):
     $this->layout = 'dev_error';
@@ -36,8 +36,8 @@ if (Configure::read('debug')):
     $this->end();
 endif;
 ?>
-<h2><?= __d('cake', 'An Internal Error Has Occurred') ?></h2>
+<h2><?= __d('cake', 'Cache hit failed. We are crunching the numbers. ') ?></h2>
 <p class="error">
-    <strong><?= __d('cake', 'Error') ?>: </strong>
+    <strong><?= __d('cake', 'Please either refresh the webpage or try another one') ?>: </strong>
     <?= h($message) ?>
 </p>

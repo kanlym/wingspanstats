@@ -18,6 +18,7 @@ use Cake\Core\Configure;
 use Cake\Network\Exception\ForbiddenException;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
+use Cake\Database\Exception\MissingConnectionException;
 use Cake\Event\Event;
 /**
  * Static content controller
@@ -30,24 +31,7 @@ class PagesController extends AppController
 {
     public function beforeFilter(Event $event){
         parent::beforeFilter($event);
-    $options = array( 
-         'astero' => "Flying asteros"
-        ,  'blops' => "Flying blops"
-        , 'miniBlops' => "Flying miniblops"
-        , 'bombers' => "Flying bombers"        
-        , 'interdictors' => "Flying interdictors"    
-        , 'nestor' =>"Flying nestors"
-        , 'recons' =>"Flying recons"
-        , 'stratios' => "Flying strats"
-        , 't3' => "Flyng T3"
-        , 'explorer' => "Killing explorers"
-        , 'industry' => "Killing industrials"
-        , 'miner' => "Killing miners"
-        
-        
-        );
-    $this->set('optionsMenu'
-        ,$options);
+    
     $this->loadModel('Stats');
     }
     public function initialize()
@@ -191,7 +175,9 @@ class PagesController extends AppController
 
 
         }
-        
+        // if (!isset($parsedData[0])){
+        //    throw new MissingConnectionException('Something went wrong');
+        // }
         if ($prop == 'agents'){
             $propList = array(
                 'character_name',

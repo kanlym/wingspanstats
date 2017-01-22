@@ -1,4 +1,20 @@
 <?php
+$optionsMenu = array( 
+         'astero' => "Flying asteros"
+        ,  'blops' => "Flying blops"
+        , 'miniBlops' => "Flying miniblops"
+        , 'bombers' => "Flying bombers"        
+        , 'interdictors' => "Flying interdictors"    
+        , 'nestor' =>"Flying nestors"
+        , 'recons' =>"Flying recons"
+        , 'stratios' => "Flying strats"
+        , 't3' => "Flyng T3"
+        , 'explorer' => "Killing explorers"
+        , 'industry' => "Killing industrials"
+        , 'miner' => "Killing miners"
+        
+        
+        );
 ?>
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
