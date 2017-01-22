@@ -168,6 +168,8 @@ class PagesController extends AppController
                         'manticore'=> ['data'=> $this->Stats->getGenericByFlownShip(array(12032),1,$this->dateStart,$this->dateEnd),'label'=>'manti','name'=>'Manticore kills'],
                     );
                 break;
+            case 'averagePilot': $parsedData = $this->Stats->averageIskPerKill($this->dateStart,$this->dateEnd); $prop = 'average';  break;
+            case 'tripwire' : $parsedData = $this->Stats->tripwireMonth($this->dateStart,$this->dateEnd); $prop='tripwire'; break; 
             // case 'bombing': $parsedData = 'bombing_run_specialists';break;
             case 'capitals': $prop = 'ships'; $parsedData = $this->Stats->getGenericByDestroyedShip($this->Stats->caps,0,$this->dateStart,$this->dateEnd); $prop='kills'; break;
             case 'explorer': $parsedData = $this->Stats->getExplorerKills(0,$this->dateStart,$this->dateEnd);break;
@@ -189,19 +191,7 @@ class PagesController extends AppController
 
 
         }
-        // if ($date == false){
-        //     $date = date('Y-m');
-        //     // $date = '2017-01';
-        // }else{
-        //     $d = explode('-',$date);
-        //     if (count($d) < 2) throw new ForbiddenException("Invalid date");
-        //     if ($d[1] < 1 && $d[0] < 2014) throw new ForbiddenException("Invalid date");
-        // }
-        //   $root = 'results/'.$date.'/';
-        // // $root = 'results/__alltime__/';
-        // $data = file_get_contents($root.$file.'.json');
-        // $parsedData = json_decode($data);
-        // $parsedData = $parsedData->$prop;
+        
         if ($prop == 'agents'){
             $propList = array(
                 'character_name',
@@ -213,6 +203,21 @@ class PagesController extends AppController
                 'Agent',
                 'Ships destroyed',
                 'Isk Destroyed',
+                );
+        }
+        elseif ($prop == 'tripwire'){
+            $propList = array(
+                'character_name',
+                    'sigCount',
+                    'systemsVisited',
+                    'systemsViewed'
+                    
+                );
+            $head = array(
+                'Agent',
+                'Signature Count',
+                'Systems Visited',
+                'System Viewed'
                 );
         }
         elseif ($prop == 'ships'){
@@ -239,6 +244,24 @@ class PagesController extends AppController
                 'Ships destroyed',
                 'Isk Destroyed',
                 );
+        }elseif ($prop == 'average'){
+            $head = array(
+                'Agent',
+                'No of Kills',                
+                'Average Isk/Kill [B]',                
+                'Average Damage/Kill',
+                'Average Fleet Size',
+                );
+            $propList = array(
+                'character_name',
+                'noOfKills',
+                'isk',
+                'averageDamageDone',
+                'avgFleet',      
+                    
+                    
+                );
+
         }
         $this->set(compact('parsedData','propList','head','page','extraData'));
     }

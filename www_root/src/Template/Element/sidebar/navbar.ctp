@@ -1,3 +1,5 @@
+<?php
+?>
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -33,6 +35,11 @@
                                     <a href="/pages/stats/solo"> Top Solo Agents</a>
                                 </li>
                                 <li>
+                                    <a href="/pages/stats/averagePilot"> Pilot Averages </a>
+                                </li>
+                               
+                                <li><hr></li>
+                                <li>
                                     <a href="/pages/losses/biggest">Biggest Loss</a>
                                 </li>
                                 <li>
@@ -41,7 +48,7 @@
                              </ul>
                         </li>        
                         <li>
-                            <a href="#"><i class="fa fa-table fa-fw"></i> Tripwire stats</a>
+                            <a href="/pages/stats/tripwire"><i class="fa fa-table fa-fw"></i> Tripwire stats</a>
                         </li>       
                         <li>
                             <a href="#"><i class="fa fa-sitemap fa-fw"></i> Ship stats <span class="fa arrow"></span></a>

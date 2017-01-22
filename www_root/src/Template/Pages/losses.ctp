@@ -1,4 +1,4 @@
-<?
+<?php
 // debug($parsedData);die();
 if ($hasChart){
 ?>
@@ -68,7 +68,16 @@ if ($hasChart){
                                                     if ($p == 'isk'){
                                                         ?>
                                                              <td><?= round($d[$p],2) ?> </td>                                                
-                                                        <?    
+                                                        <?
+                                                    }elseif ($p == 'character_name'){
+                                                            ?><td><?
+                                                            if (isset($d['character_id'])){
+                                                                ?>
+                                                                <img src="http://image.eveonline.com/Character/<?= $d['character_id'] ?>_32.jpg">
+                                                                <?
+                                                            }
+                                                            ?><?= $d[$p] ?></td><?
+    
                                                     }else{
                                                         ?>
                                                             <td><?= $d[$p] ?></td>                                                

@@ -1,4 +1,4 @@
-<?
+<?php
 ?>
 <script>
  $(function() {
@@ -20,7 +20,7 @@
         ],
         xkey: 'y',
         ykeys: ['a', 'b'],
-        labels: ['Ships','Isk[b]'],
+        labels: ['<?= $head[1] ?>','<?= $head[2] ?>'],
         hideHover: 'auto',
         resize: true,
         barColors: [
@@ -62,12 +62,26 @@
                                             ?>
                                                 <tr class="<?= $class;?> gradeA">
                                                 <td><?= $i+1 ?></td>
+
+                                                        
+                                                       
                                                 <?
                                                     foreach ($propList as $p){
-                                                        if ($p == 'isk'){
+                                                        if (in_array($p,array('isk','averageDamageDone','avgFleet'))){
                                                             ?>
                                                                  <td><?= round($d[$p],2) ?> </td>                                                
-                                                            <?    
+                                                            <? 
+
+                                                        }elseif ($p == 'character_name'){
+                                                            ?><td><?
+                                                            if (isset($d['character_id'])){
+                                                                ?>
+                                                                <img src="http://image.eveonline.com/Character/<?= $d['character_id'] ?>_32.jpg">
+                                                                <?
+                                                            }
+                                                            ?><?= $d[$p] ?></td><?
+
+
                                                         }else{
                                                             ?>
                                                                 <td><?= $d[$p] ?></td>                                                

@@ -21,6 +21,7 @@ class ParseShell extends Shell{
 		$this->loadModel('Corporations');
 		$this->loadModel('AgentKills');
 		$this->loadModel('Monthstats');
+		$this->loadModel('Tripwirestats');
 	}
 
 	
@@ -117,6 +118,7 @@ class ParseShell extends Shell{
 		return true;
 		
 	}
+
 	public function addCharacter($c){
 		try{
 			$c['id'] = $c['character_id'];
@@ -126,6 +128,28 @@ class ParseShell extends Shell{
 			$character->character_id = $c['id'];
 			// die();
 			if ($this->Characters->save($character)){
+
+				// $this->out("Salvat");
+				return true;
+			}else{
+				// $this->out("Character - NOT Salvat");
+				return false;
+			}	
+		}catch (Exception $e){
+			// $this->Log($e->getMessage());
+			return false;
+		}
+		return true;
+		
+	}
+
+	public function addTripwireStat($c){
+		try{
+			
+			$ts = $this->Tripwirestats->newEntity();
+			$ts = $this->Tripwirestats->patchEntity($ts,$c);
+			// die();
+			if ($this->Tripwirestats->save($ts)){
 
 				// $this->out("Salvat");
 				return true;
@@ -425,10 +449,35 @@ class ParseShell extends Shell{
 				$this->parseJsonAgents($str);
 				$this->parseKills($str);		
 	}
+	public function parseTW($date = "2017-01-21"){
+		 $root = WWW_ROOT."results/tripwire/twstats_$date.json";
+		 $data = file_get_contents($root);
+		 $results = json_decode($data);
+		 foreach ($results->rows as $r){
+		 	
+		 	$character = $this->Characters->find('all')->where(['Characters.character_name = ' => $r->characterName]);
+		 	$verify = $character->all()->toArray();		
+		 	if (isset($verify[0])){
+
+			 	
+			 	$newSig = array(
+			 			'character_id' => $verify[0]->character_id,
+			 			'date' => $date .' 00:00:00',
+			 			'sigCount' => $r->sigCount,
+			 			'systemsVisited'=> $r->systemsVisited,
+			 			'systemsViewed' => $r->systemsViewed
+			 		);
+			 	$this->addTripwireStat($newSig);
+			 }else{
+			 	$this->Log($r);
+			 }
+		 }
+		 
+	}
 	public function main(){
 		// $this->updateCorporationForUser(0,1);die();
 		// $this->parseOldData();
-		$this->parseCurrentMonth();
+		$this->parseTW('2017-01-21');
 		// $this->parseJsonSystems();
 		// $this->parseKills();
 		// $this->parseShipTypes();

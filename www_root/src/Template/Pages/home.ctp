@@ -52,6 +52,7 @@ $this->layout = 'wingspan';
                         'nume'=>$soloData[$i]['character_name'],
                         'ships'=>$soloData[$i]['ships_killed'],
                         'id'=>'agent_'.$i,
+                        'img'=>'<img src="http://image.eveonline.com/Character/' . $soloData[$i]['character_id']. '_32.jpg">',
                         'bani'=>round($soloData[$i]['isk'],2)
                     );
 
@@ -286,7 +287,7 @@ Morris.Bar({
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <div class="table-responsive">
                                         <table class="table table-bordered table-hover table-striped">
                                             <thead>
@@ -304,7 +305,7 @@ Morris.Bar({
 
                                                              <tr>
                                                             <td><?=$i + 1;?></td>
-                                                            <td><?= $d['nume'];?></td>
+                                                            <td><?= $d['img'] .' ' . $d['nume'];?></td>
                                                             <td><?= $d['ships'] ?></td>
                                                             <td><?= $d['bani']; ?>b</td>
                                                         </tr>
@@ -320,7 +321,7 @@ Morris.Bar({
                                     <!-- /.table-responsive -->
                                 </div>
                                 <!-- /.col-lg-4 (nested) -->
-                                <div class="col-lg-8">
+                                <div class="col-lg-6">
                                     <div id="morris-bar-chart"></div>
                                 </div>
                                 <!-- /.col-lg-8 (nested) -->
