@@ -470,6 +470,8 @@ class ParseShell extends Shell{
 			 	$this->addTripwireStat($newSig);
 			 }else{
 			 	$this->Log($r);
+
+			 	//fin 
 			 }
 		 }
 		 
@@ -477,9 +479,9 @@ class ParseShell extends Shell{
 	public function main(){
 		// $this->updateCorporationForUser(0,1);die();
 		// $this->parseOldData();
-		$this->parseTW('2017-01-21');
+		// $this->parseTW('2017-01-21');
 		// $this->parseJsonSystems();
-		// $this->parseKills();
+		$this->parseCurrentMonth();
 		// $this->parseShipTypes();
 		// $this->checkIfAgentExists(1);
 		// $c = ['character_name' =>"Test",

@@ -24,7 +24,7 @@ $optionsMenu = array(
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/"><img id="logo" class="pull-left" src="/img/icon_wing.png" alt="wing"><span class="navbar-brand">Wingspan daily stats</span></a></div>
+                <a href="/"><img id="logo" class="pull-left" src="/img/icon_wing.png" alt="wing"><span class="navbar-brand">Wingspan daily stats   </span></a><a href="/pages/datesetup"><?= $dateStart ?> to <?= $dateEnd ?></a></div>
             </div>
             <!-- /.navbar-header -->
 
@@ -34,10 +34,22 @@ $optionsMenu = array(
                 <div class="sidebar-nav navbar-collapse">
                  
                        <ul class="nav" id="side-menu">
-                            
+                         
                         <li>
                             <a href="/"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
+                        <li>
+                            <a href="#"><i class="fa fa-user-md fa-fw"></i> Lookup<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="/pages/agent"> Agents </a>
+                                    </li>
+                                    <li>
+                                        <a href="/pages/client"> Clients </a>
+                                    </li>
+                            </ul>
+                        </li>   
+                        
                         <li>
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> General stats<span class="fa arrow"></span></a>
                              <ul class="nav nav-second-level">
@@ -53,19 +65,27 @@ $optionsMenu = array(
                                 <li>
                                     <a href="/pages/stats/averagePilot"> Pilot Averages </a>
                                 </li>
+                                
                                
                                 <li><hr></li>
                                 <li>
                                     <a href="/pages/losses/biggest">Biggest Loss</a>
                                 </li>
                                 <li>
-                                    <a href="/pages/losses/normal">Dedication</a>
+                                    <a href="/pages/losses/normal">Welp factor</a>
                                 </li>
                              </ul>
-                        </li>        
+                        </li>
                         <li>
-                            <a href="/pages/stats/tripwire"><i class="fa fa-table fa-fw"></i> Tripwire stats</a>
-                        </li>       
+                            <a href="#"><i class="fa fa-table fa-fw"></i> Location stats<span class="fa arrow"></span></a>
+                             <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/pages/stats/tripwire">Tripwire stats</a>
+                                </li>  
+                                <li><a href="/pages/locations">Favorite spots</a></li>
+                             </ul>
+                        </li>        
+                             
                         <li>
                             <a href="#"><i class="fa fa-sitemap fa-fw"></i> Ship stats <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -100,7 +120,22 @@ $optionsMenu = array(
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
-                         
+                            <li>
+                                <a href="/pages/datesetup">Setup report dates </a>
+                            </li>
+                            <li>
+                            <?
+                                if ($loggedIn) {
+                                    ?>
+                                        <a href="/pages/logout">Logout</a>
+                                    <?
+                                }else{
+                                    ?>
+                                    <a href="/pages/login">Login</a>
+                                    <?
+                                }
+                            ?>
+                            </li>   
                         </ul>
                 </div>
                 <!-- /.sidebar-collapse -->

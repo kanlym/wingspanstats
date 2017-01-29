@@ -4,6 +4,7 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\Event\Event;
 use Cake\Datasource\ConnectionManager;
+use Cake\Network\Request;
 /*
  * Stats Controller
  *
@@ -17,7 +18,19 @@ class StatsController extends AppController
         $this->response->type('application/json');
         $this->set('_serialize', true);
     }
-
+    public function getAgents(){
+        $status = true;
+        if ($this->request->is('post')){
+            $name = $this->request->data['name'];
+        }else {
+            $status = false;
+            $results = array();
+        }
+        $results = $this->Stats->getAllAgents($name);
+        if (empty($results)) $status = false;
+        $this->set(compact('status','results'));
+        $this->set('_serialize',['status','results']);
+    }
     public function agents($dateStart = false,$dateEnd = false){
         if ($dateStart == false){
             $dateStart = date('Y-m-') ."01";
@@ -26,6 +39,32 @@ class StatsController extends AppController
             $dateEnd = date('Y-m-',strtotime('+1 month')) ."01";
         }
         $results = $this->Stats->agents($dateStart,$dateEnd);
+        $status = true;
+        if (empty($results)) $status = false;
+        $this->set(compact('status','results','dateStart','dateEnd'));    
+        $this->set('_serialize', ['status','results']);
+    }
+    public function welp($dateStart = false,$dateEnd = false){
+        if ($dateStart == false){
+            $dateStart = date('Y-m-') ."01";
+        }
+        if ($dateEnd == false){
+            $dateEnd = date('Y-m-',strtotime('+1 month')) ."01";
+        }
+        $results = $this->Stats->getBiggestLoss($dateStart,$dateEnd);
+        $status = true;
+        if (empty($results)) $status = false;
+        $this->set(compact('status','results','dateStart','dateEnd'));    
+        $this->set('_serialize', ['status','results']);
+    }
+     public function explorers($dateStart = false,$dateEnd = false){
+        if ($dateStart == false){
+            $dateStart = date('Y-m-') ."01";
+        }
+        if ($dateEnd == false){
+            $dateEnd = date('Y-m-',strtotime('+1 month')) ."01";
+        }
+        $results = $this->Stats->getExplorerKills(0,$dateStart,$dateEnd);
         $status = true;
         if (empty($results)) $status = false;
         $this->set(compact('status','results','dateStart','dateEnd'));    

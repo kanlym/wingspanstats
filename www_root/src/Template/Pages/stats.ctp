@@ -30,7 +30,9 @@
     });
 });
 </script>
+<div class="row"><? if (!isset($parsedData[0])){?><h1>Please reload the page</h1><?} ?></div>
 <div class="row">
+
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -79,7 +81,7 @@
                                                                 <img src="http://image.eveonline.com/Character/<?= $d['character_id'] ?>_32.jpg">
                                                                 <?
                                                             }
-                                                            ?><?= $d[$p] ?></td><?
+                                                            ?><a href="/pages/agent/<?= $d['character_id']?>/<?= urlencode($d['character_name']) ?>"><?= $d[$p] ?></a></td><?
 
 
                                                         }else{

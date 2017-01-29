@@ -26,6 +26,7 @@ $this->layout = 'wingspan';
 // debug($generalData);die();
 ?>
 
+
  <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Current stats <?= $dateStart ?> to <?= $dateEnd ?></h1>
@@ -33,63 +34,10 @@ $this->layout = 'wingspan';
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-            <div class="row">
-            <?
-                // debug($shipsData->ships);die();
-                // debug($bombersData);die();
-            ?>
-               <?= $this->element('headrows/row',array('icon'=>'fa-trophy','title'=>'Top agents','headNumber'=>'1/'.count($agentData) .' agents','headText'=>$agentData[0]['character_name'],'color'=>'wingspan','link'=>'/stats/agents/'/* yellow */));?>
-               <?= $this->element('headrows/row',array('icon'=>'fa-tasks','title'=>'Top ships','headNumber'=>$shipsData['0']['totalKills'] . ' kills','headText'=>$shipsData[0]['name'],'color'=>'wingspan','link'=>'/ships' /* yellow */));?>
-               <?= $this->element('headrows/row',array('icon'=>'fa-rocket','title'=>'Top stratios kills','headNumber'=>$stratiosData[0]['ships_killed'] .' kills','headText'=>$stratiosData[0]['character_name'],'color'=>'wingspan','link'=>'/stats/stratios/' /* yellow */));?>
-               <?= $this->element('headrows/row',array('icon'=>'fa-bomb','title'=>'Top bomber kills','headNumber'=>$bombersData[0]['ships_killed'] .' kills','headText'=>$bombersData[0]['character_name'],'color'=>'wingspan','link'=>'/stats/bombers/' /* yellow */));?>
-            </div>
-            <?
-
-            $agentChartData = array();
-            for ($i = 0; $i < 8;$i++){
-
-                $agentChartData[] = array(
-                        'nume'=>$soloData[$i]['character_name'],
-                        'ships'=>$soloData[$i]['ships_killed'],
-                        'id'=>'agent_'.$i,
-                        'img'=>'<img src="http://image.eveonline.com/Character/' . $soloData[$i]['character_id']. '_32.jpg">',
-                        'bani'=>round($soloData[$i]['isk'],2)
-                    );
-
-            }
-            
-
-            // debug($generalData);die();
-            ?>
-                                         
+          
             <script>
                 $(function() {
-  Morris.Bar({
-        element: 'morris-bar-chart',
-        data: [
-            <?
-                foreach ($agentChartData as $i=> $d){
-                    if ($i == 5) break;
-                    ?>
-                     {
-                        y: "<?= $d['nume'] ?>",
-                        a: <?= $d['bani'] ?>,
-                        b: <?= $d['ships']?>
-                    },
-                    <?
-                }
-            ?>
-        ],
-        xkey: 'y',
-        ykeys: ['a', 'b'],
-        labels: ['Isk[b]','Ships'],
-        hideHover: 'auto',
-        resize: true,
-        barColors: [
-            '#f07c00',
-            '#adadad'
-        ]
-    });
+  
 Morris.Bar({
         element: 'general-bar-chart',
         data: [
@@ -162,6 +110,37 @@ Morris.Bar({
 
             </script>
             <!-- /.row -->
+
+          <!--   <div class="row">
+                <div class="panel panel-default col-lg-6">
+                        <div class="panel-heading">
+                            <i class="fa"></i>Pilot lookup
+                        </div>
+                         <div class="panel-body">
+                         <input id="pilotLookup">
+                         </div>
+                </div>
+                 <div class="panel panel-default col-lg-6">
+                        <div class="panel-heading">
+                            <i class="fa"></i>System lookup
+                        </div>
+                         <div class="panel-body">
+                         <input>
+                         </div>
+                </div>
+            </div> -->
+
+      
+                <div class="row">
+            <?
+                // debug($shipsData->ships);die();
+                // debug($bombersData);die();
+            ?>
+               <?= $this->element('headrows/row',array('icon'=>'fa-trophy','title'=>'Top agents','headNumber'=>'1/'.count($agentData) .' agents','headText'=>$agentData[0]['character_name'],'color'=>'wingspan','link'=>'/stats/agents/'/* yellow */));?>
+               <?= $this->element('headrows/row',array('icon'=>'fa-tasks','title'=>'Top ships','headNumber'=>$shipsData['0']['totalKills'] . ' kills','headText'=>$shipsData[0]['name'],'color'=>'wingspan','link'=>'/ships' /* yellow */));?>
+               <?= $this->element('headrows/row',array('icon'=>'fa-rocket','title'=>'Top stratios kills','headNumber'=>$stratiosData[0]['ships_killed'] .' kills','headText'=>$stratiosData[0]['character_name'],'color'=>'wingspan','link'=>'/stats/stratios/' /* yellow */));?>
+               <?= $this->element('headrows/row',array('icon'=>'fa-bomb','title'=>'Top bomber kills','headNumber'=>$bombersData[0]['ships_killed'] .' kills','headText'=>$bombersData[0]['character_name'],'color'=>'wingspan','link'=>'/stats/bombers/' /* yellow */));?>
+            </div>
             <div class="row">
                 <div class="col-lg-8">
                   
@@ -258,88 +237,17 @@ Morris.Bar({
                     <!-- /.panel .chat-panel -->
                 </div>
                     <!-- /.general Stats -->
-                        <div class="col-lg-8">
+                <div class="col-lg-8">
                   
-                    <!-- /.panel -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Solo agent by isk value
-                            <div class="pull-right">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                        Actions
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a href="#">Action</a>
-                                        </li>
-                                        <li><a href="#">Another action</a>
-                                        </li>
-                                        <li><a href="#">Something else here</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered table-hover table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Agent</th>
-                                                    <th>Ships</th>
-                                                    <th>Amount</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                            <?
-                                                foreach ($agentChartData as $i => $d){
-                                                    ?>
-
-                                                             <tr>
-                                                            <td><?=$i + 1;?></td>
-                                                            <td><?= $d['img'] .' ' . $d['nume'];?></td>
-                                                            <td><?= $d['ships'] ?></td>
-                                                            <td><?= $d['bani']; ?>b</td>
-                                                        </tr>
-                                                    <?
-
-                                                }
-                                            ?>
-                                               
-                                                
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <!-- /.table-responsive -->
-                                </div>
-                                <!-- /.col-lg-4 (nested) -->
-                                <div class="col-lg-6">
-                                    <div id="morris-bar-chart"></div>
-                                </div>
-                                <!-- /.col-lg-8 (nested) -->
-                            </div>
-                            <!-- /.row -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-
-                    <!-- /.panel -->
-                   
-                    <!-- /.panel -->
+             
+                    
                 </div>
                     <!-- /.general Stats -->
                    
                     <!-- /.panel .chat-panel -->
                 </div>  
                 <!-- /.col-lg-4 -->
+              
             </div>
+
             <!-- /.row -->

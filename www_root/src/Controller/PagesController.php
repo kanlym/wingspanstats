@@ -16,7 +16,7 @@ namespace App\Controller;
 
 use Cake\Core\Configure;
 use Cake\Network\Exception\ForbiddenException;
-use Cake\Network\Exception\NotFoundException;
+
 use Cake\View\Exception\MissingTemplateException;
 use Cake\Database\Exception\MissingConnectionException;
 use Cake\Event\Event;
@@ -39,6 +39,11 @@ class PagesController extends AppController
         parent::initialize();
 
     }
+    public function test(){
+        
+        
+        die();
+    }
     /**
      * Displays a view
      *
@@ -59,7 +64,6 @@ class PagesController extends AppController
         $stratiosData = $this->Stats->getGenericByFlownShip($this->Stats->stratios,$solo,$this->dateStart,$this->dateEnd);
         $solo = 0;//can be 0 
         $bombersData = $this->Stats->getGenericByFlownShip($this->Stats->bombers,$solo,$this->dateStart,$this->dateEnd);
-        $soloData = $this->Stats->solo($this->dateStart,$this->dateEnd);
         
         $totalNave = 0;
         foreach ($shipsData as $s){
@@ -70,7 +74,7 @@ class PagesController extends AppController
         }
         $generalData = $this->Stats->locations($this->dateStart,$this->dateEnd);
         
-        $this->set(compact('agentData','shipsData','stratiosData','bombersData','soloData','shipsChart','totalNave','generalData'));
+        $this->set(compact('agentData','shipsData','stratiosData','bombersData','shipsChart','totalNave','generalData'));
 
     }
     public function ships(){
@@ -88,6 +92,108 @@ class PagesController extends AppController
                     'Isk Lost',
                     );
          $this->set(compact('parsedData','propList','head'));
+    }
+    public function login(){
+        $this->viewBuilder()->layout('wingspan');
+        $noance = uniqid();
+        $url = Configure::read('eveSSO.authsite') .Configure::read('eveSSO.authurl') . '?response_type=code&redirect_uri=' . Configure::read('eveSSO.redirect_uri') . '&client_id=' . Configure::read('eveSSO.client_id') . '&scope=&state='. $noance;
+        $this->set(compact('url'));
+        $this->set('_serialize',['url']);
+    }
+    public function logout(){
+        $this->request->session()->delete('Auth');
+        $this->redirect('/');
+    }
+    public function sso($code = ''){
+        if (isset($_GET['code'])){
+            $code = $_GET['code'];
+            $state = $_GET['state'];
+            $clientid = Configure::read('eveSSO.client_id');
+            $secret = Configure::read('eveSSO.secret');
+            $useragent = "Wingspan Delivery Stats v0.1 - andrei.negescu@gmail.com ";
+        }
+        $url=Configure::read('eveSSO.authsite') .'/oauth/token' ;
+        $verify_url=Configure::read('eveSSO.authsite')  . Configure::read('eveSSO.verifyurl') ;
+        $header='Authorization: Basic '.base64_encode($clientid.':'.$secret);
+
+        $fields_string='';
+        $fields=array(
+                    'grant_type' => 'authorization_code',
+                    'code' => $code
+                );
+        foreach ($fields as $key => $value) {
+            $fields_string .= $key.'='.$value.'&';
+        }
+        rtrim($fields_string, '&');
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_USERAGENT, $useragent);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array($header));
+        curl_setopt($ch, CURLOPT_POST, count($fields));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+        $result = curl_exec($ch);
+        if ($result===false) {
+            auth_error(curl_error($ch));
+        }
+        curl_close($ch);
+        $response=json_decode($result);
+        // print_r($response);die();
+        $auth_token=$response->access_token;
+        $ch = curl_init();
+    // Get the Character details from SSO
+        $header='Authorization: Bearer '.$auth_token;
+        curl_setopt($ch, CURLOPT_URL, $verify_url);
+        curl_setopt($ch, CURLOPT_USERAGENT, $useragent);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array($header));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+        $result = curl_exec($ch);
+        if ($result===false) {
+            auth_error(curl_error($ch));
+        }
+        curl_close($ch);
+        $response=json_decode($result);
+        if (!isset($response->CharacterID)) {
+            throw new NotFoundException('No character ID returned');
+        }
+        $ch = curl_init();
+        $lookup_url="https://api.eveonline.com/eve/CharacterAffiliation.xml.aspx?ids=".$response->CharacterID;
+        curl_setopt($ch, CURLOPT_URL, $lookup_url);
+        curl_setopt($ch, CURLOPT_USERAGENT, $useragent);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+        $result = curl_exec($ch);
+       if ($result===false) {
+                throw new NotFoundException('No such character on the API');
+            }
+        $xml=simplexml_load_string($result);
+        $corporationID=(string)$xml->result->rowset->row->attributes()["corporationID"];
+        $allianceID=(string)$xml->result->rowset->row->attributes()["allianceID"];
+        //fional check
+        if (in_array($corporationID,array(98330748))){
+            //correct corporation
+            $redirectURL = $this->request->session()->read('Auth.redirectAuth');
+            if ($redirectURL == false) $redirectURL = '/';
+            $this->redirect($redirectURL);
+            $this->auth($response->CharacterID);
+            //auth the user
+            // die("TRUE");
+            // verifica daca exista userul
+            // adauga userul in corporatie
+            // logheaza tot
+            // pune in sesiune
+            // autentifica
+        }else{
+            throw new NotFoundException("INVALID");
+        }
+
+
     }
     public function losses($page = false){
         $this->viewBuilder()->layout('wingspan');
@@ -249,9 +355,249 @@ class PagesController extends AppController
                 );
 
         }
+        $page .= " " . $this->dateStart . ' to ' . $this->dateEnd;
         $this->set(compact('parsedData','propList','head','page','extraData'));
     }
-    
+    public function agent($alternativeCid = false,$altName = false){
+        if ($this->request->is('post') || $alternativeCid !== false){
+            if ($alternativeCid !== false ) {
+                $cid = $alternativeCid;
+                $cname = str_replace("'",' ',$altName);
+            }
+            else {
+                $cid = $this->request->data['character_id'];
+                $cname = str_replace("'",' ',$this->request->data['character_name']);
+            }
+            
+            $agent = $this->Stats->getDataByAgent($cid,$this->dateStart,$this->dateEnd);
+            $killingStats = array(
+                        'totalKills'=>0,
+                        'avgParties'=>0,
+                        'totalValue'=>0
+                    );
+             $agent['loosingStats'] = array(
+                        'totalValue'=>0,
+                        'totalLoss'=>0,
+                        'averageInvolvedInLoss' => 0
+                    );
+            if (!empty($agent['losses'])){
+                $losses = $agent['losses'];
+                // unset($agent['losses']);
+                $totalValue = 0;
+                $totalLoss = 0;
+                $totalPartiesInvolvedInLoss=0;
+                foreach ($losses as $l){
+                    $totalValue += $l['value'];
+                    $totalLoss++;
+                    $totalPartiesInvolvedInLoss += $l['partiesInvolved'];
+                }
+                $averageInvolvedInLoss = $totalPartiesInvolvedInLoss/$totalLoss;    
+
+                $agent['loosingStats'] = array(
+                        'totalValue'=>$totalValue,
+                        'totalLoss'=>$totalLoss,
+                        'averageInvolvedInLoss' => $averageInvolvedInLoss
+                    );
+            }
+            if (!empty($agent['kills'])){
+                foreach ($agent['kills'] as $i=> $k){
+                    $killingStats['totalKills']++;
+                    $killingStats['avgParties'] += $k['partiesInvolved'];
+                    $killingStats['totalValue'] += $k['value'];
+                }
+
+                $killingStats['avgParties'] =  ($killingStats['totalKills'] == 0 ? 0 : $killingStats['avgParties'] / $killingStats['totalKills']);
+                
+            }
+            $agent['killingStats'] = $killingStats;
+            $tIsk = $agent['killingStats']['totalValue'] + $agent['loosingStats']['totalValue'];
+            $iskEfficency = ( $tIsk == 0 ? 0 : $agent['killingStats']['totalValue']  * 100 /$tIsk );
+            $tShips = $agent['killingStats']['totalKills'] + $agent['loosingStats']['totalLoss'];
+            $losWinRatio = ($tShips == 0 ? 0 : $agent['killingStats']['totalKills']  * 100 / $tShips );
+            $humanInteraction = ($agent['loosingStats']['averageInvolvedInLoss'] + $agent['killingStats']['avgParties'] )/ 2;
+            // debug($agent['favSystems']);die();
+            $favSys = 'Unknown';
+            if (isset($agent['favSystems'][0])){
+                $fs = $agent['favSystems'][0];
+                if ($fs['isWh'] == 1){
+                    $favSys = "J ***". substr($fs['name'],-3);
+                }else{
+                    $favSys = $fs['name'];
+                }
+            $fs = $agent['favSystems'];
+            unset($agent['favSystems']);
+                foreach ($fs as $f => $s){
+                        $agent['favSystems'][] = array(
+                                'kills'=>$s['noOfKills'],
+                                'isk' => $s['isk'],
+                                'name' => ($s['isWh'] ? "J ***". substr($s['name'],-3) : $s['name'] )
+                            );
+                }
+            }
+            $genericStats = array(
+                    'iskEfficency' => round($iskEfficency,2),
+                    'losWinRatio' => round($losWinRatio,2),
+                    'humanInteraction'=>round($humanInteraction,2),
+                    'cid'=>$cid,
+                    'cname'=>$cname,
+                    'favSys'=>$favSys
+                );
+            // debug ($agent['favoriteShip']);die();
+            $this->set(compact('agent','genericStats'));
+            $this->set('_serialize',['agent','genericStats']);
+                         
+        }
+            $agents = $this->Stats->getAllAgents();
+            $this->set(compact('agents'));
+            $this->set('_serialize',['agents']);
+    }
+
+    public function client($alternativeName = false){
+        if ($this->request->is('post') || $alternativeName !== false){
+            // $cid = $this->request->data['character_name'];
+            if ($alternativeName !== false){
+                $cname = str_replace("'",' ',urldecode($alternativeName));
+            }else{
+                $cname = str_replace("'",' ',$this->request->data['character_name']);    
+            }
+            
+            if (trim($cname) == '') throw new NotFoundException('NO NO NO NO NO TYPE SOMETHING GODDAMIT');
+            $checkup = $this->Stats->getClientByName($cname);
+            $go = false;
+            if (empty($checkup)){
+            	//no info for $cname
+                $this->Stats->addToQueue($cname);
+                throw new NotFoundException("No info for character. Added to polling queue");
+            }
+            if (isset($checkup[0])){
+                $cid = $checkup[0]['character_id'];
+                $cname = $checkup[0]['character_name'];
+                $go = true;
+            }
+            if ($go){
+                $agent = $this->Stats->getClientById($cid,$this->dateStart,$this->dateEnd);
+            $killingStats = array(
+                        'totalKills'=>0,
+                        'avgParties'=>0,
+                        'totalValue'=>0
+                    );
+             $agent['loosingStats'] = array(
+                        'totalValue'=>0,
+                        'totalLoss'=>0,
+                        'averageInvolvedInLoss' => 0
+                    );
+            if (!empty($agent['losses'])){
+                $losses = $agent['losses'];
+                // unset($agent['losses']);
+                $totalValue = 0;
+                $totalLoss = 0;
+                $totalPartiesInvolvedInLoss=0;
+                foreach ($losses as $l){
+                    $totalValue += $l['value'];
+                    $totalLoss++;
+                    $totalPartiesInvolvedInLoss += $l['partiesInvolved'];
+                }
+                $averageInvolvedInLoss = $totalPartiesInvolvedInLoss/$totalLoss;    
+
+                $agent['loosingStats'] = array(
+                        'totalValue'=>$totalValue,
+                        'totalLoss'=>$totalLoss,
+                        'averageInvolvedInLoss' => $averageInvolvedInLoss
+                    );
+            }
+            if (!empty($agent['kills'])){
+                foreach ($agent['kills'] as $i=> $k){
+                    $killingStats['totalKills']++;
+                    $killingStats['avgParties'] += $k['partiesInvolved'];
+                    $killingStats['totalValue'] += $k['value'];
+                }
+
+                $killingStats['avgParties'] =  ($killingStats['totalKills'] == 0 ? 0 : $killingStats['avgParties'] / $killingStats['totalKills']);
+                
+            }
+            $agent['killingStats'] = $killingStats;
+            $tIsk = $agent['killingStats']['totalValue'] + $agent['loosingStats']['totalValue'];
+            $iskEfficency = ( $tIsk == 0 ? 0 : $agent['killingStats']['totalValue']  * 100 /$tIsk );
+            $tShips = $agent['killingStats']['totalKills'] + $agent['loosingStats']['totalLoss'];
+            $losWinRatio = ($tShips == 0 ? 0 : $agent['killingStats']['totalKills']  * 100 / $tShips );
+            $humanInteraction = ($agent['loosingStats']['averageInvolvedInLoss'] + $agent['killingStats']['avgParties'] )/ 2;
+            // debug($agent['favSystems']);die();
+            $favSys = 'Unknown';
+            if (isset($agent['favSystems'][0])){
+                $fs = $agent['favSystems'][0];
+                if ($fs['isWh'] == 1){
+                    $favSys = "J ***". substr($fs['name'],-3);
+                }else{
+                    $favSys = $fs['name'];
+                }
+            $fs = $agent['favSystems'];
+            unset($agent['favSystems']);
+                foreach ($fs as $f => $s){
+                        $agent['favSystems'][] = array(
+                                'kills'=>$s['noOfKills'],
+                                'isk' => $s['isk'],
+                                'name' => ($s['isWh'] ? "J ***". substr($s['name'],-3) : $s['name'] )
+                            );
+                }
+            }
+            $genericStats = array(
+                    'iskEfficency' => round($iskEfficency,2),
+                    'losWinRatio' => round($losWinRatio,2),
+                    'humanInteraction'=>round($humanInteraction,2),
+                    'cid'=>$cid,
+                    'cname'=>$cname,
+                    'favSys'=>$favSys
+                );
+            // debug ($agent['favoriteShip']);die();
+        }else{
+
+        }
+            
+            $this->set(compact('agent','genericStats'));
+            $this->set('_serialize',['agent','genericStats']);
+                         
+        }
+            // $agents = $this->Stats->getAllClients   ();
+            $this->set(compact('agents'));
+            $this->set('_serialize',['agents']);
+    }
+    public function locations($type = 'kills'){
+        $this->viewBuilder()->layout('wingspan');
+        $locationStats = $this->Stats->getFavoriteSystems($this->dateStart,$this->dateEnd);
+        foreach ($locationStats['fav'] as $i => $k){
+            if ($k['isWh'] == 1 ) {
+                $locationStats['fav'][$i]['name'] = 'J ***'.substr($locationStats['fav'][$i]['name'],-3);
+            }
+        }
+        foreach ($locationStats['welp'] as $i => $k){
+            if ($k['isWh'] == 1 ) {
+                $locationStats['welp'][$i]['name'] = 'J ***'.substr($locationStats['welp'][$i]['name'],-3);
+            }
+        }
+        $this->set(compact('locationStats'));
+        $this->set('_serialize',['locationStats']);
+    }
+    public function datesetup(){
+        $this->viewBuilder()->layout('wingspan');
+        if ($this->request->is('post')){
+            $dateStart = $this->request->data['dateStart'];
+            $dateEnd = $this->request->data['dateEnd'];
+            if (strtotime($dateStart) > strtotime($dateEnd)){
+                throw new ForbiddenException("Bad date is bad");
+            }
+            $x = ['dateStart'=>$dateStart, 'dateEnd'=>$dateEnd];
+            $this->Cookie->write('stats',
+                ['dateStart'=>$dateStart, 'dateEnd'=>$dateEnd]
+                );
+            $this->redirect('/');
+            //setting up
+        }
+        /*
+                $this->Cookie->write('stats',
+                ['dateStart'=>$dateStart, 'dateEnd'=>$dateEnd]
+                );
+         */
+    }
     public function display()
     {
         $path = func_get_args();

@@ -85,13 +85,13 @@ class StatsTable extends Table
             count(ak.kill_id) as kills, c.character_name,sum(value)/1000000000 as isk,c.character_id from agent_kills as ak join kills on kills.kill_id = ak.kill_id
             join characters as c on c.character_id = ak.character_id
             where date > '$dateStart 00:00:00'
-            and date < '$dateEnd 00:00:00'
+            and date <= '$dateEnd 00:00:00'
             and totalWingspanPct > 24
            group by ak.`character_id`
             ORDER BY kills DESC";
                 $connection = ConnectionManager::get('default');
                 $results = $connection->execute($query)->fetchAll('assoc');
-        Cache::write($cacheKey,$results,'fivemin');
+        $s = Cache::write($cacheKey,$results,'fivemin');
         return $results;
     }
 
@@ -112,7 +112,7 @@ class StatsTable extends Table
                             join ship_types as agentShip on agentShip.ship_type_id = ak.ship_type_id
                         where  
                             kills.date > '$dateStart 00:00:00' 
-                        and kills.date < '$dateEnd 00:00:00'
+                        and kills.date <= '$dateEnd 00:00:00'
                         and agentShip.name = '$shipName'
                         and totalWingspanPct > 24
                         group by a.character_id
@@ -121,6 +121,7 @@ class StatsTable extends Table
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
         Cache::write($cacheKey,$results,'fivemin');
+        
         return $results;
     }
 
@@ -146,7 +147,7 @@ class StatsTable extends Table
                  join ship_types as agentShip on agentShip.ship_type_id = ak.ship_type_id
             where character_name = '$pilotName'
             and kills.date > '$dateStart 00:00:00' 
-            and kills.date < '$dateEnd 00:00:00'
+            and kills.date <= '$dateEnd 00:00:00'
             and totalWingspanPct > 24
             -- and ak.killingBlow = 0
             group by ak.ship_type_id
@@ -166,7 +167,7 @@ class StatsTable extends Table
                  join solar_systems as system on system.solar_system_id = kills.solar_system_id
 
             where date > '$dateStart 00:00:00'  
-            and date < '$dateEnd 00:00:00'
+            and date <= '$dateEnd 00:00:00'
             and totalWingspanPct > 24
             and isOurLoss = 0
             group by system.type
@@ -215,7 +216,7 @@ class StatsTable extends Table
                     and isOurLoss = 0
                     and totalWingspanPct > 24
                     and kills.date > '$dateStart 00:00:00'
-                    and kills.date < '$dateEnd 00:00:00'
+                    and kills.date <= '$dateEnd 00:00:00'
                     and partiesInvolved = 1
                     group by c.character_id
                     ORDER by ships_killed DESC";
@@ -247,7 +248,7 @@ class StatsTable extends Table
                     and totalWingspanPct > 24
                     -- and isKillingBlows = 1 #FOR SOLO
                     and kills.date > '$dateStart 00:00:00'
-                    and kills.date < '$dateEnd 00:00:00'
+                    and kills.date <= '$dateEnd 00:00:00'
                     and agntShip.ship_type_id in ($ships)      
                     group by c.character_id
                     ORDER by ships_killed DESC";
@@ -277,7 +278,7 @@ class StatsTable extends Table
                     and totalWingspanPct > 24
                     -- and isKillingBlows = 1 #FOR SOLO
                     and kills.date > '$dateStart 00:00:00'
-                    and kills.date < '$dateEnd 00:00:00'
+                    and kills.date <= '$dateEnd 00:00:00'
                     and kills.ship_type_id in ($ships)      
                     group by c.character_id
                     ORDER by ships_killed DESC";
@@ -291,7 +292,7 @@ class StatsTable extends Table
         if (($output = Cache::read($cacheKey,'fivemin')) !== false){
             if (!empty($output)) return $output;
         } 
-        $soloConditions = " and partiesInvolved > 1 ";
+        $soloConditions = "  ";
         if ($solo == 1){
             $soloConditions = " and partiesInvolved = 1 ";
         }
@@ -307,7 +308,7 @@ class StatsTable extends Table
                     and isOurLoss = 0
                     and totalWingspanPct > 24
                     and kills.date > '$dateStart 00:00:00'
-                    and kills.date < '$dateEnd 00:00:00'
+                    and kills.date <= '$dateEnd 00:00:00'
                     $soloConditions
                     group by c.character_id
                     ORDER by kills DESC";
@@ -338,7 +339,7 @@ class StatsTable extends Table
                     -- and isKillingBlows = 1 #FOR SOLO
                     and totalWingspanPct > 24
                     and kills.date > '$dateStart 00:00:00'
-                    and kills.date < '$dateEnd 00:00:00'
+                    and kills.date <= '$dateEnd 00:00:00'
                     and kills.ship_type_id in ($vicShips) 
                     and ak.ship_type_id in ($agntShips)     
                     group by c.character_id
@@ -360,7 +361,7 @@ class StatsTable extends Table
     join ship_types as ship on ship.ship_type_id = kills.ship_type_id
     where isOurLoss = 1
     and date > '$dateStart 00:00:00'
-    and date < '$dateEnd 00:00:00'    
+    and date <= '$dateEnd 00:00:00'    
     
     
     group by kills.character_id
@@ -381,7 +382,7 @@ class StatsTable extends Table
                     join ship_types as ship on ship.ship_type_id = kills.ship_type_id
                     where isOurLoss = 1
                     and date > '$dateStart 00:00:00'
-                    and date < '$dateEnd 00:00:00'    
+                    and date <= '$dateEnd 00:00:00'    
                     
                     order by isk DESC;";
          $connection = ConnectionManager::get('default');
@@ -426,7 +427,7 @@ class StatsTable extends Table
                     and totalWingspanPct > 24
                     and isOurLoss = 0
                     and kills.date > '$dateStart 00:00:00'
-                    and kills.date < '$dateEnd 00:00:00'
+                    and kills.date <= '$dateEnd 00:00:00'
                     and agntShip.ship_type_id in ($ships)
                     group by c.character_id
                     ORDER by ships_killed DESC";
@@ -456,7 +457,7 @@ class StatsTable extends Table
                     and totalWingspanPct > 24
                     and c.character_id > 0
                     and kills.date > '$dateStart 00:00:00'
-                    and kills.date < '$dateEnd 00:00:00'
+                    and kills.date <= '$dateEnd 00:00:00'
                 GROUP BY c.character_id
                 ORDER BY efficency DESC";
         $connection = ConnectionManager::get('default');
@@ -484,7 +485,7 @@ class StatsTable extends Table
                 WHERE 
                     isOurLoss = 0
                     AND date > '$dateStart 00:00:00'
-                    AND date < '$dateEnd 00:00:00'
+                    AND date <= '$dateEnd 00:00:00'
                     AND totalWingspanPct > 24
                     and c.corporation_id in (98330748)
                     GROUP BY ak.character_id
@@ -514,7 +515,7 @@ class StatsTable extends Table
                         isOurLoss = 1
                         and c.character_id > 0
                         and kills.date > '$dateStart 00:00:00'
-                        and kills.date < '$dateEnd 00:00:00'
+                        and kills.date <= '$dateEnd 00:00:00'
                     GROUP BY c.character_id
                     ORDER BY efficency DESC";
         $connection = ConnectionManager::get('default');
@@ -536,7 +537,8 @@ class StatsTable extends Table
                         kills.isOurLoss = 0
                         and totalWingspanPct >24
                         and kills.date > '$dateStart 00:00:00'
-                        and kills.date < '$dateEnd 00:00:00'
+                        and kills.date <= '$dateEnd 00:00:00'
+                        and ship.ship_type_id not in (0,670,33328)
                     GROUP BY ship.ship_type_id
                     ORDER BY isk DESC";
         $connection = ConnectionManager::get('default');
@@ -545,7 +547,7 @@ class StatsTable extends Table
         return $results;
     }
     public function tripwireMonth( $dateStart = false, $dateEnd = false){
-         $cacheKey = 'tripwireMonth_' . $dateStart. '_'. $dateEnd;
+       $cacheKey = 'tripwireMonth_' . $dateStart. '_'. $dateEnd;
         if (($output = Cache::read($cacheKey,'fivemin')) !== false){
             if (!empty($output)) return $output;
         }
@@ -560,7 +562,7 @@ class StatsTable extends Table
                         join characters as c on c.character_id = tripwirestats.character_id
                     WHERE 
                         tripwirestats.date > '$dateStart 00:00:00'
-                        and tripwirestats.date < '$dateEnd 00:00:00'
+                        and tripwirestats.date <= '$dateEnd 00:00:00'
                     GROUP BY c.character_id
                     ORDER BY systemsVisited DESC";
         $connection = ConnectionManager::get('default');
@@ -568,7 +570,352 @@ class StatsTable extends Table
          Cache::write($cacheKey,$results,'fivemin');
 
         return $results;
-    }      
+    }     
+    public function getAllAgents(){
+        $cacheKey = 'getAllAgents';
+        if (($output = Cache::read($cacheKey,'eternity')) !== false){
+            if (!empty($output)) return $output;
+        }
+          $query = "SELECT c.character_name, c.character_id, corp.corporation_name from characters as c join corporations as corp on corp.corporation_id = c.corporation_id where  c.corporation_id in (98330748) and c.character_id > 0";
+        $connection = ConnectionManager::get('default');
+        $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'eternity');
+        return $results;
+    }
+    public function getClientByName($name = false){
+        $cacheKey = 'getClientByName_' . md5($name);    
+        if (($output = Cache::read($cacheKey,'eternity')) !== false){
+            if (!empty($output)) return $output;
+        }
+        $name = "%".str_replace(" ","%",$name)."%";
+          $query = "SELECT c.character_name, c.character_id from characters as c  where  
+           -- c.corporation_id not in (98330748) and 
+           c.character_id > 0
+           AND c.character_name like '$name'";
+        $connection = ConnectionManager::get('default');
+        $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'eternity');
+        return $results;
+    }
+    public function getInitialStats($cid = 0){
+        $cacheKey = 'getInitialStats_' . $cid;
+        if (($output = Cache::read($cacheKey,'eternity')) !== false){
+            if (!empty($output)) return $output;
+        }
+          $query = "SELECT sum(sigCount) as sigCount,sum(systemsVisited) as systemsVisited, sum(systemsViewed) as systemsViewed, character_id from tripwirestats where character_id = $cid ";
+        $connection = ConnectionManager::get('default');
+        $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'eternity');
+
+        return $results;
+    }
+    public function checkUserExistsForAuth($cid = 0){
+        $cacheKey = 'checkUserExistsForAuth_' . $cid;
+        if ($cid == 0) return false;
+
+        if (($output = Cache::read($cacheKey,'eternity')) !== false){
+            if (!empty($output)) return $output;
+        }
+        $query = "SELECT count(character_id) as character_id from characters where character_id = $cid ";
+
+        $connection = ConnectionManager::get('default');
+        $results = $connection->execute($query)->fetchAll('assoc');
+        if (empty($results)) $results = false;
+        Cache::write($cacheKey,$results,'eternity');
+        return $results;
+    }   
+    //$query = "select * from tripwirestats where character_id = 92805979 and date = 0"; //get delta
+    public function getDataByAgent($cid = 0,$dateStart = false,$dateEnd = false){
+        $cacheKey = 'getAllAgents_' . strtotime($dateStart). '_' . strtotime($dateEnd). '_' . $cid;
+        if (($output = Cache::read($cacheKey,'eternity')) !== false){
+            if (!empty($output)) return $output;
+        }
+        $results = array(
+            'losses'=>array(),
+            'killingBlows'=>array(),
+            'favoriteShips'=>array(),
+            'tripwire'=>array(),
+            'kills'=>array(),
+            'averages'=>array(),
+            'favSystems'=>array()
+            );
+
+        $connection = ConnectionManager::get('default');
+          $query = "SELECT vic.character_name, ship.name,k.date, k.value/1000000000 as value, k.totalWingspanPct, k.partiesInvolved, k.isExplorer,agnt.character_name,k.kill_id
+                from kills  as k
+                JOIN characters as vic on vic.character_id = k.character_id
+                JOIN characters as agnt on agnt.character_id = k.agent_id
+                JOIN ship_types as ship on ship.ship_type_id = k.ship_type_id
+                where k.character_id = $cid 
+                and k.date > '$dateStart 00:00:00'
+                and k.date <= '$dateEnd 00:00:00'
+                and isOurLoss = 1;";
+        
+        $losses = $connection->execute($query)->fetchAll('assoc');
+        $query ="SELECT vic.character_name, ship.name,k.date, k.value /1000000000 as value, k.totalWingspanPct, k.partiesInvolved, k.isExplorer,agnt.character_name,k.kill_id
+                from kills  as k
+                JOIN characters as vic on vic.character_id = k.character_id
+                JOIN characters as agnt on agnt.character_id = k.agent_id
+                JOIN ship_types as ship on ship.ship_type_id = k.ship_type_id
+                where agnt.character_id = $cid 
+                and k.date > '$dateStart 00:00:00'
+                and k.date <= '$dateEnd 00:00:00'
+                and isOurLoss = 0;";
+        $killingBlows = $connection->execute($query)->fetchAll('assoc');
+        $query = "SELECT count(agentShip.ship_type_id) as noOfHits,sum(k.value)/1000000000 as value, agentShip.name
+                from kills  as k
+                JOIN characters as vic on vic.character_id = k.character_id
+                JOIN agent_kills as agents on agents.kill_id = k.kill_id
+                JOIN characters as agnt on agnt.character_id = agents.character_id
+                JOIN ship_types as ship on ship.ship_type_id = k.ship_type_id
+                JOIN ship_types as agentShip on agentShip.ship_type_id = agents.ship_type_id
+                where agnt.character_id = $cid
+                and k.date > '$dateStart 00:00:00'
+                and k.date <= '$dateEnd 00:00:00'
+                and isOurLoss = 0
+                Group by agentShip.ship_type_id
+                ORDER BY noOfHits DESC";
+        $favoriteShip = $connection->execute($query)->fetchAll('assoc');
+
+        $query = "SELECT sum(sigCount) as sigCountT, sum(systemsVisited) as systemsVisitedT, sum(systemsViewed) as systemsViewedT from tripwirestats where character_id = $cid
+                and date > '$dateStart 00:00:00'
+                and date <= '$dateEnd 00:00:00'
+                ";
+        $tripwireStats = $connection->execute($query)->fetchAll('assoc');
+
+        $query = "SELECT  agentShip.name,value/1000000000 as value, ship.name as vicShip,damageDone,totalWingspanpct,partiesInvolved,k.kill_id
+                from kills  as k
+                JOIN characters as vic on vic.character_id = k.character_id
+                JOIN agent_kills as agents on agents.kill_id = k.kill_id
+                JOIN characters as agnt on agnt.character_id = agents.character_id
+                JOIN ship_types as ship on ship.ship_type_id = k.ship_type_id
+                JOIN ship_types as agentShip on agentShip.ship_type_id = agents.ship_type_id
+                where agnt.character_id = $cid
+                and k.date > '$dateStart 00:00:00'
+                and k.date <= '$dateEnd 00:00:00'
+                and isOurLoss = 0";
+
+        $killsParticipated = $connection->execute($query)->fetchAll('assoc');
+
+        $query = "SELECT 
+                    sum(kills.value / partiesInvolved * totalWingspanPct/100) / 1000000000 as isk,
+                    sum(damageDone) / count(kills.kill_id) as averageDamageDone,
+                    count(kills.kill_id) as noOfKills,
+                    avg(partiesInvolved) as avgFleet,
+                    c.character_name,
+                    c.character_id
+                    from agent_kills as ak 
+                    JOIN kills on kills.kill_id = ak.kill_id
+                    JOIN characters as c on c.character_id = ak.character_id
+                WHERE 
+                    isOurLoss = 0
+                    AND date > '$dateStart 00:00:00'
+                    AND date <= '$dateEnd 00:00:00'
+                    AND totalWingspanPct > 24
+                    and c.corporation_id in (98330748)
+                    and ak.character_id = $cid
+                    ORDER BY isk DESC
+        ";        
+        $averages = $connection->execute($query)->fetchAll('assoc');
+        $query = "SELECT 
+                    count(k.kill_id) as noOfKills,
+                    sum(value)/1000000000 as isk,
+                    ss.name,
+                    ss.isWh,
+                    c.character_name
+                    from agent_kills as ag
+                    JOIN kills as k on k.kill_id = ag.kill_id
+                    JOIN solar_systems as ss on ss.solar_system_id = k.solar_system_id
+                    JOIN characters as c on c.character_id = ag.character_id
+                WHERE
+                    isOurLoss = 0
+                    AND k.date > '$dateStart 00:00:00'
+                    AND k.date <= '$dateEnd 00:00:00'
+                    AND c.character_id = $cid
+                GROUP BY ag.character_id, k.solar_system_id
+                ORDER BY noOfKills DESC";
+        $favSystems = $connection->execute($query)->fetchAll('assoc');
+         $results = array(
+            'losses'=>$losses,
+            'killingBlows'=>$killingBlows,
+            'favoriteShips'=>$favoriteShip,
+            'tripwire'=>$tripwireStats,
+            'kills'=>$killsParticipated,
+            'averages'=>$averages,
+            'favSystems'=>$favSystems
+            );
+        Cache::write($cacheKey,$results,'eternity');
+
+        return $results;
+    } 
+    public function getClientById($cid = 0,$dateStart = false,$dateEnd = false){
+        $cacheKey = 'getClientById_' . strtotime($dateStart). '_' . strtotime($dateEnd). '_' . $cid;
+        if (($output = Cache::read($cacheKey,'eternity')) !== false){
+            if (!empty($output)) return $output;
+        }
+        $results = array(
+            'losses'=>array(),
+            'killingBlows'=>array(),
+            'favoriteShips'=>array(),
+            'tripwire'=>array(),
+            'kills'=>array(),
+            'averages'=>array(),
+            'favSystems'=>array()
+            );
+
+        $connection = ConnectionManager::get('default');
+          $query = "SELECT vic.character_name, ship.name,k.date, k.value/1000000000 as value, k.totalWingspanPct, k.partiesInvolved, k.isExplorer,agnt.character_name,k.kill_id,k.date
+                from kills  as k
+                JOIN characters as vic on vic.character_id = k.character_id
+                JOIN characters as agnt on agnt.character_id = k.agent_id
+                JOIN ship_types as ship on ship.ship_type_id = k.ship_type_id
+                where k.character_id = $cid 
+                ORDER BY k.date DESC
+                ;";
+        
+        $losses = $connection->execute($query)->fetchAll('assoc');
+        $query ="SELECT vic.character_name, ship.name,k.date, k.value /1000000000 as value, k.totalWingspanPct, k.partiesInvolved, k.isExplorer,agnt.character_name,k.date
+                from kills  as k
+                JOIN characters as vic on vic.character_id = k.character_id
+                JOIN characters as agnt on agnt.character_id = k.agent_id
+                JOIN ship_types as ship on ship.ship_type_id = k.ship_type_id
+                where agnt.character_id = $cid 
+                ORDER BY k.date DESC
+                ;";
+        $killingBlows = $connection->execute($query)->fetchAll('assoc');
+        $query = "SELECT count(agentShip.ship_type_id) as noOfHits,sum(k.value)/1000000000 as value, agentShip.name
+                from kills  as k
+                JOIN characters as vic on vic.character_id = k.character_id
+                JOIN agent_kills as agents on agents.kill_id = k.kill_id
+                JOIN characters as agnt on agnt.character_id = agents.character_id
+                JOIN ship_types as ship on ship.ship_type_id = k.ship_type_id
+                JOIN ship_types as agentShip on agentShip.ship_type_id = agents.ship_type_id
+                where agnt.character_id = $cid
+                Group by agentShip.ship_type_id
+                ORDER BY noOfHits DESC";
+        $favoriteShip = $connection->execute($query)->fetchAll('assoc');
+
+        $query = "SELECT sum(sigCount) as sigCountT, sum(systemsVisited) as systemsVisitedT, sum(systemsViewed) as systemsViewedT from tripwirestats where character_id = $cid
+                and date > '$dateStart 00:00:00'
+                and date <= '$dateEnd 00:00:00'
+                ";
+        $tripwireStats = $connection->execute($query)->fetchAll('assoc');
+
+        $query = "SELECT  agentShip.name,value/1000000000 as value, ship.name as vicShip,damageDone,totalWingspanpct,partiesInvolved
+                from kills  as k
+                JOIN characters as vic on vic.character_id = k.character_id
+                JOIN agent_kills as agents on agents.kill_id = k.kill_id
+                JOIN characters as agnt on agnt.character_id = agents.character_id
+                JOIN ship_types as ship on ship.ship_type_id = k.ship_type_id
+                JOIN ship_types as agentShip on agentShip.ship_type_id = agents.ship_type_id
+                where agnt.character_id = $cid
+                ORDER BY k.date DESC
+                ";
+
+        $killsParticipated = $connection->execute($query)->fetchAll('assoc');
+
+        $query = "SELECT 
+                    sum(kills.value / partiesInvolved * totalWingspanPct/100) / 1000000000 as isk,
+                    sum(damageDone) / count(kills.kill_id) as averageDamageDone,
+                    count(kills.kill_id) as noOfKills,
+                    avg(partiesInvolved) as avgFleet,
+                    c.character_name,
+                    c.character_id
+                    from agent_kills as ak 
+                    JOIN kills on kills.kill_id = ak.kill_id
+                    JOIN characters as c on c.character_id = ak.character_id
+                WHERE 
+                  
+                    c.corporation_id NOT in (98330748)
+                    and ak.character_id = $cid
+                    ORDER BY isk DESC
+        ";        
+        $averages = $connection->execute($query)->fetchAll('assoc');
+        $query = "SELECT 
+                    count(k.kill_id) as noOfKills,
+                    sum(value)/1000000000 as isk,
+                    ss.name,
+                    ss.isWh,
+                    c.character_name
+                    from agent_kills as ag
+                    JOIN kills as k on k.kill_id = ag.kill_id
+                    JOIN solar_systems as ss on ss.solar_system_id = k.solar_system_id
+                    JOIN characters as c on c.character_id = ag.character_id
+                WHERE
+                     c.character_id = $cid
+                GROUP BY ag.character_id, k.solar_system_id
+                ORDER BY noOfKills DESC";
+                // debug($query);die();
+        $favSystems = $connection->execute($query)->fetchAll('assoc');
+         $results = array(
+            'losses'=>$losses,
+            'killingBlows'=>$killingBlows,
+            'favoriteShips'=>$favoriteShip,
+            'tripwire'=>$tripwireStats,
+            'kills'=>$killsParticipated,
+            'averages'=>$averages,
+            'favSystems'=>$favSystems
+            );
+        Cache::write($cacheKey,$results,'eternity');
+
+        return $results;
+    } 
+    public function getFavoriteSystems($dateStart = false,$dateEnd = false){
+        $cacheKey = 'getFavoriteSystems_' . strtotime($dateStart) .'_'.strtotime($dateEnd);
+        if (($output = Cache::read($cacheKey,'eternity')) !== false){
+            if (!empty($output)) return $output;
+        }
+        $results = array(
+                'fav'=>array(),
+                'welp'=>array()
+            );
+          $query = "SELECT 
+                    count(k.kill_id) as noOfKills,
+                    sum(value)/1000000000 as isk,
+                    ss.name,
+                    ss.isWh
+                FROM kills as k 
+                    JOIN solar_systems as ss on ss.solar_system_id = k.solar_system_id
+                WHERE
+                    isOurLoss = 0
+                    AND totalWingspanpct >= 25
+                    AND k.date > '$dateStart 00:00:00'
+                    AND k.date <= '$dateEnd 00:00:00'
+                GROUP BY k.solar_system_id
+                ORDER BY noOfKills DESC";
+                // debug($query);die()
+        $connection = ConnectionManager::get('default');
+        $favoriteLocation = $connection->execute($query)->fetchAll('assoc');
+        $query = "SELECT 
+                    count(k.kill_id) as noOfKills,
+                    sum(value)/1000000000 as isk,
+                    ss.name,
+                    ss.isWh
+                FROM kills as k 
+                    JOIN solar_systems as ss on ss.solar_system_id = k.solar_system_id
+                WHERE
+                    isOurLoss = 1
+                    AND k.date > '$dateStart 00:00:00'
+                    AND k.date <= '$dateEnd 00:00:00'
+                GROUP BY k.solar_system_id
+                ORDER BY noOfKills DESC";
+        $welpLocation = $connection->execute($query)->fetchAll('assoc');
+        $results = array(
+                'fav'=>$favoriteLocation,
+                'welp'=>$welpLocation
+            );
+        Cache::write($cacheKey,$results,'eternity');
+        return $results;
+    } 
+    public function addToQueue($name){
+        $query = "INSERT INTO `characterques` (`character_id`, `character_name`, `queued`)
+            VALUES
+                (0, '$name', '".date('Y-m-d H:i:s')."');
+            ";
+                    $connection = ConnectionManager::get('default');
+        $connection->execute($query);
+        return true;
+    }
     /**
      * Default validation rules.
      *

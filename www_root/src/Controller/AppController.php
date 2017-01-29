@@ -16,7 +16,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
-
+use Cake\Network\Exception\NotFoundException;
 
 /**
  * Application Controller
@@ -30,7 +30,8 @@ class AppController extends Controller
 {
     public $dateStart = '';
     public $dateEnd = '';
-    public $minimumPct = 25; 
+    public $minimumPct = 25;
+    public $allowedAcions = array('login','logout','home','sso'); //allowed pages without login
     /**
      * Initialization hook method.
      *
@@ -40,16 +41,73 @@ class AppController extends Controller
      *
      * @return void
      */
+
+    public function checkIfAllowed(){
+        if (!$this->checkIfLoggedIn()){
+            if (!in_array($this->request->action,$this->allowedAcions)){
+                $this->request->session()->write('Auth.redirectAuth',$this->referer() );
+                $this->redirect('/pages/login');
+            }    
+        }
+        
+    }
+    public function auth($uid = false){
+             $s = $this->Stats->checkUserExistsForAuth($uid);
+             if ($s === false) throw new NotFoundException('No Such User');     
+                $this->request->session()->write('Auth.uid',$uid);
+                $this->request->session()->write('Auth.loggedin',date('Y-m-d H:i:s'));
+                 
+    }
+    public function checkIfLoggedIn(){
+        $uid = $this->request->session()->read('Auth.uid');
+
+        try{                  
+            $this->loadModel('Stats');  
+            if ($uid == 0 ){
+                $this->request->session()->delete('Auth');
+                // $this->checkIfAllowed();
+            } 
+
+            $s = $this->Stats->checkUserExistsForAuth($uid);
+            if ($s === false) throw new NotFoundException('No Such User');
+        }catch(NotFoundException $e){
+            return false;
+        }
+        return true;
+    }
+    public function checkIfOurBot(){
+        // die($_GET['bot']);
+        if ($this->request->is('POST')){
+            
+            if ($this->request->data['bot'] == "0026865d2aabdf20be434997cb225fc6"){
+                //$hash = md5("kanlyhasthekey");      
+                return true;
+                // die($hash);
+            }
+        }
+        return false;
+    }
     public function initialize()
     {
         parent::initialize();
-
+        $loggedIn = false;
+        $loggedIn = $this->checkIfLoggedIn();
+        if ($loggedIn == false){
+            //check if authenticated via script
+            if ($this->checkIfOurBot()){
+                $loggedIn = true;
+            }else{
+                $this->checkIfAllowed();    
+            }
+            
+        }
+        
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
         $this->loadComponent('Cookie');
         $this->Cookie->config('path', '/');
         $this->Cookie->config([
-            'expires' => '+1 minute',
+            'expires' => '+60 minute',
             'httpOnly' => true
         ]);
         $this->Cookie->configKey('stats', 'path', '/');
@@ -69,12 +127,12 @@ class AppController extends Controller
         }else{
            $this->dateStart = $dateStart= $stats['dateStart'];
             $this->dateEnd = $dateEnd = $stats['dateEnd'];
-            $this->minimumPct = $minimumPct = $stats['minimumPct'];
+            $this->minimumPct = $minimumPct =  25;// $stats['minimumPct'];
         }
         // $this->dateStart =  $dateStart = '2016-11';
         // $this->dateEnd = $dateEnd = '2016-12';
-        $this->set(compact('dateStart','dateEnd','minimumPct'));
-         $this->set('_serialize', ['dateStart','dateEnd','minimumPct']);
+        $this->set(compact('dateStart','dateEnd','minimumPct','loggedIn'));
+         $this->set('_serialize', ['dateStart','dateEnd','minimumPct','loggedIn']);
 
  
         /*

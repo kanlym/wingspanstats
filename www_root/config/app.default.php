@@ -10,7 +10,22 @@ return [
      * true: Errors and warnings shown.
      */
     'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
-
+    'tripWire' => [
+        'username'=>'',
+        'password'=>'',
+        'baseUrl'=>''
+    ],
+   'eveSSO' =>[
+        'client_id' => '',
+        'secret' =>'',
+        'authurl'=>'/oauth/authorize',
+        'authsite'=>'https://login.eveonline.com',
+        'verifyurl'=>'/oauth/verify',
+        'redirect_uri' => '',
+    ],
+    'slack' =>[
+        'hash' => ''
+    ],
     /**
      * Configure basic information about the application.
      *
@@ -101,6 +116,22 @@ return [
             'path' => CACHE . 'persistent/',
             'serialize' => true,
             'duration' => '+1 years',
+            'url' => env('CACHE_CAKECORE_URL', null),
+        ],
+        'fivemin' => [
+            'className' => 'File',
+            'prefix' => 'fivemin_cache',
+            'path' => CACHE . 'persistent/',
+            'serialize' => true,
+            'duration' => '+5 minutes',
+          'url' => env('CACHE_CAKECORE_URL', null),  
+        ],
+        'eternity' => [
+            'className' => 'File',
+            'prefix' => 'wingspan_eternity_',
+            'path' => CACHE . 'persistent/',
+            'serialize' => true,
+            'duration' => '+1 day',
             'url' => env('CACHE_CAKECORE_URL', null),
         ],
 
