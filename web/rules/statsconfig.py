@@ -13,7 +13,7 @@ class StatsConfig:
 
     CORP_IDS = [
         98330748,  # WiNGSPAN Delivery Services
-        98415327,  # WiNGSPAN Academy for Enterprising Pilots
+        # 98415327,  # WiNGSPAN Academy for Enterprising Pilots
     ]
 
     FLEET_COMP = 0.25

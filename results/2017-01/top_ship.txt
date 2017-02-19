@@ -1,55 +1,55 @@
 Ships destroyed by a specific hull
 --------------------------------------------
-#01 - Stratios - 645 ships
-#02 - Astero - 285 ships
-#03 - Tengu - 240 ships
-#04 - Nemesis - 186 ships
-#05 - Manticore - 170 ships
-#06 - Hound - 100 ships
-#07 - Rapier - 64 ships
-#08 - Orthrus - 50 ships
-#09 - Thrasher - 41 ships
-#10 - Caracal - 37 ships
-#11 - Proteus - 31 ships
-#12 - Vexor - 31 ships
-#13 - Omen - 31 ships
-#14 - Dramiel - 29 ships
-#15 - Falcon - 25 ships
-#16 - Purifier - 23 ships
-#17 - Loki - 23 ships
-#18 - Sabre - 22 ships
-#19 - Onyx - 21 ships
-#20 - Broadsword - 20 ships
-#21 - Pilgrim - 15 ships
-#22 - Heron - 13 ships
-#23 - Vigilant - 12 ships
-#24 - Nestor - 10 ships
-#25 - Sleipnir - 9 ships
+#01 - Stratios - 1119 ships
+#02 - Astero - 398 ships
+#03 - Tengu - 353 ships
+#04 - Nemesis - 320 ships
+#05 - Manticore - 306 ships
+#06 - Hound - 114 ships
+#07 - Rapier - 103 ships
+#08 - Proteus - 98 ships
+#09 - Purifier - 73 ships
+#10 - Thrasher - 71 ships
+#11 - Vigilant - 56 ships
+#12 - Falcon - 54 ships
+#13 - Orthrus - 52 ships
+#14 - Loki - 46 ships
+#15 - Caracal - 39 ships
+#16 - Sabre - 36 ships
+#17 - Dramiel - 33 ships
+#18 - Vexor - 31 ships
+#19 - Omen - 31 ships
+#20 - Pilgrim - 27 ships
+#21 - Nestor - 27 ships
+#22 - Cynabal - 23 ships
+#23 - Legion - 22 ships
+#24 - Onyx - 21 ships
+#25 - Svipul - 20 ships
 
 ISK destroyed by a specific hull
 --------------------------------------------
-#01 - Stratios - 119.90b
-#02 - Manticore - 70.35b
-#03 - Nemesis - 57.49b
-#04 - Tengu - 51.12b
-#05 - Hound - 48.17b
-#06 - Caracal - 29.91b
-#07 - Astero - 25.94b
-#08 - Rapier - 18.40b
-#09 - Purifier - 9.53b
-#10 - Orthrus - 7.36b
-#11 - Dramiel - 7.14b
-#12 - Sleipnir - 6.42b
-#13 - Loki - 6.37b
-#14 - Scythe - 6.18b
-#15 - Onyx - 6.17b
-#16 - Legion - 6.01b
-#17 - Nidhoggur - 5.87b
-#18 - Sacrilege - 5.46b
-#19 - Vexor - 5.26b
-#20 - Falcon - 4.86b
-#21 - Naglfar - 4.37b
-#22 - Curse - 4.21b
-#23 - Bellicose - 3.67b
-#24 - Eagle - 3.67b
-#25 - Moa - 3.66b
+#01 - Stratios - 190.65b
+#02 - Manticore - 94.07b
+#03 - Nemesis - 83.51b
+#04 - Tengu - 67.87b
+#05 - Hound - 52.18b
+#06 - Astero - 35.66b
+#07 - Caracal - 29.93b
+#08 - Rapier - 23.68b
+#09 - Purifier - 21.94b
+#10 - Falcon - 17.09b
+#11 - Loki - 10.02b
+#12 - Orthrus - 7.36b
+#13 - Dramiel - 7.17b
+#14 - Legion - 7.02b
+#15 - Sleipnir - 6.46b
+#16 - Scythe - 6.18b
+#17 - Onyx - 6.17b
+#18 - Nidhoggur - 5.87b
+#19 - Sacrilege - 5.46b
+#20 - Proteus - 5.33b
+#21 - Vexor - 5.26b
+#22 - Nestor - 4.78b
+#23 - Arazu - 4.70b
+#24 - Naglfar - 4.37b
+#25 - Curse - 4.21b

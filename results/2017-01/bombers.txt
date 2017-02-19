@@ -1,55 +1,55 @@
 Top bomber pilots - ships destroyed
 --------------------------------------------
-#01 - Yosh Maken - 36 ships
-#02 - Corrupted Aideron - 19 ships
-#03 - Father Nye - 19 ships
-#04 - Rogue Seven - 18 ships
-#05 - Crankball - 17 ships
-#06 - Rootey Tootey - 17 ships
-#07 - Grimm Horizon - 16 ships
-#08 - Aldard Aldard - 15 ships
-#09 - Xfinity Misner - 13 ships
-#10 - Caligulas - 12 ships
-#11 - DeLlave Verdun - 12 ships
-#12 - Aafen - 11 ships
-#13 - Haruko Kitsune - 11 ships
-#14 - Gigi McQuaid - 11 ships
-#15 - Epoch Veli - 11 ships
-#16 - Van Eshri - 9 ships
-#17 - Patrick Moon - 8 ships
-#18 - Quintus Va'Lari - 8 ships
-#19 - William Peccav - 8 ships
-#20 - Czechbox - 8 ships
-#21 - Dorphin Ghekon - 7 ships
-#22 - Capcan - 7 ships
-#23 - Jessi MalDoran - 7 ships
-#24 - Sachenka Cadelanne - 6 ships
-#25 - heptolisk Cato - 6 ships
+#01 - Yosh Maken - 57 ships
+#02 - Corrupted Aideron - 33 ships
+#03 - Aldard Aldard - 30 ships
+#04 - Father Nye - 25 ships
+#05 - Aafen - 24 ships
+#06 - Dorphin Ghekon - 22 ships
+#07 - Grimm Horizon - 22 ships
+#08 - Xfinity Misner - 21 ships
+#09 - Quintus Va'Lari - 21 ships
+#10 - Rootey Tootey - 20 ships
+#11 - Crankball - 19 ships
+#12 - Rogue Seven - 18 ships
+#13 - Caligulas - 18 ships
+#14 - Haruko Kitsune - 17 ships
+#15 - Seabrony - 16 ships
+#16 - Gigi McQuaid - 16 ships
+#17 - DeLlave Verdun - 15 ships
+#18 - Mister McQueen - 15 ships
+#19 - Chance Ravinne - 13 ships
+#20 - Epoch Veli - 13 ships
+#21 - minold heifer - 13 ships
+#22 - Krome Finn - 12 ships
+#23 - Richter Barret - 12 ships
+#24 - bumnz - 11 ships
+#25 - Flint Lowell - 11 ships
 
 Top bomber pilots - ISK destroyed
 --------------------------------------------
-#01 - DeLlave Verdun - 7.99b
-#02 - Father Nye - 7.78b
-#03 - Aldard Aldard - 7.62b
-#04 - Romanholiday - 6.95b
-#05 - Kerie Thomas - 6.84b
-#06 - Van Eshri - 6.76b
-#07 - Epoch Veli - 6.69b
-#08 - Rootey Tootey - 6.64b
-#09 - SsjGhost - 6.52b
-#10 - William Peccav - 6.15b
-#11 - Xfinity Misner - 6.13b
-#12 - Crankball - 6.08b
-#13 - Nils Winterstorm - 6.02b
-#14 - Doris Andedarie - 5.94b
-#15 - Selena Na'sharr - 5.46b
-#16 - Sachenka Cadelanne - 5.32b
-#17 - Cristos Grimblade - 5.31b
-#18 - Yosh Maken - 4.53b
-#19 - Haruko Kitsune - 3.83b
-#20 - Orianna Okanata - 3.73b
-#21 - Grimm Horizon - 3.24b
-#22 - Annages Dakos - 3.06b
-#23 - Caligulas - 3.02b
-#24 - Rogue Seven - 2.62b
-#25 - Patrick Moon - 2.50b
+#01 - Aldard Aldard - 9.96b
+#02 - Father Nye - 8.53b
+#03 - Nils Winterstorm - 8.25b
+#04 - DeLlave Verdun - 8.00b
+#05 - SsjGhost - 7.73b
+#06 - Yosh Maken - 7.72b
+#07 - Xfinity Misner - 7.61b
+#08 - Epoch Veli - 7.30b
+#09 - Rootey Tootey - 7.21b
+#10 - Romanholiday - 6.95b
+#11 - Kerie Thomas - 6.84b
+#12 - Van Eshri - 6.76b
+#13 - Quintus Va'Lari - 6.50b
+#14 - William Peccav - 6.15b
+#15 - Sachenka Cadelanne - 6.08b
+#16 - Crankball - 6.08b
+#17 - Doris Andedarie - 5.95b
+#18 - Aafen - 5.79b
+#19 - Grimm Horizon - 5.77b
+#20 - Selena Na'sharr - 5.51b
+#21 - Cristos Grimblade - 5.31b
+#22 - Deathwush Pitchblack - 4.67b
+#23 - minold heifer - 4.31b
+#24 - Haruko Kitsune - 4.14b
+#25 - Chance Ravinne - 4.11b

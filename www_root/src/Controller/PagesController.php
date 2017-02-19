@@ -31,6 +31,7 @@ class PagesController extends AppController
 {
     public function beforeFilter(Event $event){
         parent::beforeFilter($event);
+        // debug($_SESSION);die();
     
     $this->loadModel('Stats');
     }
@@ -52,10 +53,37 @@ class PagesController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When the view file could not
      *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
      */
-
+    public function prevmonth(){
+        $dateStart = date('Y-m',strtotime('last month')).'-01';
+        $dateEnd = date('Y-m').'-01';
+          $this->Cookie->write('stats',
+                ['dateStart'=>$dateStart, 'dateEnd'=>$dateEnd]
+                );
+          $this->redirect('/');
+    }
+    public function thismonth(){
+        $dateEnd = date('Y-m',strtotime('next month')).'-01';
+        $dateStart = date('Y-m').'-01';
+          $this->Cookie->write('stats',
+                ['dateStart'=>$dateStart, 'dateEnd'=>$dateEnd]
+                );
+          $this->redirect('/');
+    }
+    public function lastquarter(){
+        $dateStart = date('Y-m',strtotime('-3 months')).'-01';
+        $dateEnd = date('Y-m').'-01';
+        
+          $this->Cookie->write('stats',
+                ['dateStart'=>$dateStart, 'dateEnd'=>$dateEnd]
+                );
+          $this->redirect('/');
+    }
+    public function customstats(){
+    	
+    }
     public function home(){
         $agentData = $this->Stats->agents($this->dateStart,$this->dateEnd);
-        if (empty($agentData)) $this->redirect('/'); //in case cache fails, we retry cuz fuck cake
+        // if (empty($agentData)) $this->redirect('/'); //in case cache fails, we retry cuz fuck cake
         // if (empty($agentData)){
         //     die("Crunching numbers, return later");
         // }
@@ -95,10 +123,8 @@ class PagesController extends AppController
     }
     public function login(){
         $this->viewBuilder()->layout('wingspan');
-        $noance = uniqid();
-        $url = Configure::read('eveSSO.authsite') .Configure::read('eveSSO.authurl') . '?response_type=code&redirect_uri=' . Configure::read('eveSSO.redirect_uri') . '&client_id=' . Configure::read('eveSSO.client_id') . '&scope=&state='. $noance;
-        $this->set(compact('url'));
-        $this->set('_serialize',['url']);
+        
+        
     }
     public function logout(){
         $this->request->session()->delete('Auth');
@@ -161,6 +187,7 @@ class PagesController extends AppController
         if (!isset($response->CharacterID)) {
             throw new NotFoundException('No character ID returned');
         }
+        // debug($response);die();
         $ch = curl_init();
         $lookup_url="https://api.eveonline.com/eve/CharacterAffiliation.xml.aspx?ids=".$response->CharacterID;
         curl_setopt($ch, CURLOPT_URL, $lookup_url);
@@ -181,7 +208,7 @@ class PagesController extends AppController
             $redirectURL = $this->request->session()->read('Auth.redirectAuth');
             if ($redirectURL == false) $redirectURL = '/';
             $this->redirect($redirectURL);
-            $this->auth($response->CharacterID);
+            $this->auth($response);
             //auth the user
             // die("TRUE");
             // verifica daca exista userul

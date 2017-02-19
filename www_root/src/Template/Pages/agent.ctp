@@ -239,7 +239,7 @@ $this->layout = 'wingspan';
                                         <tr>
                                             <td><?= $l['noOfHits']?></td>
                                             <td><?= $l['value']?></td>
-                                            <td><?= $l['name']; ?></td>
+                                            <td><a href="https://o.smium.org/search?q=<?= $l['name']; ?>" target="_blank"><?= $l['name']; ?></a> </td>
                                         </tr>
                                         <?
                                         }

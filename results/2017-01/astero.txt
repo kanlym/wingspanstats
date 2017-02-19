@@ -1,55 +1,55 @@
 Top Astero pilots - ships destroyed
 --------------------------------------------
-#01 - Hae Joo Chang - 29 ships
-#02 - Negark Crendraven - 26 ships
-#03 - Kerie Thomas - 24 ships
-#04 - Jessi MalDoran - 22 ships
-#05 - Deathwush Pitchblack - 21 ships
-#06 - Damien Muth - 17 ships
-#07 - Fyodor Ivanov Svoboda - 15 ships
-#08 - Flint Lowell - 14 ships
-#09 - Nik Volsk - 14 ships
-#10 - Alebrelle Kuatu - 12 ships
-#11 - TOPSTER - 10 ships
-#12 - Epoch Veli - 9 ships
-#13 - Rootey Tootey - 6 ships
-#14 - Ishtar d'Asmodai - 5 ships
-#15 - QuarantineEng - 5 ships
-#16 - Dorphin Ghekon - 5 ships
-#17 - Grimm Horizon - 5 ships
-#18 - G Indahowse - 4 ships
-#19 - minold heifer - 4 ships
-#20 - Priestez - 4 ships
-#21 - CyanideLeviathan - 3 ships
-#22 - Inam Pak - 3 ships
-#23 - Benaiah Barrington - 2 ships
-#24 - Aldard Aldard - 2 ships
-#25 - AusTiger - 2 ships
+#01 - Negark Crendraven - 43 ships
+#02 - Hae Joo Chang - 39 ships
+#03 - Deathwush Pitchblack - 35 ships
+#04 - Kerie Thomas - 26 ships
+#05 - Jessi MalDoran - 24 ships
+#06 - Alebrelle Kuatu - 23 ships
+#07 - Damien Muth - 17 ships
+#08 - Fyodor Ivanov Svoboda - 16 ships
+#09 - Flint Lowell - 14 ships
+#10 - Nik Volsk - 14 ships
+#11 - Epoch Veli - 11 ships
+#12 - TOPSTER - 11 ships
+#13 - Arcdale - 8 ships
+#14 - Rootey Tootey - 7 ships
+#15 - Dorphin Ghekon - 7 ships
+#16 - noXena - 7 ships
+#17 - Grimm Horizon - 6 ships
+#18 - AusTiger - 5 ships
+#19 - Ishtar d'Asmodai - 5 ships
+#20 - QuarantineEng - 5 ships
+#21 - Xfinity Misner - 5 ships
+#22 - Shaellon - 4 ships
+#23 - Grant Adoudel - 4 ships
+#24 - G Indahowse - 4 ships
+#25 - Richter Barret - 4 ships
 
 Top Astero pilots - ISK destroyed
 --------------------------------------------
-#01 - Negark Crendraven - 4.76b
+#01 - Negark Crendraven - 6.05b
 #02 - Fyodor Ivanov Svoboda - 4.67b
-#03 - Jessi MalDoran - 2.74b
-#04 - Hae Joo Chang - 2.40b
-#05 - Damien Muth - 2.15b
-#06 - Nik Volsk - 1.48b
-#07 - Rootey Tootey - 1.39b
-#08 - Deathwush Pitchblack - 1.21b
-#09 - Epoch Veli - 0.97b
-#10 - Kerie Thomas - 0.75b
-#11 - QuarantineEng - 0.59b
-#12 - Alebrelle Kuatu - 0.53b
-#13 - Flint Lowell - 0.38b
-#14 - Dorphin Ghekon - 0.31b
-#15 - AusTiger - 0.28b
-#16 - Grimm Horizon - 0.27b
-#17 - Ishtar d'Asmodai - 0.17b
-#18 - Daff Punk - 0.13b
-#19 - Inam Pak - 0.12b
-#20 - sgrhtj - 0.12b
-#21 - Trip Erata - 0.10b
-#22 - Arteris Longesprit - 0.10b
-#23 - CyanideLeviathan - 0.08b
-#24 - TOPSTER - 0.06b
-#25 - Priestez - 0.05b
+#03 - Jessi MalDoran - 2.77b
+#04 - Hae Joo Chang - 2.67b
+#05 - Xfinity Misner - 2.65b
+#06 - Deathwush Pitchblack - 2.16b
+#07 - Damien Muth - 2.15b
+#08 - Alebrelle Kuatu - 1.91b
+#09 - Nik Volsk - 1.48b
+#10 - Rootey Tootey - 1.40b
+#11 - Epoch Veli - 1.21b
+#12 - noXena - 1.18b
+#13 - Kerie Thomas - 0.75b
+#14 - Arcdale - 0.75b
+#15 - QuarantineEng - 0.59b
+#16 - Flint Lowell - 0.38b
+#17 - Dorphin Ghekon - 0.35b
+#18 - AusTiger - 0.28b
+#19 - Grimm Horizon - 0.27b
+#20 - Vasil Gaterau - 0.26b
+#21 - Richter Barret - 0.20b
+#22 - Ishtar d'Asmodai - 0.17b
+#23 - Daff Punk - 0.13b
+#24 - Inam Pak - 0.12b
+#25 - Father Nye - 0.12b

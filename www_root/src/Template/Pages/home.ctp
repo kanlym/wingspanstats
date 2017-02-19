@@ -23,13 +23,21 @@ $this->layout = 'wingspan';
 
 ?>
 <?
+
 // debug($generalData);die();
 ?>
 
 
  <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Current stats <?= $dateStart ?> to <?= $dateEnd ?></h1>
+                    <h1 class="page-header"><? if (empty($agentData)) {
+                        ?>
+                        No data for <?= $dateStart ?> to <?= $dateEnd ?>
+                        <?
+                        }else{
+                            ?>
+                            Current stats <?= $dateStart ?> to <?= $dateEnd ?>
+                            <? } ?></h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -135,11 +143,16 @@ Morris.Bar({
             <?
                 // debug($shipsData->ships);die();
                 // debug($bombersData);die();
+                
             ?>
-               <?= $this->element('headrows/row',array('icon'=>'fa-trophy','title'=>'Top agents','headNumber'=>'1/'.count($agentData) .' agents','headText'=>$agentData[0]['character_name'],'color'=>'wingspan','link'=>'/stats/agents/'/* yellow */));?>
-               <?= $this->element('headrows/row',array('icon'=>'fa-tasks','title'=>'Top ships','headNumber'=>$shipsData['0']['totalKills'] . ' kills','headText'=>$shipsData[0]['name'],'color'=>'wingspan','link'=>'/ships' /* yellow */));?>
-               <?= $this->element('headrows/row',array('icon'=>'fa-rocket','title'=>'Top stratios kills','headNumber'=>$stratiosData[0]['ships_killed'] .' kills','headText'=>$stratiosData[0]['character_name'],'color'=>'wingspan','link'=>'/stats/stratios/' /* yellow */));?>
-               <?= $this->element('headrows/row',array('icon'=>'fa-bomb','title'=>'Top bomber kills','headNumber'=>$bombersData[0]['ships_killed'] .' kills','headText'=>$bombersData[0]['character_name'],'color'=>'wingspan','link'=>'/stats/bombers/' /* yellow */));?>
+               <? if (!empty($agentData)){
+
+                echo $this->element('headrows/row',array('icon'=>'fa-trophy','title'=>'Top agents','headNumber'=>'1/'.count($agentData) .' agents','headText'=>$agentData[0]['character_name'],'color'=>'wingspan','link'=>'/stats/agents/'/* yellow */));
+               }
+               ?>
+               <?= !empty($shipsData) ? $this->element('headrows/row',array('icon'=>'fa-tasks','title'=>'Top ships','headNumber'=>$shipsData['0']['totalKills'] . ' kills','headText'=>$shipsData[0]['name'],'color'=>'wingspan','link'=>'/ships' /* yellow */)) : '';?>
+               <?= !empty($stratiosData) ? $this->element('headrows/row',array('icon'=>'fa-rocket','title'=>'Top stratios kills','headNumber'=>$stratiosData[0]['ships_killed'] .' kills','headText'=>$stratiosData[0]['character_name'],'color'=>'wingspan','link'=>'/stats/stratios/' /* yellow */)) : '';?>
+               <?= !empty($bombersData) ? $this->element('headrows/row',array('icon'=>'fa-bomb','title'=>'Top bomber kills','headNumber'=>$bombersData[0]['ships_killed'] .' kills','headText'=>$bombersData[0]['character_name'],'color'=>'wingspan','link'=>'/stats/bombers/' /* yellow */)) : '';?>
             </div>
             <div class="row">
                 <div class="col-lg-8">

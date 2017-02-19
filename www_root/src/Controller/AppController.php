@@ -17,7 +17,7 @@ namespace App\Controller;
 use Cake\Controller\Controller;
 use Cake\Event\Event;
 use Cake\Network\Exception\NotFoundException;
-
+use Cake\Core\Configure;
 /**
  * Application Controller
  *
@@ -31,7 +31,7 @@ class AppController extends Controller
     public $dateStart = '';
     public $dateEnd = '';
     public $minimumPct = 25;
-    public $allowedAcions = array('login','logout','home','sso'); //allowed pages without login
+    public $allowedAcions = array('login','logout','home','sso','thismonth','prevmonth','lastquarter'); //allowed pages without login
     /**
      * Initialization hook method.
      *
@@ -51,11 +51,14 @@ class AppController extends Controller
         }
         
     }
-    public function auth($uid = false){
+    public function auth($response = false){
+        $uid = $response->CharacterID;
+        $name = $response->CharacterName;
              $s = $this->Stats->checkUserExistsForAuth($uid);
              if ($s === false) throw new NotFoundException('No Such User');     
                 $this->request->session()->write('Auth.uid',$uid);
                 $this->request->session()->write('Auth.loggedin',date('Y-m-d H:i:s'));
+                $this->request->session()->write('Auth.name',$name);
                  
     }
     public function checkIfLoggedIn(){
@@ -101,7 +104,9 @@ class AppController extends Controller
             }
             
         }
-        
+        $noance = uniqid();
+        $loginUrl = Configure::read('eveSSO.authsite') .Configure::read('eveSSO.authurl') . '?response_type=code&redirect_uri=' . Configure::read('eveSSO.redirect_uri') . '&client_id=' . Configure::read('eveSSO.client_id') . '&scope=&state='. $noance;
+        $this->set(compact('loginUrl'));
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
         $this->loadComponent('Cookie');
@@ -131,8 +136,8 @@ class AppController extends Controller
         }
         // $this->dateStart =  $dateStart = '2016-11';
         // $this->dateEnd = $dateEnd = '2016-12';
-        $this->set(compact('dateStart','dateEnd','minimumPct','loggedIn'));
-         $this->set('_serialize', ['dateStart','dateEnd','minimumPct','loggedIn']);
+        $this->set(compact('dateStart','dateEnd','minimumPct','loggedIn','loginUrl'));
+         $this->set('_serialize', ['dateStart','dateEnd','minimumPct','loggedIn','loginUrl']);
 
  
         /*

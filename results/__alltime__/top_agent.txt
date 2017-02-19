@@ -1,55 +1,55 @@
 Ships destroyed
 --------------------------------------------
-#01 - Okaga Utama - 93 ships
-#02 - Tasmine Cha-Tien - 63 ships
-#03 - Gareth Adoudel - 62 ships
-#04 - Sylnn Severn - 51 ships
-#05 - Mei Long - 50 ships
-#06 - Aldard Aldard - 48 ships
-#07 - Kerie Thomas - 48 ships
-#08 - Capcan - 48 ships
-#09 - Jessi MalDoran - 44 ships
-#10 - Reed Icculus - 44 ships
-#11 - Yosh Maken - 39 ships
-#12 - Vek Chiasson - 38 ships
-#13 - Shaellon - 38 ships
-#14 - DeLlave Verdun - 37 ships
-#15 - Iwata s - 37 ships
-#16 - Rootey Tootey - 36 ships
-#17 - Swift Isu - 36 ships
-#18 - Haruko Kitsune - 35 ships
-#19 - Grimm Horizon - 35 ships
-#20 - Al3x Oaks - 35 ships
-#21 - AusTiger - 34 ships
-#22 - Deathwush Pitchblack - 34 ships
-#23 - Zevenz - 33 ships
-#24 - Crankball - 32 ships
-#25 - Hae Joo Chang - 32 ships
+#01 - Okaga Utama - 172 ships
+#02 - Sylnn Severn - 109 ships
+#03 - Al3x Oaks - 105 ships
+#04 - Gareth Adoudel - 96 ships
+#05 - Capcan - 78 ships
+#06 - Haruko Kitsune - 76 ships
+#07 - Mei Long - 71 ships
+#08 - AusTiger - 67 ships
+#09 - Deathwush Pitchblack - 66 ships
+#10 - Aldard Aldard - 65 ships
+#11 - Tasmine Cha-Tien - 63 ships
+#12 - DeLlave Verdun - 62 ships
+#13 - Kerie Thomas - 62 ships
+#14 - Yosh Maken - 60 ships
+#15 - Kanly Aideron - 54 ships
+#16 - Zevenz - 53 ships
+#17 - minold heifer - 51 ships
+#18 - Xaeli - 51 ships
+#19 - Epoch Veli - 51 ships
+#20 - Crankball - 50 ships
+#21 - Reed Icculus - 50 ships
+#22 - Jessi MalDoran - 48 ships
+#23 - Negark Crendraven - 48 ships
+#24 - bumnz - 47 ships
+#25 - NoGo Rose - 47 ships
 
 ISK destroyed
 --------------------------------------------
-#01 - Aldard Aldard - 15.95b
-#02 - Grimm Horizon - 15.05b
-#03 - Okaga Utama - 14.12b
-#04 - SsjGhost - 13.67b
-#05 - AusTiger - 13.43b
-#06 - Romanholiday - 12.31b
-#07 - Xaeli - 11.23b
-#08 - Kerie Thomas - 11.09b
-#09 - DeLlave Verdun - 10.98b
-#10 - Jessi MalDoran - 10.26b
-#11 - Orianna Okanata - 10.02b
-#12 - Haruko Kitsune - 10.01b
-#13 - Zevenz - 9.94b
-#14 - Leptys Finbulventr - 9.92b
-#15 - Rootey Tootey - 9.65b
-#16 - QuarantineEng - 9.64b
-#17 - Tasmine Cha-Tien - 9.61b
-#18 - Xee Yoona-451 - 9.28b
-#19 - Dorphin Ghekon - 9.23b
-#20 - Epoch Veli - 8.94b
-#21 - Gareth Adoudel - 8.91b
-#22 - Sachenka Cadelanne - 8.72b
-#23 - Kanly Aideron - 8.41b
-#24 - Crankball - 8.20b
-#25 - Father Nye - 8.06b
+#01 - Okaga Utama - 20.46b
+#02 - AusTiger - 20.09b
+#03 - Aldard Aldard - 19.42b
+#04 - Grimm Horizon - 18.29b
+#05 - Sylnn Severn - 16.83b
+#06 - SsjGhost - 15.78b
+#07 - Haruko Kitsune - 15.39b
+#08 - Xaeli - 14.69b
+#09 - Epoch Veli - 13.97b
+#10 - Mei Long - 13.69b
+#11 - Deathwush Pitchblack - 13.67b
+#12 - Kerie Thomas - 13.45b
+#13 - Romanholiday - 13.19b
+#14 - Gareth Adoudel - 12.72b
+#15 - Kanly Aideron - 12.53b
+#16 - Xee Yoona-451 - 12.33b
+#17 - DeLlave Verdun - 11.85b
+#18 - Orianna Okanata - 11.76b
+#19 - Zevenz - 11.06b
+#20 - Gillion Wyrddych - 10.73b
+#21 - Jessi MalDoran - 10.31b
+#22 - Sphex Nobody - 10.29b
+#23 - Xfinity Misner - 10.25b
+#24 - Rootey Tootey - 10.23b
+#25 - Sachenka Cadelanne - 10.22b

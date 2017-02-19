@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 # db_create.py
 # Author: Valtyr Farshield
 
@@ -27,11 +29,12 @@ def zkill_fetch(year, month, page_nr):
     )
 
     try:
+        print "Trying to connect to {}".format(url)
         request = urllib2.Request(url, None, headers)
-        response = urllib2.urlopen(request)
+        response = urllib2.urlopen(request)        
     except urllib2.URLError as e:
         print "[Error]", e.reason
-        return None
+        return False
 
     if response.info().get("Content-Encoding") == "gzip":
         buf = StringIO(response.read())
@@ -39,7 +42,6 @@ def zkill_fetch(year, month, page_nr):
         data = f.read()
     else:
         data = response.read()
-
     return data
 
 
@@ -49,27 +51,34 @@ def extract_data(year, month):
     db_dir = os.path.join(StatsConfig.DATABASE_PATH, "{}-{:02d}".format(year, month))
     if not os.path.exists(db_dir):
         os.makedirs(db_dir)
-
+    requests = 0
     page_nr = 1
     while True:
         data = zkill_fetch(year, month, page_nr)
+        if data == False:
+            print "No data received"
+            # break
+        requests += 1
 
         # try to parse JSON received from server
         try:
             parsed_json = json.loads(data)
         except ValueError as e:
-            print "[Error]", e
-            return
+            print "[Error Parsing]", e.reason
+            print "Exit function"
+            return requests
+
 
         if len(parsed_json) > 0:
             file_name = os.path.join(db_dir, "{}-{:02d}_{:02d}.json".format(year, month, page_nr))
             with open(file_name, 'w') as f_out:
                 f_out.write(data)
+        print "Found {} mails".format(len(parsed_json) );
 
         if len(parsed_json) < 200:
-            break
+        	break
         else:
-            page_nr += 1
+        	page_nr += 1
 
 def getOldData():
     extract_data(2014, 7)

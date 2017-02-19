@@ -1,5 +1,9 @@
 Ships destroyed in Thera
 --------------------------------------------
+#01 - Father Nye - 1 ships
+#02 - Damien Muth - 1 ships
 
 ISK destroyed in Thera
 --------------------------------------------
+#01 - Father Nye - 0.05b
+#02 - Damien Muth - 0.05b

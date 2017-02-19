@@ -5,7 +5,7 @@
                          	Login with EVE SSO   
                         </div>
                      <div class="panel-body">
-                     		<a href="<?=$url;?>">Click here</a>
+                     		<a href="<?=$loginUrl;?>">Click here</a>
                      </div>
            </div>
            </div>

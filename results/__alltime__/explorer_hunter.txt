@@ -1,55 +1,55 @@
 Top explorer hunters - ships destroyed
 --------------------------------------------
-#01 - Okaga Utama - 27 ships
-#02 - Deathwush Pitchblack - 14 ships
-#03 - Capcan - 14 ships
-#04 - Shaellon - 13 ships
-#05 - Gareth Adoudel - 10 ships
-#06 - Hae Joo Chang - 9 ships
-#07 - Crankball - 8 ships
-#08 - DeLlave Verdun - 8 ships
-#09 - Flint Lowell - 8 ships
-#10 - Negark Crendraven - 8 ships
-#11 - Patrick Moon - 7 ships
-#12 - Jessi MalDoran - 7 ships
-#13 - Father Nye - 7 ships
-#14 - Epoch Veli - 7 ships
-#15 - Reed Icculus - 7 ships
-#16 - Vek Chiasson - 6 ships
-#17 - TOPSTER - 6 ships
-#18 - Kerie Thomas - 6 ships
-#19 - Rootey Tootey - 5 ships
-#20 - bumnz - 5 ships
-#21 - Nik Volsk - 5 ships
-#22 - Sylnn Severn - 5 ships
-#23 - Richter Barret - 5 ships
-#24 - Al3x Oaks - 5 ships
-#25 - Terram alWathani - 5 ships
+#01 - Okaga Utama - 48 ships
+#02 - Capcan - 25 ships
+#03 - Deathwush Pitchblack - 23 ships
+#04 - Al3x Oaks - 22 ships
+#05 - Negark Crendraven - 17 ships
+#06 - Haruko Kitsune - 16 ships
+#07 - Gareth Adoudel - 16 ships
+#08 - Shaellon - 16 ships
+#09 - DeLlave Verdun - 15 ships
+#10 - Hae Joo Chang - 14 ships
+#11 - Father Nye - 12 ships
+#12 - Kanly Aideron - 11 ships
+#13 - Crankball - 10 ships
+#14 - Sabrez Haklar - 10 ships
+#15 - Richter Barret - 10 ships
+#16 - TOPSTER - 10 ships
+#17 - Yosh Maken - 10 ships
+#18 - Bdan en Gravonere - 10 ships
+#19 - Nik Volsk - 9 ships
+#20 - Patrick Moon - 9 ships
+#21 - Flint Lowell - 9 ships
+#22 - Dorphin Ghekon - 8 ships
+#23 - bumnz - 8 ships
+#24 - Corridor Paratus - 8 ships
+#25 - Sachenka Cadelanne - 8 ships
 
 Top explorer hunters - ISK destroyed
 --------------------------------------------
-#01 - Hae Joo Chang - 1.30b
-#02 - Okaga Utama - 1.09b
-#03 - bumnz - 1.04b
-#04 - Xee Yoona-451 - 1.02b
-#05 - Sylnn Severn - 0.98b
-#06 - Aafen - 0.85b
-#07 - Epoch Veli - 0.70b
-#08 - Fyodor Ivanov Svoboda - 0.69b
-#09 - Haruko Kitsune - 0.69b
-#10 - Capcan - 0.67b
-#11 - AusTiger - 0.61b
-#12 - Van Eshri - 0.60b
-#13 - Sabrez Haklar - 0.55b
-#14 - Al3x Oaks - 0.52b
-#15 - Xfinity Misner - 0.52b
-#16 - NoGo Rose - 0.51b
-#17 - Alex Bianci - 0.51b
-#18 - Jessi MalDoran - 0.51b
-#19 - Ishtar d'Asmodai - 0.50b
-#20 - Crankball - 0.49b
-#21 - Grimm Horizon - 0.48b
-#22 - Father Nye - 0.45b
-#23 - Gareth Adoudel - 0.42b
-#24 - Shaellon - 0.33b
-#25 - Richter Barret - 0.28b
+#01 - Okaga Utama - 1.79b
+#02 - Hae Joo Chang - 1.56b
+#03 - bumnz - 1.38b
+#04 - Xee Yoona-451 - 1.38b
+#05 - Sylnn Severn - 1.10b
+#06 - Capcan - 1.05b
+#07 - Al3x Oaks - 1.01b
+#08 - Haruko Kitsune - 0.99b
+#09 - Aafen - 0.85b
+#10 - Sabrez Haklar - 0.72b
+#11 - Epoch Veli - 0.71b
+#12 - AusTiger - 0.70b
+#13 - Fyodor Ivanov Svoboda - 0.69b
+#14 - Kanly Aideron - 0.66b
+#15 - NoGo Rose - 0.66b
+#16 - Gareth Adoudel - 0.65b
+#17 - Father Nye - 0.62b
+#18 - Van Eshri - 0.60b
+#19 - Xfinity Misner - 0.60b
+#20 - Bdan en Gravonere - 0.58b
+#21 - Negark Crendraven - 0.54b
+#22 - Alex Bianci - 0.51b
+#23 - Jessi MalDoran - 0.51b
+#24 - Ishtar d'Asmodai - 0.50b
+#25 - Crankball - 0.49b

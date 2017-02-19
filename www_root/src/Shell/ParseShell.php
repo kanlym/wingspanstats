@@ -274,12 +274,12 @@ class ParseShell extends Shell{
 				// $this->out("Salvat");
 				return true;
 			}else{
-				$this->out($ship);
-				$this->out("NOT Salvat");
+				// $this->out($ship);
+				// $this->out("NOT Salvat");
 				return false;
 			}	
 		}catch (Exception $e){
-			$this->Log($s);
+			// $this->Log($s);
 			$this->Log($e->getMessage());
 			return false;
 		}
@@ -376,8 +376,13 @@ class ParseShell extends Shell{
 		 $data = file_get_contents($root.'kills.json');
          $agentData = json_decode($data);
          $this->out("File is $root/kills.json");
-         
+         $at = 1;
+         $totalNoOfKills = sizeof($agentData->kills);
+         $this->out("Analyzing " . $totalNoOfKills . ' kill mails');
+
          foreach ($agentData->kills as $a){
+         	$this->out("Processing kill ". $at . ' out of ' . $totalNoOfKills);
+         	$at++;
          	$c = array(
          		'solar_system_id' => (int) $a->solar_system_id,
          		'character_id' =>(int)$a->character_id,
@@ -393,7 +398,12 @@ class ParseShell extends Shell{
          		'corporation_id'=>$a->corporation_id
          		);
          	if ($this->addKill($c)){
+         		$totalAttackers = sizeof($a->attackers);
+         		$noOfAtt = 1;
+         		
          		foreach ($a->attackers as $atc){
+         			$this->out("|- processing attacker $noOfAtt of $totalAttackers");
+         			$noOfAtt++;
 	         		//parsam corporati
 	         		$corp = array(
 	         			'corporation_id'=>$atc->corporation_id,
@@ -432,17 +442,19 @@ class ParseShell extends Shell{
 	// public function parseShips()
 	// public function parsevictims
 	public function parseOldData(){
-		for ($i = 2016; $i<2017; $i++){
-			for ($j = 6; $j <13;$j++){
-				// $i = 2016;
-				// $j = 10;
-				if ($j < 10) $str = "$i-0$j"; 
-				else $str= "$i-$j";
-				$this->Log("Parsing file " . $str);
-				$this->parseJsonAgents($str);
-				$this->parseKills($str);		
-			}
-		}
+				$i = 2015;
+				$j = 1;
+				for ($i = 2015; $i<=2017;$i++){
+					for ($j = 1;$j<=12;$j++){
+						if ($j < 10) $str = "$i-0$j";
+						else $str ="$i-$j";
+						$this->Log("Parsing file " . $str);
+						$this->parseJsonAgents($str);
+						$this->parseKills($str);		
+					}
+				}
+				// $str = '2017-01';
+				
 	}
 	public function parseCurrentMonth(){
 				$str = date('Y') . '-' . (date('m') < 10 ? date('m') : date('m'));

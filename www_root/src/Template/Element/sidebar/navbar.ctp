@@ -24,8 +24,41 @@ $optionsMenu = array(
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/"><img id="logo" class="pull-left" src="/img/icon_wing.png" alt="wing"><span class="navbar-brand">Wingspan daily stats   </span></a><a href="/pages/datesetup"><?= $dateStart ?> to <?= $dateEnd ?></a></div>
+                <a href="/"><img id="logo" class="pull-left" src="/img/icon_wing.png" alt="wing"><span class="navbar-brand">Wingspan daily stats   </span></a></div>
+                  <ul class="nav navbar-top-links navbar-right">
+             
+                <!-- /.dropdown -->
+                <li><a href="/pages/thismonth">This Month</a></li>
+                <li><a href="/pages/prevmonth">Last Month</a></li>
+                <li><a href="/pages/lastquarter">Last Quarter</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+    
+                    <ul class="dropdown-menu dropdown-user">
+
+                      <?
+                        if ($loggedIn) {
+                       ?>
+                        <li><a href="/pages/agent/<?= $_SESSION['Auth']['uid'] ?>/<?= urlencode($_SESSION['Auth']['name']) ?>"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="/pages/datesetup"><i class="fa fa-calendar fa-fw"></i> Date setup</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="/pages/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                          <? }else{ ?>
+                          <li><a href="<?=$loginUrl ?>"><i class="fa fa-sign-in fa-fw"></i> Login</a>
+                          <? } ?>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+              
+                <!-- /.dropdown -->
+            </ul>
             </div>
+
             <!-- /.navbar-header -->
 
             <!-- /.navbar-top-links -->
@@ -120,27 +153,13 @@ $optionsMenu = array(
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
-                            <li>
-                                <a href="/pages/datesetup">Setup report dates </a>
-                            </li>
-                            <li>
-                            <?
-                                if ($loggedIn) {
-                                    ?>
-                                        <a href="/pages/logout">Logout</a>
-                                    <?
-                                }else{
-                                    ?>
-                                    <a href="/pages/login">Login</a>
-                                    <?
-                                }
-                            ?>
-                            </li>   
+                           
                         </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
             </div>
             <!-- /.navbar-static-side -->
+
         </nav>
 
   

@@ -15,7 +15,7 @@ from datetime import datetime
 
 def zkill_fetch_kills(year, month, page_nr):
     headers = {
-        "User-Agent": "WINGSPAN Statistics, Mail: andrei.negescu@gmail.com",
+        "User-Agent": "WINGSPAN Statistics, Mail: andrei.negescu@gmail.com !",
         "Accept-encoding": "gzip"
     }
 
@@ -32,7 +32,7 @@ def zkill_fetch_kills(year, month, page_nr):
     try:
         print "Trying to connect to {}".format(url)
         request = urllib2.Request(url, None, headers)
-        response = urllib2.urlopen(request)
+        response = urllib2.urlopen(request)        
     except urllib2.URLError as e:
         print "[Error]", e.reason
         return False
@@ -43,7 +43,6 @@ def zkill_fetch_kills(year, month, page_nr):
         data = f.read()
     else:
         data = response.read()
-
     return data
 def zkill_fetch_losses(year, month, page_nr):
     headers = {
@@ -96,7 +95,8 @@ def extract_data(year, month):
     while True:
         data = zkill_fetch_kills(year, month, page_nr)
         if data == False:
-            break
+            print "No data received"
+            # break
         requests += 1
 
         # try to parse JSON received from server
@@ -104,7 +104,8 @@ def extract_data(year, month):
             parsed_json = json.loads(data)
         except ValueError as e:
             print "[Error Parsing]", e.reason
-            return 
+            print "Exit function"
+            return requests
 
         if len(parsed_json) > 0:
             file_name = os.path.join(
@@ -113,13 +114,19 @@ def extract_data(year, month):
             )
             with open(file_name, 'w') as f_out:
                 f_out.write(data)
-
+                # print "{}".format(data);
+                print "Writing data for {}".format(file_name);
+        print "Found {} mails".format(len(parsed_json) );
+        downloadIndex += 1
+        requests += 1
         if len(parsed_json) < 200:
+            print "Less than 200 mails, breaking"
             break
         else:
             page_nr += 1
-            downloadIndex += 1
+        
     page_nr = 1
+    # return requests
     print "Downloading losses"
     while True:
 
@@ -133,7 +140,7 @@ def extract_data(year, month):
             parsed_json = json.loads(data)
         except ValueError as e:
             print "[Error Parsing]", e.reason
-            return 
+            return requests
 
         if len(parsed_json) > 0:
             file_name = os.path.join(
@@ -142,7 +149,9 @@ def extract_data(year, month):
             )
             with open(file_name, 'w') as f_out:
                 f_out.write(data)
-
+        print "Found {} mails".format(len(parsed_json) );
+        downloadIndex += 1
+        requests += 1
         if len(parsed_json) < 200:
             break
         else:

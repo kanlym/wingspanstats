@@ -1,55 +1,55 @@
 Solo ships destroyed
 --------------------------------------------
-#01 - Okaga Utama - 55 ships
-#02 - Tasmine Cha-Tien - 45 ships
-#03 - Capcan - 43 ships
-#04 - Gareth Adoudel - 33 ships
-#05 - Sylnn Severn - 30 ships
-#06 - Reed Icculus - 27 ships
-#07 - Shaellon - 23 ships
-#08 - DeLlave Verdun - 20 ships
-#09 - Iwata s - 20 ships
-#10 - Corrupted Aideron - 19 ships
-#11 - Mei Long - 19 ships
-#12 - Deathwush Pitchblack - 18 ships
-#13 - Negark Crendraven - 18 ships
-#14 - G Indahowse - 16 ships
-#15 - Patrick Moon - 15 ships
-#16 - Al3x Oaks - 15 ships
-#17 - Flint Lowell - 14 ships
-#18 - Hae Joo Chang - 14 ships
-#19 - Vek Chiasson - 13 ships
-#20 - TOPSTER - 13 ships
-#21 - Yosh Maken - 12 ships
-#22 - Jessi MalDoran - 12 ships
-#23 - Damien Muth - 11 ships
-#24 - Nik Volsk - 10 ships
-#25 - Jedi VanDiemen - 10 ships
+#01 - Okaga Utama - 112 ships
+#02 - Sylnn Severn - 68 ships
+#03 - Capcan - 67 ships
+#04 - Tasmine Cha-Tien - 45 ships
+#05 - DeLlave Verdun - 44 ships
+#06 - Al3x Oaks - 41 ships
+#07 - Gareth Adoudel - 39 ships
+#08 - Corrupted Aideron - 35 ships
+#09 - Reed Icculus - 33 ships
+#10 - Negark Crendraven - 33 ships
+#11 - Deathwush Pitchblack - 32 ships
+#12 - Shaellon - 31 ships
+#13 - Zevenz - 27 ships
+#14 - Iwata s - 25 ships
+#15 - Mei Long - 25 ships
+#16 - Haruko Kitsune - 24 ships
+#17 - bumnz - 24 ships
+#18 - Hae Joo Chang - 24 ships
+#19 - TOPSTER - 22 ships
+#20 - G Indahowse - 22 ships
+#21 - Patrick Moon - 21 ships
+#22 - Bdan en Gravonere - 19 ships
+#23 - Bustrr Bluth - 18 ships
+#24 - Bjurn Akely - 17 ships
+#25 - Seabrony - 16 ships
 
 Solo ISK destroyed
 --------------------------------------------
-#01 - Tasmine Cha-Tien - 6.40b
-#02 - Sylnn Severn - 1.94b
-#03 - Capcan - 1.68b
-#04 - Jessi MalDoran - 0.85b
-#05 - Okaga Utama - 0.74b
-#06 - Valtyr Farshield - 0.72b
-#07 - WeirdBall - 0.65b
-#08 - Al3x Oaks - 0.64b
-#09 - Mei Long - 0.61b
-#10 - Reed Icculus - 0.53b
-#11 - Gareth Adoudel - 0.52b
-#12 - Vek Chiasson - 0.44b
-#13 - Crankball - 0.43b
-#14 - CyanideLeviathan - 0.42b
-#15 - Flint Lowell - 0.40b
-#16 - sgrhtj - 0.37b
-#17 - Patrick Moon - 0.36b
-#18 - Darum Rinah - 0.36b
-#19 - Bustrr Bluth - 0.35b
-#20 - Epoch Veli - 0.32b
-#21 - Terram alWathani - 0.29b
-#22 - Richter Barret - 0.28b
-#23 - Deathwush Pitchblack - 0.27b
-#24 - Phaedrus Paine - 0.27b
-#25 - Kanly Aideron - 0.24b
+#01 - Sylnn Severn - 6.66b
+#02 - Tasmine Cha-Tien - 6.40b
+#03 - Capcan - 2.56b
+#04 - Okaga Utama - 2.26b
+#05 - Sila Lok - 2.23b
+#06 - WeirdBall - 1.43b
+#07 - Al3x Oaks - 1.08b
+#08 - Arcdale - 0.98b
+#09 - DeLlave Verdun - 0.95b
+#10 - Jessi MalDoran - 0.85b
+#11 - Patrick Moon - 0.78b
+#12 - Valtyr Farshield - 0.72b
+#13 - bumnz - 0.70b
+#14 - CyanideLeviathan - 0.68b
+#15 - Mei Long - 0.67b
+#16 - Reed Icculus - 0.66b
+#17 - Gareth Adoudel - 0.66b
+#18 - Bdan en Gravonere - 0.62b
+#19 - Sachenka Cadelanne - 0.62b
+#20 - Sebtal Seaking - 0.59b
+#21 - Epoch Veli - 0.58b
+#22 - Xaeli - 0.50b
+#23 - Negark Crendraven - 0.48b
+#24 - Darum Rinah - 0.47b
+#25 - Comy 1 - 0.45b
