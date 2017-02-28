@@ -94,6 +94,36 @@ class StatsTable extends Table
         $s = Cache::write($cacheKey,$results,'fivemin');
         return $results;
     }
+      public function topLastSevenDays($de){
+        $ds = date('Y-m-d',strtotime('-7 days'));
+        
+        $cacheKey = 'topLastSevenDaysXXX_' . $ds. '_'. $de;
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            if (!empty($output)) return $output;
+        }        
+        
+         $query = "SELECT s.name,kills.value/1000000000 as v,kills.kill_id,partiesInvolved,totalWingspanPct from kills 
+                    JOIN ship_types as s on kills.ship_type_id = s.ship_type_id
+
+                    where totalWingspanPct > 25
+                    AND date > '$ds 00:00:00'
+                    AND date < '$de 23:59:59'
+                    order by value DESC limit 10";
+                $connection = ConnectionManager::get('default');
+                $results = $connection->execute($query)->fetchAll('assoc');
+                $output = array();
+                foreach ($results as $r){
+                    $o = array(
+                            'kill'=>$r['kill_id'],
+                            'ship'=>$r['name'],
+                            'value'=>$r['v'],
+                            'involved'=>round($r['partiesInvolved'] * $r['totalWingspanPct']/100) .' wingspan members out of ' . $r['partiesInvolved'] . ' total'
+                        );
+                    $output[] = $o; 
+                }
+        $s = Cache::write($cacheKey,$output,'fivemin');
+        return $output;
+    }
 
      public function ship($shipName = 'stratios',$dateStart = false,$dateEnd = false){
         $cacheKey = 'ships_' . $dateStart. '_'. $dateEnd. '_'.md5($shipName);
@@ -220,6 +250,59 @@ class StatsTable extends Table
                     and partiesInvolved = 1
                     group by c.character_id
                     ORDER by ships_killed DESC";
+        $connection = ConnectionManager::get('default');
+        $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'fivemin');
+        return $results;
+    }
+    public function topKillInAstero($dateStart = false,$dateEnd = false){
+        $cacheKey = 'topKillInAsteroC1_' . $dateStart. '_'. $dateEnd;
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            if (!empty($output)) return $output;
+        }        
+        $query = "select kills.kill_id,s.name as sname, characters.character_name, value/1000000000 as isk,ss.name from kills
+                    JOIN ship_types as s on kills.ship_type_id = s.ship_type_id
+                    join agent_kills as ak on kills.kill_id = ak.kill_id and ak.character_id = kills.agent_id
+                    JOIN characters on ak.character_id = characters.character_id
+                    JOIN solar_systems as ss on ss.solar_system_id = kills.solar_system_id
+                    where date > '$dateStart 00:00:00'
+                    and date < '$dateEnd 00:00:00'
+                    AND partiesInvolved = 1
+                    AND totalWingspanPCT = 100
+                    AND isOurLoss = false
+                    AND ak.ship_type_id = 33468
+                    AND ak.killingBlow = 1
+                    AND ss.isWh = 1
+                    ORDER BY VALUE DESC
+                    LIMIT 1";
+        $connection = ConnectionManager::get('default');
+        $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'fivemin');
+        return $results;
+    }
+        public function topKillInBomber($dateStart = false,$dateEnd = false){
+        $cacheKey = 'topKillInBomber_' . $dateStart. '_'. $dateEnd;
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            if (!empty($output)) return $output;
+        }        
+        $bombers = implode(',',$this->bombers);
+        $query = "select kills.kill_id,s.name as sname, characters.character_name, value/1000000000 as isk,ss.name,flying.name as flyingShip from kills
+                    JOIN ship_types as s on kills.ship_type_id = s.ship_type_id
+                    
+                    join agent_kills as ak on kills.kill_id = ak.kill_id and ak.character_id = kills.agent_id
+                    JOIN ship_types as flying on ak.ship_type_id = flying.ship_type_id
+                    JOIN characters on ak.character_id = characters.character_id
+                    JOIN solar_systems as ss on ss.solar_system_id = kills.solar_system_id
+                    where date > '$dateStart 00:00:00'
+                    and date < '$dateEnd 00:00:00'
+                    AND partiesInvolved = 1
+                    AND totalWingspanPCT = 100
+                    AND isOurLoss = false
+                    AND ak.ship_type_id in ($bombers)
+                    AND ak.killingBlow = 1
+                    AND ss.isWh = 1
+                    ORDER BY VALUE DESC
+                    LIMIT 1";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
         Cache::write($cacheKey,$results,'fivemin');

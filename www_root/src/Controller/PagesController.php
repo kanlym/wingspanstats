@@ -81,6 +81,14 @@ class PagesController extends AppController
     public function customstats(){
     	
     }
+    public function contest(){
+        $this->viewBuilder()->layout('wingspan');
+        $data = $this->Stats->topKillInAstero($this->dateStart,$this->dateEnd);
+        $ds = $this->dateStart;
+        $de = $this->dateEnd;
+        $bomber = $this->Stats->topKillInBomber($this->dateStart,$this->dateEnd);
+        $this->set(compact('data','ds','de','bomber'));
+    }
     public function home(){
         $agentData = $this->Stats->agents($this->dateStart,$this->dateEnd);
         // if (empty($agentData)) $this->redirect('/'); //in case cache fails, we retry cuz fuck cake
@@ -92,7 +100,7 @@ class PagesController extends AppController
         $stratiosData = $this->Stats->getGenericByFlownShip($this->Stats->stratios,$solo,$this->dateStart,$this->dateEnd);
         $solo = 0;//can be 0 
         $bombersData = $this->Stats->getGenericByFlownShip($this->Stats->bombers,$solo,$this->dateStart,$this->dateEnd);
-        
+        $topSeven = $this->Stats->topLastSevenDays($this->dateEnd);
         $totalNave = 0;
         foreach ($shipsData as $s){
             $totalNave += $s['totalKills'];
@@ -102,7 +110,7 @@ class PagesController extends AppController
         }
         $generalData = $this->Stats->locations($this->dateStart,$this->dateEnd);
         
-        $this->set(compact('agentData','shipsData','stratiosData','bombersData','shipsChart','totalNave','generalData'));
+        $this->set(compact('agentData','shipsData','stratiosData','bombersData','shipsChart','totalNave','generalData','topSeven'));
 
     }
     public function ships(){

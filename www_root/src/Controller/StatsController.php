@@ -31,6 +31,9 @@ class StatsController extends AppController
         $this->set(compact('status','results'));
         $this->set('_serialize',['status','results']);
     }
+    public function statsSeven(){
+        $this->Stats->topLastSevenDays();
+    }
     public function agents($dateStart = false,$dateEnd = false){
         if ($dateStart == false){
             $dateStart = date('Y-m-') ."01";

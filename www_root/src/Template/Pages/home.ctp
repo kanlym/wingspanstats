@@ -251,9 +251,39 @@ Morris.Bar({
                 </div>
                     <!-- /.general Stats -->
                 <div class="col-lg-8">
-                  
+                <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Top kills last 7 days
+                        </div>
+                   <table class="table table-bordered table-hover table-striped">
+                                            <thead>
+                                                <tr>
+                                                <th>Ships </th>
+                                                    <th>Members involved</th>
+                                                    
+                                                    <th>Value</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                             <?
+                                                foreach ($topSeven as $g){
+                                            ?>
+                                            <tr>
+                                                
+                                                <td><a href="https://zkillboard.com/kill/<?= $g['kill'];?>" > <?= $g['ship'] ?></a></td>
+                                                <td><?= $g['involved'] ?></td>
+                                                <td><?= round($g['value'] ,2) ?>b</td>
+                                            </tr>
+
+                                                   
+                                            <?
+                                            }
+                                            ?>
+                                               
+                                                
+                                            </tbody>
+                                        </table>
              
-                    
+                  
                 </div>
                     <!-- /.general Stats -->
                    
