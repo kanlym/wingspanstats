@@ -60,6 +60,7 @@ class StatsTable extends Table
     public $citadels = array(
 
         );
+    public $WDSCorps = array(98330748);
     /**
      * Initialize method
      *
@@ -81,12 +82,14 @@ class StatsTable extends Table
         if (($output = Cache::read($cacheKey,'fivemin')) !== false){
             if (!empty($output)) return $output;
         }        
+        $wds = implode(',',$this->WDSCorps);
          $query = "SELECT 
             count(ak.kill_id) as kills, c.character_name,sum(value)/1000000000 as isk,c.character_id from agent_kills as ak join kills on kills.kill_id = ak.kill_id
             join characters as c on c.character_id = ak.character_id
             where date > '$dateStart 00:00:00'
             and date <= '$dateEnd 00:00:00'
             and totalWingspanPct > 24
+            AND c.corporation_id in ($wds) 
            group by ak.`character_id`
             ORDER BY kills DESC";
                 $connection = ConnectionManager::get('default');
@@ -299,6 +302,34 @@ class StatsTable extends Table
                     AND totalWingspanPCT = 100
                     AND isOurLoss = false
                     AND ak.ship_type_id in ($bombers)
+                    AND ak.killingBlow = 1
+                    AND ss.isWh = 1
+                    ORDER BY VALUE DESC
+                    LIMIT 1";
+        $connection = ConnectionManager::get('default');
+        $results = $connection->execute($query)->fetchAll('assoc');
+        Cache::write($cacheKey,$results,'fivemin');
+        return $results;
+    }
+            public function topKillsinarecon($dateStart = false,$dateEnd = false){
+        $cacheKey = 'topKillInRecon_' . $dateStart. '_'. $dateEnd;
+        if (($output = Cache::read($cacheKey,'fivemin')) !== false){
+            if (!empty($output)) return $output;
+        }        
+        $recons = implode(',',$this->recons);
+        $query = "select kills.kill_id,s.name as sname, characters.character_name, value/1000000000 as isk,ss.name,flying.name as flyingShip from kills
+                    JOIN ship_types as s on kills.ship_type_id = s.ship_type_id
+                    
+                    join agent_kills as ak on kills.kill_id = ak.kill_id and ak.character_id = kills.agent_id
+                    JOIN ship_types as flying on ak.ship_type_id = flying.ship_type_id
+                    JOIN characters on ak.character_id = characters.character_id
+                    JOIN solar_systems as ss on ss.solar_system_id = kills.solar_system_id
+                    where date > '$dateStart 00:00:00'
+                    and date < '$dateEnd 00:00:00'
+                    AND partiesInvolved = 1
+                    AND totalWingspanPCT = 100
+                    AND isOurLoss = false
+                    AND ak.ship_type_id in ($recons)
                     AND ak.killingBlow = 1
                     AND ss.isWh = 1
                     ORDER BY VALUE DESC

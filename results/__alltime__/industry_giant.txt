@@ -1,55 +1,55 @@
 Top industrial hunters - ships destroyed
 --------------------------------------------
-#01 - Aldard Aldard - 8 ships
-#02 - Father Nye - 5 ships
-#03 - Al3x Oaks - 4 ships
-#04 - Bdan en Gravonere - 4 ships
-#05 - Aglio Piccante - 4 ships
-#06 - Okaga Utama - 4 ships
-#07 - AusTiger - 3 ships
-#08 - Quintus Va'Lari - 3 ships
-#09 - Aafen - 3 ships
-#10 - Wingnut ojj - 3 ships
-#11 - Tasmine Cha-Tien - 3 ships
-#12 - Ren Kane - 2 ships
-#13 - Damien Muth - 2 ships
-#14 - Merlin Avalon - 2 ships
-#15 - Reed Icculus - 2 ships
-#16 - Negark Crendraven - 2 ships
-#17 - Arcdale - 2 ships
-#18 - Devious 21 - 2 ships
-#19 - Narcisse Nightmare - 2 ships
-#20 - William Peccav - 2 ships
-#21 - Comy 1 - 2 ships
-#22 - Swift Isu - 2 ships
-#23 - Bak Jauer - 2 ships
-#24 - Richter Barret - 2 ships
-#25 - Inam Pak - 2 ships
+#01 - Vasil Gaterau - 14 ships
+#02 - Comy 1 - 8 ships
+#03 - Vilya Nold - 7 ships
+#04 - Aglio Piccante - 6 ships
+#05 - Reed Icculus - 5 ships
+#06 - Glade Radner - 5 ships
+#07 - Xavier Hex - 5 ships
+#08 - Al3x Oaks - 4 ships
+#09 - AusTiger - 4 ships
+#10 - Grant Adoudel - 4 ships
+#11 - Aldard Aldard - 3 ships
+#12 - Ronni Ormand - 3 ships
+#13 - Phoenix Duvarkan - 3 ships
+#14 - Dakodai - 3 ships
+#15 - Kanly Aideron - 3 ships
+#16 - Pippinthehobbit - 2 ships
+#17 - Sharps - 2 ships
+#18 - Okaga Utama - 2 ships
+#19 - Corrupted Aideron - 2 ships
+#20 - Gareth Adoudel - 2 ships
+#21 - Bdan en Gravonere - 2 ships
+#22 - Sylnn Severn - 2 ships
+#23 - Qalten - 2 ships
+#24 - Mishka Privyet - 2 ships
+#25 - Dorphin Ghekon - 2 ships
 
 Top industrial hunters - ISK destroyed
 --------------------------------------------
-#01 - Tasmine Cha-Tien - 15.55b
-#02 - Showgunn - 14.57b
-#03 - Sujo - 14.57b
-#04 - Narcisse Nightmare - 1.81b
-#05 - Comy 1 - 1.17b
-#06 - X3ro Kion - 0.97b
-#07 - Sabrez Haklar - 0.97b
-#08 - Inta Vakaria - 0.97b
-#09 - Capcan - 0.97b
-#10 - Bdan en Gravonere - 0.87b
-#11 - Al3x Oaks - 0.85b
-#12 - Missiahs Nemesis - 0.84b
-#13 - SsjGhost - 0.84b
-#14 - Crazy Dogbreath - 0.83b
-#15 - Quintus Va'Lari - 0.73b
-#16 - Aafen - 0.71b
-#17 - Richter Barret - 0.68b
-#18 - Sveti Trgovacki - 0.67b
-#19 - Kanly Aideron - 0.67b
-#20 - Arcdale - 0.58b
-#21 - Reed Icculus - 0.46b
-#22 - Dradul - 0.45b
-#23 - Xavier Hex - 0.45b
-#24 - Okaga Utama - 0.44b
-#25 - Sharps - 0.24b
+#01 - Glade Radner - 1.97b
+#02 - Kanly Aideron - 1.75b
+#03 - Comy 1 - 1.65b
+#04 - Aldard Aldard - 1.26b
+#05 - Qalten - 1.20b
+#06 - Epoch Veli - 1.20b
+#07 - Pippinthehobbit - 1.19b
+#08 - Sila Lok - 1.18b
+#09 - Noble Dave - 1.18b
+#10 - Blackhawk Bordeaux - 1.18b
+#11 - Haruko Kitsune - 1.18b
+#12 - Reed Icculus - 1.04b
+#13 - Dakodai - 0.97b
+#14 - Okaga Utama - 0.88b
+#15 - Sveti Trgovacki - 0.87b
+#16 - Vasil Gaterau - 0.80b
+#17 - Mei Long - 0.77b
+#18 - Parsimony Kate - 0.75b
+#19 - Trip Erata - 0.75b
+#20 - Jessi MalDoran - 0.75b
+#21 - Buster Atmosk - 0.42b
+#22 - Grimm Horizon - 0.41b
+#23 - Aglio Piccante - 0.38b
+#24 - Sharps - 0.36b
+#25 - Gigi McQuaid - 0.36b

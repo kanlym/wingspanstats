@@ -1,55 +1,55 @@
 Ships destroyed
 --------------------------------------------
-#01 - Aldard Aldard - 116 ships
-#02 - Al3x Oaks - 115 ships
-#03 - Darum Rinah - 94 ships
-#04 - Deathwush Pitchblack - 86 ships
-#05 - Yosh Maken - 75 ships
-#06 - Ren Kane - 74 ships
-#07 - Dunfniss Mislah - 73 ships
-#08 - Quintus Va'Lari - 65 ships
-#09 - Bdan en Gravonere - 59 ships
-#10 - quietslayer - 58 ships
-#11 - Okaga Utama - 58 ships
-#12 - Mei Long - 58 ships
-#13 - Father Nye - 54 ships
-#14 - Vasil Gaterau - 52 ships
-#15 - Kanly Aideron - 52 ships
-#16 - AusTiger - 50 ships
-#17 - Bak Jauer - 48 ships
-#18 - DeLlave Verdun - 48 ships
-#19 - Aafen - 48 ships
-#20 - Jessi MalDoran - 48 ships
-#21 - Ronni Ormand - 47 ships
-#22 - Zevenz - 47 ships
-#23 - Zeb Taloan - 46 ships
-#24 - Richter Barret - 45 ships
-#25 - Negark Crendraven - 39 ships
+#01 - Al3x Oaks - 129 ships
+#02 - Comy 1 - 124 ships
+#03 - Gareth Adoudel - 95 ships
+#04 - Ren Kane - 92 ships
+#05 - Kanly Aideron - 74 ships
+#06 - Aldard Aldard - 67 ships
+#07 - Mei Long - 66 ships
+#08 - Bdan en Gravonere - 59 ships
+#09 - Ronni Ormand - 57 ships
+#10 - Epoch Veli - 57 ships
+#11 - Pippinthehobbit - 56 ships
+#12 - Noble Dave - 51 ships
+#13 - Okaga Utama - 50 ships
+#14 - Xavier Hex - 49 ships
+#15 - Vilya Nold - 49 ships
+#16 - Reed Icculus - 46 ships
+#17 - AusTiger - 40 ships
+#18 - Vasil Gaterau - 40 ships
+#19 - Bak Jauer - 39 ships
+#20 - Glade Radner - 38 ships
+#21 - Twopudz Gordson - 33 ships
+#22 - Nik Volsk - 32 ships
+#23 - Quintus Va'Lari - 32 ships
+#24 - Gigi McQuaid - 32 ships
+#25 - Hannal Cha'al - 29 ships
 
 ISK destroyed
 --------------------------------------------
-#01 - Al3x Oaks - 22.60b
-#02 - Sujo - 22.24b
-#03 - Dunfniss Mislah - 18.83b
-#04 - Showgunn - 16.89b
-#05 - Tasmine Cha-Tien - 16.32b
-#06 - Quintus Va'Lari - 14.16b
-#07 - Kanly Aideron - 13.99b
-#08 - Zeb Taloan - 12.51b
-#09 - Bdan en Gravonere - 11.91b
-#10 - Sveti Trgovacki - 11.87b
-#11 - Aafen - 11.85b
-#12 - Pippinthehobbit - 10.39b
-#13 - Devious 21 - 10.37b
-#14 - Deathwush Pitchblack - 10.04b
-#15 - Gareth Adoudel - 9.98b
-#16 - Richter Barret - 9.79b
-#17 - AusTiger - 9.50b
-#18 - Blackhawk Bordeaux - 9.12b
-#19 - Sabrez Haklar - 8.44b
-#20 - Terram alWathani - 8.17b
-#21 - khomeini - 8.14b
-#22 - Xfinity Misner - 8.08b
-#23 - minold heifer - 8.06b
-#24 - Yosh Maken - 8.00b
-#25 - Myra Vixen - 7.97b
+#01 - Al3x Oaks - 16.39b
+#02 - Xavier Hex - 15.50b
+#03 - Pippinthehobbit - 13.79b
+#04 - Kanly Aideron - 12.06b
+#05 - AusTiger - 11.72b
+#06 - Bdan en Gravonere - 11.49b
+#07 - Mei Long - 10.38b
+#08 - Trip Erata - 9.85b
+#09 - Epoch Veli - 9.14b
+#10 - Comy 1 - 9.02b
+#11 - Gigi McQuaid - 8.86b
+#12 - Glade Radner - 8.67b
+#13 - Aldard Aldard - 8.64b
+#14 - Noble Dave - 8.61b
+#15 - Ransom Odunen - 8.40b
+#16 - Okaga Utama - 8.31b
+#17 - Sylnn Severn - 8.03b
+#18 - RuthlessFord Uitra - 6.51b
+#19 - minold heifer - 6.17b
+#20 - Reed Icculus - 5.84b
+#21 - Mister McQueen - 5.83b
+#22 - Parsimony Kate - 5.52b
+#23 - Haruko Kitsune - 5.48b
+#24 - Gillion Wyrddych - 5.37b
+#25 - Gareth Adoudel - 4.99b

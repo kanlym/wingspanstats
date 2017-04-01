@@ -1,9 +1,17 @@
 Top BLOPS pilots - ships destroyed
 --------------------------------------------
-#01 - Inta Vakaria - 1 ships
-#02 - Kanly Aideron - 1 ships
+#01 - Okaga Utama - 14 ships
+#02 - Mishka Privyet - 11 ships
+#03 - Inta Vakaria - 8 ships
+#04 - Malak Saren - 5 ships
+#05 - Stanis Lunar - 4 ships
+#06 - Kanly Aideron - 1 ships
 
 Top BLOPS pilots - ISK destroyed
 --------------------------------------------
-#01 - Inta Vakaria - 0.89b
-#02 - Kanly Aideron - 0.89b
+#01 - Okaga Utama - 7.22b
+#02 - Inta Vakaria - 3.12b
+#03 - Malak Saren - 2.12b
+#04 - Mishka Privyet - 1.75b
+#05 - Stanis Lunar - 1.75b
+#06 - Kanly Aideron - 0.40b

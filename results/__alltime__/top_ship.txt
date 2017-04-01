@@ -1,55 +1,55 @@
 Ships destroyed by a specific hull
 --------------------------------------------
-#01 - Stratios - 816 ships
-#02 - Manticore - 390 ships
-#03 - Nemesis - 364 ships
-#04 - Hound - 246 ships
-#05 - Astero - 218 ships
-#06 - Purifier - 131 ships
-#07 - Pilgrim - 89 ships
-#08 - Proteus - 86 ships
-#09 - Dominix - 84 ships
-#10 - Thrasher - 78 ships
-#11 - Tengu - 65 ships
-#12 - Vigilant - 65 ships
-#13 - Gnosis - 63 ships
-#14 - Hecate - 53 ships
-#15 - Rapier - 50 ships
-#16 - Falcon - 43 ships
-#17 - Confessor - 39 ships
-#18 - Svipul - 34 ships
-#19 - Loki - 29 ships
-#20 - Scorpion - 21 ships
-#21 - Onyx - 21 ships
-#22 - Arazu - 20 ships
-#23 - Orthrus - 18 ships
-#24 - Caracal - 18 ships
-#25 - Vexor Navy Issue - 16 ships
+#01 - Stratios - 924 ships
+#02 - Nemesis - 297 ships
+#03 - Manticore - 211 ships
+#04 - Astero - 127 ships
+#05 - Hound - 98 ships
+#06 - Purifier - 79 ships
+#07 - Tengu - 71 ships
+#08 - Pilgrim - 69 ships
+#09 - Falcon - 53 ships
+#10 - Phantasm - 46 ships
+#11 - Thrasher - 44 ships
+#12 - Panther - 34 ships
+#13 - Dramiel - 29 ships
+#14 - Hecate - 26 ships
+#15 - Svipul - 25 ships
+#16 - Vigilant - 24 ships
+#17 - Myrmidon - 22 ships
+#18 - Eris - 22 ships
+#19 - Confessor - 20 ships
+#20 - Vexor - 20 ships
+#21 - Proteus - 20 ships
+#22 - Incursus - 18 ships
+#23 - Phobos - 18 ships
+#24 - Sabre - 16 ships
+#25 - Arazu - 14 ships
 
 ISK destroyed by a specific hull
 --------------------------------------------
-#01 - Stratios - 123.21b
-#02 - Manticore - 86.20b
-#03 - Nemesis - 79.82b
-#04 - Purifier - 32.69b
-#05 - Hound - 24.87b
-#06 - Rapier - 23.40b
-#07 - Pilgrim - 19.17b
-#08 - Falcon - 18.30b
-#09 - Astero - 15.27b
-#10 - Vigilant - 9.22b
-#11 - Nestor - 8.49b
-#12 - Proteus - 8.47b
-#13 - Tengu - 7.35b
-#14 - Phantasm - 6.40b
-#15 - Armageddon - 5.76b
-#16 - Svipul - 3.84b
-#17 - Dominix - 3.51b
-#18 - Gnosis - 3.27b
-#19 - Loki - 2.71b
-#20 - Rook - 2.58b
-#21 - Onyx - 2.43b
-#22 - Caracal - 2.34b
-#23 - Hecate - 2.17b
-#24 - Confessor - 2.04b
-#25 - Rattlesnake - 1.85b
+#01 - Stratios - 124.97b
+#02 - Manticore - 40.59b
+#03 - Nemesis - 39.77b
+#04 - Hound - 28.92b
+#05 - Falcon - 16.43b
+#06 - Tengu - 13.78b
+#07 - Panther - 12.84b
+#08 - Purifier - 11.19b
+#09 - Astero - 8.62b
+#10 - Pilgrim - 7.71b
+#11 - Myrmidon - 5.88b
+#12 - Sabre - 5.49b
+#13 - Confessor - 5.27b
+#14 - Onyx - 4.45b
+#15 - Svipul - 4.24b
+#16 - Vigilant - 4.07b
+#17 - Talos - 3.98b
+#18 - Helios - 3.66b
+#19 - Sin - 3.52b
+#20 - Phantasm - 3.38b
+#21 - Arazu - 3.35b
+#22 - Proteus - 3.14b
+#23 - Armageddon - 2.28b
+#24 - Cynabal - 2.24b
+#25 - Hecate - 1.98b

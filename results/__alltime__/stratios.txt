@@ -1,55 +1,55 @@
 Top Stratios pilots - ships destroyed
 --------------------------------------------
-#01 - Dunfniss Mislah - 44 ships
-#02 - Bak Jauer - 43 ships
-#03 - AusTiger - 37 ships
-#04 - Ren Kane - 36 ships
-#05 - Bdan en Gravonere - 34 ships
-#06 - Zeb Taloan - 32 ships
-#07 - Ronni Ormand - 31 ships
-#08 - Negark Crendraven - 31 ships
-#09 - Comy 1 - 28 ships
-#10 - Capcan - 21 ships
-#11 - Terram alWathani - 20 ships
-#12 - Xfinity Misner - 19 ships
-#13 - Ethnicolor Akiga - 19 ships
-#14 - Quintus Va'Lari - 17 ships
-#15 - Sabrez Haklar - 17 ships
-#16 - Rillek Ratseye - 16 ships
-#17 - Epoch Veli - 16 ships
-#18 - Reed Icculus - 14 ships
-#19 - Sila Lok - 13 ships
-#20 - Kanly Aideron - 13 ships
-#21 - DeLlave Verdun - 12 ships
-#22 - Yosh Maken - 12 ships
-#23 - Mei Long - 11 ships
-#24 - Buster Atmosk - 10 ships
-#25 - Okaga Utama - 10 ships
+#01 - Comy 1 - 124 ships
+#02 - Ren Kane - 91 ships
+#03 - Vilya Nold - 44 ships
+#04 - Glade Radner - 37 ships
+#05 - Vasil Gaterau - 36 ships
+#06 - Bdan en Gravonere - 30 ships
+#07 - AusTiger - 29 ships
+#08 - Reed Icculus - 28 ships
+#09 - Sylnn Severn - 27 ships
+#10 - Hannal Cha'al - 25 ships
+#11 - Mei Long - 24 ships
+#12 - Noble Dave - 21 ships
+#13 - Epoch Veli - 20 ships
+#14 - Dunfniss Mislah - 19 ships
+#15 - RuthlessFord Uitra - 17 ships
+#16 - Capcan - 16 ships
+#17 - Pippinthehobbit - 15 ships
+#18 - Sila Lok - 14 ships
+#19 - Malak Saren - 14 ships
+#20 - Ronni Ormand - 14 ships
+#21 - Dakodai - 13 ships
+#22 - Forrest Martinez - 13 ships
+#23 - Groves111 - 13 ships
+#24 - Bak Jauer - 11 ships
+#25 - Aldard Aldard - 10 ships
 
 Top Stratios pilots - ISK destroyed
 --------------------------------------------
-#01 - Dunfniss Mislah - 9.35b
-#02 - Sabrez Haklar - 8.00b
-#03 - Terram alWathani - 7.85b
-#04 - khomeini - 7.29b
-#05 - AusTiger - 6.70b
-#06 - Bdan en Gravonere - 6.26b
-#07 - Deathwush Pitchblack - 4.69b
-#08 - Zeb Taloan - 4.36b
-#09 - Ronni Ormand - 4.35b
-#10 - Xfinity Misner - 4.05b
-#11 - Comy 1 - 3.48b
-#12 - Negark Crendraven - 3.25b
-#13 - Bak Jauer - 3.21b
-#14 - Reed Icculus - 3.12b
-#15 - Jessi MalDoran - 2.95b
-#16 - Haruko Kitsune - 2.82b
-#17 - Epoch Veli - 2.74b
-#18 - Mei Long - 2.56b
-#19 - Quintus Va'Lari - 2.46b
-#20 - Grimm Horizon - 2.14b
-#21 - Blackhawk Bordeaux - 2.06b
-#22 - DeLlave Verdun - 1.93b
-#23 - Kanly Aideron - 1.79b
-#24 - Zevenz - 1.77b
-#25 - minold heifer - 1.46b
+#01 - AusTiger - 9.71b
+#02 - Comy 1 - 9.02b
+#03 - Sylnn Severn - 8.03b
+#04 - Glade Radner - 7.35b
+#05 - RuthlessFord Uitra - 6.50b
+#06 - Bdan en Gravonere - 5.50b
+#07 - Pippinthehobbit - 4.86b
+#08 - Mei Long - 4.59b
+#09 - Al3x Oaks - 3.69b
+#10 - Ransom Odunen - 3.57b
+#11 - Trip Erata - 3.56b
+#12 - Gigi McQuaid - 3.52b
+#13 - Epoch Veli - 3.38b
+#14 - Mister McQueen - 2.89b
+#15 - Vasil Gaterau - 2.79b
+#16 - Groves111 - 2.77b
+#17 - Hannal Cha'al - 2.77b
+#18 - Grimm Horizon - 2.59b
+#19 - quietslayer - 2.24b
+#20 - Reed Icculus - 2.19b
+#21 - Albin wood - 2.17b
+#22 - Vilya Nold - 2.12b
+#23 - Sila Lok - 2.10b
+#24 - Ren Kane - 2.07b
+#25 - Dunfniss Mislah - 1.86b

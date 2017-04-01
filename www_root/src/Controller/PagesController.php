@@ -87,7 +87,8 @@ class PagesController extends AppController
         $ds = $this->dateStart;
         $de = $this->dateEnd;
         $bomber = $this->Stats->topKillInBomber($this->dateStart,$this->dateEnd);
-        $this->set(compact('data','ds','de','bomber'));
+        $recon = $this->Stats->topKillsinarecon($this->dateStart,$this->dateEnd);
+        $this->set(compact('data','ds','de','bomber','recon'));
     }
     public function home(){
         $agentData = $this->Stats->agents($this->dateStart,$this->dateEnd);

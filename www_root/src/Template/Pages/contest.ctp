@@ -37,3 +37,22 @@
 					</div>
 			</div>
 </div>
+
+<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+						<h2> Top recon kill <?= $ds;?> 00:00 to <?= $de; ?> 00:00 is </h2>
+						</div>
+					</div>
+					<div class="panel-body">
+                            <div class="row">
+                            	<div class="col-lg-8">
+									<h2> <?= $recon[0]['character_name'] ?> </h2>
+									<h2> Killing a <?= $recon[0]['sname'] ?> in <?= $recon[0]['name'];?> worth <?= round($recon[0]['isk'],2) ?> b isk while flying a <?= $recon['0']['flyingShip'] ?></h2>
+									<a target="_blank" href="http://zkillboard.com/kill/<?= $recon[0]['kill_id'] ?>"> Kill info </a>
+								</div>
+							</div>
+					</div>
+			</div>
+</div>

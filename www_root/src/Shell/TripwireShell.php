@@ -9,7 +9,7 @@ use Cake\ORM\TableRegistry;
 use Cake\ORM\Entity;
 use Cake\ORM\Table;
 use Cake\Datasource\EntityInterface;
-
+use Cake\Datasource\ConnectionManager;
 class TripwireShell extends Shell{
 	public $USER_AGENT = "Kanly Stats WHY VALTYR WHY v0.1";
 	public $username = '';
@@ -18,6 +18,7 @@ class TripwireShell extends Shell{
 	public $loginPath = 'login.php';
 	public $apiPath = 'agentstats.php';
 	public $jsonPathForTests = 'tripwire/lol.json';
+	public $WDSCorps = array(98330748);
 	public function initialize(){
 		parent::initialize();
 		$this->baseUrl = Configure::read('tripWire.baseUrl');
@@ -50,6 +51,58 @@ class TripwireShell extends Shell{
 		$a = json_decode($answer);
 		return $a;
 		// echo($answer);
+	}
+
+	public function getPilotJoinDates(){
+		$url = "https://evewho.com/api.php?type=character&id="; //charID
+		$initStats = $this->Stats->getAllAgents();
+		foreach ($initStats as $s){
+			$searchURL = $url.$s['character_id'];
+			$this->Log("Getting join date for " . $s['character_id']);	
+			$json = file_get_contents($searchURL);
+			$obj = json_decode($json);
+			// sleep(1);
+			$this->Log($obj->info);
+			try{
+				if (!isset($obj->info->corporation_id)) continue;
+				if (in_array($obj->info->corporation_id,$this->WDSCorps)){
+				foreach ($obj->history as $h){
+
+					if (in_array($h->corporation_id,$this->WDSCorps)){
+						if (is_null($h->end_date)){
+							$startDate = $h->start_date;	
+							echo "Found WDS " . $startDate;
+							//update start date joindate
+							$query = "UPDATE characters set joindate = '$startDate' where character_id = " . $s['character_id'];
+							$connection = ConnectionManager::get('default');
+        					$connection->execute($query);
+
+						}
+					}
+				}	
+				}else{
+					//not in corp
+					foreach ($obj->history as $h){
+						if (is_null($h->end_date)){
+							$startDate = $h->start_date;	
+							echo "Left WDS " . $startDate;
+							$corp = $h->corporation_id;
+							//update start date joindate
+							$query = "UPDATE characters set joindate = '$startDate', corporation_id = '$corp' where character_id = " . $s['character_id'];
+							$connection = ConnectionManager::get('default');
+        					$connection->execute($query);
+
+						}
+					}
+				}	
+			}catch(Exception $e){
+				$this->Log($obj->info);
+				die();
+			}
+			
+		}
+		
+		die();
 	}
 
 	public function readFile(){

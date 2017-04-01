@@ -1,55 +1,55 @@
 Solo ships destroyed
 --------------------------------------------
-#01 - Darum Rinah - 87 ships
-#02 - quietslayer - 52 ships
-#03 - Dunfniss Mislah - 43 ships
-#04 - Bak Jauer - 35 ships
-#05 - Ren Kane - 35 ships
-#06 - Al3x Oaks - 34 ships
-#07 - Okaga Utama - 34 ships
-#08 - Aglio Piccante - 33 ships
-#09 - DeLlave Verdun - 30 ships
-#10 - Father Nye - 29 ships
-#11 - TOPSTER - 29 ships
-#12 - Bdan en Gravonere - 26 ships
-#13 - Negark Crendraven - 26 ships
-#14 - Arcdale - 26 ships
-#15 - Wingnut ojj - 24 ships
-#16 - Vek Chiasson - 21 ships
-#17 - Agastya Ergs - 21 ships
-#18 - Jessi MalDoran - 19 ships
-#19 - Comy 1 - 19 ships
-#20 - Aldard Aldard - 18 ships
-#21 - Sila Lok - 18 ships
-#22 - Kanly Aideron - 18 ships
-#23 - Zevenz - 17 ships
-#24 - Reed Icculus - 17 ships
-#25 - Crazy Dogbreath - 16 ships
+#01 - Comy 1 - 102 ships
+#02 - Ren Kane - 87 ships
+#03 - Al3x Oaks - 46 ships
+#04 - Okaga Utama - 36 ships
+#05 - Vilya Nold - 36 ships
+#06 - Gareth Adoudel - 35 ships
+#07 - Bak Jauer - 32 ships
+#08 - Nik Volsk - 32 ships
+#09 - Ronni Ormand - 31 ships
+#10 - Aglio Piccante - 24 ships
+#11 - Sylnn Severn - 22 ships
+#12 - Arcdale - 22 ships
+#13 - Darum Rinah - 21 ships
+#14 - Noble Dave - 20 ships
+#15 - Kanly Aideron - 19 ships
+#16 - Aldard Aldard - 18 ships
+#17 - Ensong Hisakawa - 18 ships
+#18 - Bdan en Gravonere - 18 ships
+#19 - Reed Icculus - 17 ships
+#20 - Dunfniss Mislah - 16 ships
+#21 - Mei Long - 16 ships
+#22 - Hannal Cha'al - 15 ships
+#23 - Vasil Gaterau - 14 ships
+#24 - Capcan - 14 ships
+#25 - Glade Radner - 13 ships
 
 Solo ISK destroyed
 --------------------------------------------
-#01 - Dunfniss Mislah - 5.68b
-#02 - Darum Rinah - 3.04b
-#03 - Bak Jauer - 1.82b
-#04 - Kanly Aideron - 1.31b
-#05 - Reed Icculus - 1.20b
-#06 - lashana darkmoon - 1.13b
-#07 - Comy 1 - 1.09b
-#08 - Quintus Va'Lari - 1.08b
-#09 - Aglio Piccante - 1.04b
-#10 - Vek Chiasson - 0.93b
-#11 - Arcdale - 0.90b
-#12 - Okaga Utama - 0.89b
-#13 - Crazy Dogbreath - 0.85b
-#14 - Negark Crendraven - 0.76b
-#15 - Ren Kane - 0.75b
-#16 - Ensong Hisakawa - 0.64b
-#17 - Narcisse Nightmare - 0.54b
-#18 - Agastya Ergs - 0.48b
-#19 - Xee Yoona-451 - 0.44b
-#20 - Pippinthehobbit - 0.43b
-#21 - Bdan en Gravonere - 0.40b
-#22 - Father Nye - 0.39b
-#23 - Jessi MalDoran - 0.38b
-#24 - Orianna Okanata - 0.37b
-#25 - quietslayer - 0.36b
+#01 - Sylnn Severn - 5.34b
+#02 - Comy 1 - 4.72b
+#03 - Okaga Utama - 2.57b
+#04 - Aglio Piccante - 2.34b
+#05 - Ren Kane - 1.76b
+#06 - Al3x Oaks - 1.49b
+#07 - Gareth Adoudel - 1.41b
+#08 - Bak Jauer - 1.09b
+#09 - Ensong Hisakawa - 1.03b
+#10 - Kanly Aideron - 1.00b
+#11 - Shaellon - 0.93b
+#12 - DeLlave Verdun - 0.92b
+#13 - Father Nye - 0.89b
+#14 - Vilya Nold - 0.72b
+#15 - Mei Long - 0.67b
+#16 - Reed Icculus - 0.55b
+#17 - Arcdale - 0.50b
+#18 - Wingnut ojj - 0.47b
+#19 - Bjurn Akely - 0.44b
+#20 - Ronni Ormand - 0.43b
+#21 - Hannal Cha'al - 0.43b
+#22 - Terram alWathani - 0.39b
+#23 - Crankball - 0.37b
+#24 - Grant Adoudel - 0.36b
+#25 - Darum Rinah - 0.33b
