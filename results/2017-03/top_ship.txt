@@ -1,0 +1,55 @@
+Ships destroyed by a specific hull
+--------------------------------------------
+#01 - Stratios - 924 ships
+#02 - Nemesis - 297 ships
+#03 - Manticore - 211 ships
+#04 - Astero - 127 ships
+#05 - Hound - 98 ships
+#06 - Purifier - 79 ships
+#07 - Tengu - 71 ships
+#08 - Pilgrim - 69 ships
+#09 - Falcon - 53 ships
+#10 - Phantasm - 46 ships
+#11 - Thrasher - 44 ships
+#12 - Panther - 34 ships
+#13 - Dramiel - 29 ships
+#14 - Hecate - 26 ships
+#15 - Svipul - 25 ships
+#16 - Vigilant - 24 ships
+#17 - Myrmidon - 22 ships
+#18 - Eris - 22 ships
+#19 - Confessor - 20 ships
+#20 - Vexor - 20 ships
+#21 - Proteus - 20 ships
+#22 - Incursus - 18 ships
+#23 - Phobos - 18 ships
+#24 - Sabre - 16 ships
+#25 - Arazu - 14 ships
+
+ISK destroyed by a specific hull
+--------------------------------------------
+#01 - Stratios - 124.97b
+#02 - Manticore - 40.59b
+#03 - Nemesis - 39.77b
+#04 - Hound - 28.92b
+#05 - Falcon - 16.43b
+#06 - Tengu - 13.78b
+#07 - Panther - 12.84b
+#08 - Purifier - 11.19b
+#09 - Astero - 8.62b
+#10 - Pilgrim - 7.71b
+#11 - Myrmidon - 5.88b
+#12 - Sabre - 5.49b
+#13 - Confessor - 5.27b
+#14 - Onyx - 4.45b
+#15 - Svipul - 4.24b
+#16 - Vigilant - 4.07b
+#17 - Talos - 3.98b
+#18 - Helios - 3.66b
+#19 - Sin - 3.52b
+#20 - Phantasm - 3.38b
+#21 - Arazu - 3.35b
+#22 - Proteus - 3.14b
+#23 - Armageddon - 2.28b
+#24 - Cynabal - 2.24b
+#25 - Hecate - 1.98b

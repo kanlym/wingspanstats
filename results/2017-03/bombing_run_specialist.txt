@@ -1,0 +1,25 @@
+Top Bombing Run Specialists - ships destroyed
+--------------------------------------------
+#01 - Mei Long - 15 ships
+#02 - Aafen - 14 ships
+#03 - Quintus Va'Lari - 14 ships
+#04 - Gigi McQuaid - 14 ships
+#05 - Stephen Arthie - 14 ships
+#06 - Aglio Piccante - 2 ships
+#07 - Grimm Horizon - 2 ships
+#08 - Aldard Aldard - 1 ships
+#09 - Noble Dave - 1 ships
+#10 - Epoch Veli - 1 ships
+
+Top Bombing Run Specialists - ISK destroyed
+--------------------------------------------
+#01 - Aglio Piccante - 0.21b
+#02 - Mei Long - 0.06b
+#03 - Aafen - 0.05b
+#04 - Quintus Va'Lari - 0.05b
+#05 - Gigi McQuaid - 0.05b
+#06 - Stephen Arthie - 0.05b
+#07 - Aldard Aldard - 0.05b
+#08 - Grimm Horizon - 0.01b
+#09 - Noble Dave - 0.00b
+#10 - Epoch Veli - 0.00b

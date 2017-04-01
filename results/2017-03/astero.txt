@@ -1,0 +1,55 @@
+Top Astero pilots - ships destroyed
+--------------------------------------------
+#01 - Winona Kessel - 24 ships
+#02 - Jessi MalDoran - 11 ships
+#03 - Ensong Hisakawa - 10 ships
+#04 - Haruko Kitsune - 7 ships
+#05 - Caligulas - 6 ships
+#06 - DeLlave Verdun - 6 ships
+#07 - Vilya Nold - 5 ships
+#08 - Baron VonSchniffle - 4 ships
+#09 - Nik Volsk - 4 ships
+#10 - Epoch Veli - 4 ships
+#11 - Xavier Hex - 4 ships
+#12 - Parsimony Kate - 3 ships
+#13 - Darum Rinah - 3 ships
+#14 - Ishtar d'Asmodai - 3 ships
+#15 - Shaellon - 3 ships
+#16 - Inam Pak - 3 ships
+#17 - Polly Agstrom - 3 ships
+#18 - Ronni Ormand - 2 ships
+#19 - Sister Fisterr - 2 ships
+#20 - Twopudz Gordson - 2 ships
+#21 - Anouk Lazair - 2 ships
+#22 - Devious 21 - 2 ships
+#23 - RuthlessFord Uitra - 2 ships
+#24 - Rafael Tonka - 2 ships
+#25 - Boosted Monkey - 2 ships
+
+Top Astero pilots - ISK destroyed
+--------------------------------------------
+#01 - Winona Kessel - 2.89b
+#02 - Flaya Noong - 1.73b
+#03 - DeLlave Verdun - 0.91b
+#04 - Ensong Hisakawa - 0.91b
+#05 - Parsimony Kate - 0.75b
+#06 - Jessi MalDoran - 0.30b
+#07 - Epoch Veli - 0.18b
+#08 - Twopudz Gordson - 0.13b
+#09 - Devious 21 - 0.12b
+#10 - Caligulas - 0.12b
+#11 - Shaellon - 0.11b
+#12 - Agastya Ergs - 0.09b
+#13 - Ishtar d'Asmodai - 0.07b
+#14 - Kanly Aideron - 0.07b
+#15 - Haruko Kitsune - 0.05b
+#16 - Inam Pak - 0.04b
+#17 - Rafael Tonka - 0.03b
+#18 - Grant Adoudel - 0.03b
+#19 - Arcdale - 0.03b
+#20 - Baron VonSchniffle - 0.01b
+#21 - Xavier Hex - 0.01b
+#22 - Anouk Lazair - 0.01b
+#23 - Darum Rinah - 0.01b
+#24 - Sister Fisterr - 0.01b
+#25 - Vilya Nold - 0.00b
