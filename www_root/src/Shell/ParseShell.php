@@ -458,6 +458,7 @@ class ParseShell extends Shell{
 	}
 	public function parseCurrentMonth(){
 				$str = date('Y') . '-' . (date('m') < 10 ? date('m') : date('m'));
+			// $str = '2017-03';
 				$this->parseJsonAgents($str);
 				$this->parseKills($str);		
 	}
