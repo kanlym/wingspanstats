@@ -252,7 +252,7 @@ class StatsTable extends Table
                     and kills.date <= '$dateEnd 00:00:00'
                     and partiesInvolved = 1
                     group by c.character_id
-                    ORDER by ships_killed DESC";
+                    ORDER by isk DESC";
         $connection = ConnectionManager::get('default');
         $results = $connection->execute($query)->fetchAll('assoc');
         Cache::write($cacheKey,$results,'fivemin');
